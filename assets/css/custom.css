@@ -717,6 +717,7 @@ body.nav-md ul.nav.child_menu li:after {
     left: 27px;
     position: absolute;
     top: 0;
+    font-size: 5pt;
 }
 
 .nav.side-menu>li>a,
