@@ -47,21 +47,29 @@
                                         <li><a><i class="fa fa-user"></i> Employe <span class="fa fa-chevron-left"></span></a>
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="media_gallery.html"><i class="fa fa-bars"></i>All</a>
+                                        <li><a href="media_gallery.html"><i class="fa fa-plus"></i>Add</a>
+                                        </li>
                                         </li>
                                         </ul>
                                         <li><a><i class="fa fa-user"></i> New Employe <span class="fa fa-chevron-left"></span></a>
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="media_gallery.html"><i class="fa fa-bars"></i>All</a>
+                                        <li><a href="media_gallery.html"><i class="fa fa-plus"></i>Add</a>
+                                        </li>
                                         </li>
                                         </ul>
                                         <li><a><i class="fa fa-desktop"></i> Level <span class="fa fa-chevron-left"></span></a>
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="media_gallery.html"><i class="fa fa-bars"></i>All</a>
+                                        <li><a href="media_gallery.html"><i class="fa fa-plus"></i>Add</a>
+                                        </li>
                                         </li>
                                         </ul>
                                         <li><a><i class="fa fa-desktop"></i> Division <span class="fa fa-chevron-left"></span></a>
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="media_gallery.html"><i class="fa fa-bars"></i>All</a>
+                                        <li><a href="media_gallery.html"><i class="fa fa-plus"></i>Add</a>
+                                        </li>
                                         </li>
                                         </ul>
                                         <li><a><i class="fa fa-money"></i> Salary <span class="fa fa-chevron-left"></span></a>
