@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'shshsh',
-	'database' => '',
+	'hostname' => '103.27.206.159',
+	'username' => 'pg_hrms_usr',
+	'password' => 'jogja237e-hrms',
+	'database' => 'pg_hrms',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
