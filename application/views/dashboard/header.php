@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>PG HRMS</title>
+    <title>Human Resources Management System</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -28,7 +28,7 @@
     <script>
         NProgress.start();
     </script>
-    
+
     <!--[if lt IE 9]>
         <script src="../assets/js/ie8-responsive-file-warning.js"></script>
         <![endif]-->
