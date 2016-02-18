@@ -36,7 +36,7 @@
                                 <li><a><i class="fa fa-dashboard"></i> Dasboard </a>
 
                                 </li>
-                                <li><a href ="company.php"><i class="fa fa-university"></i> Company </a>
+                                <li><a href ="company_add"><i class="fa fa-university"></i> Company </a>
                                     <!-- <ul class="nav child_menu" style="display: none">
                                         <li><a href="form.html">All Data</a>
 
