@@ -36,9 +36,9 @@
                                         </li>
                                         <li><a href="projects.html">New Employee</a>
                                         </li>
-                                        <li><a href="projects.html">Level</a>
+                                        <li><a href="management/level">Level</a>
                                         </li>
-                                        <li><a href="projects.html">Division</a>
+                                        <li><a href="management/division">Division</a>
                                         </li>
                                         <li><a href="projects.html">Salary</a>
                                         </li>
