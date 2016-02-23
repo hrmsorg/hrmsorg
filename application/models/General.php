@@ -30,6 +30,13 @@ class general extends CI_Model
     $this->load->view('dashboard/footer');
     // $this->general->logdata($page,$data);
   }
+
+  public function save_company($data)
+  {
+  	$this->db->insert('perusahaan', $data);
+     
+  }
+
 }
 
  ?>
