@@ -11,13 +11,13 @@ class Management extends CI_Controller
 //function master_gaji
 		public function master_gaji()
 	{
-		$this->load->view('management/salary/add');
+		$this->general->load('management/salary/add');
 	}
 
 //function division
 	public function division()
 	{
-			$this->load->view('management/division/all');
+			$this->general->load('management/division/all');
 	}
 
 //function level

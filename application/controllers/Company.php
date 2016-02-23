@@ -1,7 +1,7 @@
 <?php
 
 /**
-* 
+*
 */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -12,8 +12,9 @@ class Company extends CI_Controller
 
 	{
 
-		$this->load->view('company/add');
-	
+
+		$this->general->load('company/add');
+
 	}
 
 }
