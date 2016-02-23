@@ -26,9 +26,9 @@
                         <div class="menu_section">
                             <h3>General</h3>
                             <ul class="nav side-menu">
-                                <li><a><i class="fa fa-dashboard"></i> Dashboard </a>
+                                <li><a href="<?php echo base_url('/');?>"><i class="fa fa-dashboard"></i> Dashboard </a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-university"></i> Company </a>
+                                <li><a href="<?php echo base_url('Company/company_add');?>"><i class="fa fa-university"></i> Company </a>
                                 </li>
                                 <li><a><i class="fa fa-sitemap"></i> Management <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
@@ -38,7 +38,7 @@
                                         </li>
                                         <li><a href="management/level">Level</a>
                                         </li>
-                                        <li><a href="management/division">Division</a>
+                                        <li><a href="<?php echo base_url('management/division');?>">Division</a>
                                         </li>
                                         <li><a href="projects.html">Salary</a>
                                         </li>
