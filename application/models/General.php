@@ -42,6 +42,11 @@ class general extends CI_Model
   	$this->db->insert('absensi', $data);
   }
 
+  public function save_master_cuti($data)
+  {
+    $this->db->insert('master_cuti', $data);
+  }
+
 }
 
  ?>

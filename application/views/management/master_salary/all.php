@@ -6,7 +6,7 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
-                    <h3>Form Salary </h3>
+                    <h3>Form Master Salary </h3>
                 </div>
 
                 <div class="title_right">

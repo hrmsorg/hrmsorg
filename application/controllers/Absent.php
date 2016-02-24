@@ -21,19 +21,27 @@ class Absent extends CI_Controller
 
 	}
 
-<<<<<<< HEAD
+
 	public function master_cuti()
 
 	{
-
 	$this->general->load('absent/mastercuti/all');
+	}
 
+	public function save_master_cuti()
+	{
+		$data = array (
+				
+				'id'=>$this->input->post('id'),
+				'jenis'=>$this->input->post('jenis'),
+				'ket'=>$this->input->post('ket'));
+
+		$this->General->save_master_cuti($data);
+		redirect('Absent/master_cuti');
 	}
 
 
-<<< HEAD
-=======
->>>>>>> 6b9fb4c373801532eb40c55417edacdad0a4e8bd
+
 		public function absent_add()
 	{
 		$this->general->load('absent/absensi');
