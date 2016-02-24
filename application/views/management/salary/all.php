@@ -6,7 +6,7 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
-                    <h3>Form Division </h3>
+                    <h3>Form Salary </h3>
                 </div>
 
                 <div class="title_right">
@@ -66,43 +66,37 @@
                 </div>
                   <br>
                 <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">Name</label>
+                    <label for="password" class="control-label col-md-3">Gaji Awal</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <input id="password" type="text" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
                     </div>
                 </div>
 
-                <div class="clearfix"></div>
-                <br>
-              <div class="item form-group">
-                  <label class="control-label col-md-3 col-sm-3 col-xs-12" >Logo<span class="required"></span>
-                  </label>
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                      <form action="choices/form_upload.html" class="dropzone" style="border: 1px solid #e5e5e5; height: 300px; "></form>
-                  </div>
-              </div>
-
-              <div class="clearfix"></div>
-                <br>
-            <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Description
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <textarea id="textarea" required="required" name="textarea" class="form-control col-md-7 col-xs-12"></textarea>
-                </div>
-            </div>
-
-                <br>
+           
+                  <br>
                   <div class="clearfix"></div>
                     <br>
                 <div class="item form-group">
-                    <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Main Task</label>
+                    <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Gaji Akhir</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <input id="password2" type="text" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
                     </div>
                 </div>
                 <br>
 
+
+                  <br>
+                  <div class="clearfix"></div>
+                    <br>
+                  <div class="form-group">
+                      <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Keterangan</label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                      <textarea id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="ket">
+                          </textarea>
+                      </div>
+                      </div>
+                    <br>
+                   
 
                 <div class="clearfix"></div>
 

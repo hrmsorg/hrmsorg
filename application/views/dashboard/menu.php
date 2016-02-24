@@ -40,7 +40,7 @@
                                         </li>
                                         <li><a href="<?php echo base_url('management/division');?>">Division</a>
                                         </li>
-                                        <li><a href="projects.html">Salary</a>
+                                       <li><a href="<?php echo base_url('management/master_gaji');?>">Salary</a>
                                         </li>
                                     </ul>
                                 </li>
