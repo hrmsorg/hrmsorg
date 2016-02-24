@@ -21,6 +21,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			public function save_company_add()
 		{
+
+		// 		$config['upload_path'] = 'uploads/';
+		// 		$config['allowed_types'] = 'gif|jpg|png';
+		// 		$config['max_size']	= '1000';
+		// 		$config['max_width']  = '1024';
+		// 		$config['max_height']  = '768';
+				 
+		// 		$this->load->library('upload', $config);
+				 
+		// 		$this->upload->do_upload(
+		// 			$data = array(
+		// 				'logo' => $this->upload->data(),
+		// 				'nama'=>$this->input->post('nama'),
+		// 				'alamat'=>$this->input->post('alamat'),
+		// 				'kode_pos'=>$this->input->post('kode_pos'),
+		// 				'npwp'=>$this->input->post('npwp'),
+		// 				'email'=>$this->input->post('email'),
+		// 				'ket'=>$this->input->post('ket'),
+		// 				'no_telp'=>$this->input->post('no_telp')
+		// 				));
+				 
+		// 		}
+		// 		$this->General->save_company('perusahaan', $data);
+		// 	 	redirect('Company/company_add');
+				
+				 
+		// 		}
+				
+		// }
 			
 				$config = array(
 					'allowed_types' => 'jpg|jpeg|gif|png|bmp',
@@ -49,4 +78,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$this->General->save_company('perusahaan', $data);
 				redirect('Company/company_add');
 			}
-	}
+		}
+	
+	
