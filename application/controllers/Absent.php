@@ -19,12 +19,37 @@ class Absent extends CI_Controller
 		$this->general->load('absent/cuti/add');
 	}
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 586f60d1ff0ce2c1e679c3eab3951431f2f8e330
 	public function master_cuti()
 	{
+<<<<<<< HEAD
+	$this->general->load('absent/mastercuti/all');
+	}
+
+	public function save_master_cuti()
+	{
+		$data = array (
+				
+				'id'=>$this->input->post('id'),
+				'jenis'=>$this->input->post('jenis'),
+				'ket'=>$this->input->post('ket'));
+
+		$this->General->save_master_cuti($data);
+		redirect('Absent/master_cuti');
+	}
+
+
+
+		public function absent_add()
+=======
 		$this->general->load('absent/mastercuti/all');
 	}
 	
 	public function absent_add()
+>>>>>>> 586f60d1ff0ce2c1e679c3eab3951431f2f8e330
 	{
 		$this->general->load('absent/absensi');
 	}

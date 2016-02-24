@@ -52,7 +52,11 @@
                                         </li>
                                         <li><a href="<?php echo base_url('absent/cuti_add');?>">Cuti</a>
                                         </li>
+<<<<<<< HEAD
+                                        <li><a href="<?php echo base_url('absent/master_cuti/all');?>">Master Cuti</a>
+=======
                                         <li><a href="<?php echo base_url('absent/master_cuti');?>">Master Cuti</a>
+>>>>>>> 586f60d1ff0ce2c1e679c3eab3951431f2f8e330
                                         </li>
                                         <li><a href="projects.html">Overtime</a>
                                         </li>

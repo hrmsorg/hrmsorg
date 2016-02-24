@@ -1,4 +1,3 @@
-
 <section class="content">
   <div class="right_col" role="main">
 
@@ -6,7 +5,7 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
-                    <h3>Form Salary </h3>
+                    <h3>Form Master Cuti </h3>
                 </div>
 
                 <div class="title_right">
@@ -62,24 +61,18 @@
     </div>
     <div class="x_content">
 
-                    <div class="clearfix"></div>
-                </div>
-                  <br>
-                <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">Gaji Awal</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                    </div>
-                </div>
+                   <?php echo form_open('Absent/save_master_cuti');?>
+
+                    
 
            
                   <br>
                   <div class="clearfix"></div>
                     <br>
                 <div class="item form-group">
-                    <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Gaji Akhir</label>
+                    <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Jenis</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password2" type="text" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
+                        <input id="password2" type="text" name="jenis" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
                     </div>
                 </div>
                 <br>
