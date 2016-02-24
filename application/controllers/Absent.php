@@ -21,7 +21,6 @@ class Absent extends CI_Controller
 
 	}
 
-<<<<<<< HEAD
 		public function absent_add()
 	{
 		$this->general->load('absent/absensi');
@@ -33,14 +32,12 @@ class Absent extends CI_Controller
 				'id_perusahaan'=> 1,
 				'id_karyawan'=> 1,
 				'tgl'=>$this->input->post('tgl'),
-				'start'=>$this->input->post('jam_datang'),
-				'finish'=>$this->input->post('jam_pulang'));
+				'jam_datang'=>$this->input->post('jam_datang'),
+				'jam_pulang'=>$this->input->post('jam_pulang'),
+				'ket'=>$this->input->post('ket'));
 
 		$this->General->save_absent($data);
-		redirect('');
+		redirect('Abset/absent_add');
 	}
 
 }
-=======
-}
->>>>>>> 3136f102445359350d615967429f2db0886c7529
