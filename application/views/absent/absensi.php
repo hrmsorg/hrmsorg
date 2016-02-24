@@ -6,7 +6,7 @@
             <div class="page-title">
                 <div class="title_left">
 
-                    <h3>Form Company </h3>
+                    <h3>Form Absent </h3>
                 </div>
 
                 <div class="title_right">
@@ -49,64 +49,36 @@
     </div>
     <div class="x_content">
 
-                <?php echo form_open_multipart('Company/save_company_add');?>
+                <?php echo form_open('Absent/save_absent_add');?>
 
                     <div class="clearfix"></div>
                 </div>
                   <br>
                 <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">Name</label>
+                    <label for="password" class="control-label col-md-3">Date</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="nama" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                    </div>
-
-                    <div class="clearfix"></div>
-              </div>
-                <br>
-            <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Address
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <textarea id="textarea" required="required" name="alamat" class="form-control col-md-7 col-xs-12"></textarea>
-                </div>
-
-                    <div class="clearfix"></div>
-                </div>
-                  <br>
-                <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">Pos Code</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="kode_pos" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                        <input id="password" type="text" name="tgl" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
                     </div>
 
                     <div class="clearfix"></div>
                 </div>
                   <br>
                 <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">NPWP</label>
+                    <label for="password" class="control-label col-md-3">Start</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="npwp" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                        <input id="password" type="text" name="jam_datang" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
                     </div>
 
                     <div class="clearfix"></div>
                 </div>
                   <br>
                 <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">No. Telp</label>
+                    <label for="password" class="control-label col-md-3">Finish</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="no_telp" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                        <input id="password" type="text" name="jam_pulang" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
                     </div>
 
-                    <div class="clearfix"></div>
-                </div>
-                  <br>
-                <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">Logo</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password"  type="file" name="logo" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                    </div>
-
-              <div class="clearfix"></div>
+                <div class="clearfix"></div>
               </div>
                 <br>
             <div class="item form-group">
@@ -117,11 +89,7 @@
                 </div>
             </div>
 
-               
-
-
                 <div class="clearfix"></div>
-
                   <br>
                   <div class="form-group">
                       <div class="col-md-6 col-md-offset-3">

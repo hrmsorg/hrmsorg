@@ -46,7 +46,7 @@
                                 </li>
                                 <li><a><i class="fa fa-calendar"></i> Absent <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="e_commerce.html">All</a>
+                                        <li><a href="<?php echo base_url('Absent/absent_add');?>">All</a>
                                         </li>
                                         <li><a href="projects.html">Free</a>
                                         </li>
