@@ -11,7 +11,7 @@ class Management extends CI_Controller
 //function master_gaji
 		public function master_gaji()
 	{
-		$this->general->load('management/salary/all');
+		$this->general->load('management/master_salary/all');
 	}
 
 //function division
