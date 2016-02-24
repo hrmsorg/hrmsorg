@@ -1,10 +1,7 @@
                 <footer>
-                    <div class="">
                         <p class="pull-right">PG<a>hrms</a>. |
                             <span class="lead"> <i class="fa fa-paw"></i> PG</span>
                         </p>
-                    </div>
-                    <div class="clearfix"></div>
                 </footer>
                 <!-- /footer content -->
 
