@@ -32,7 +32,7 @@
                                 </li>
                                 <li><a><i class="fa fa-sitemap"></i> Management <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="e_commerce.html">Employee</a>
+                                        <li><a href="<?php echo base_url('management/employee');?>">Employee</a>
                                         </li>
                                         <li><a href="projects.html">New Employee</a>
                                         </li>
@@ -48,11 +48,15 @@
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="<?php echo base_url('Absent/absent_add');?>">All</a>
                                         </li>
-                                        <li><a href="projects.html">Free</a>
+                                        <li><a href="<?php echo base_url('absent/free_all') ?>">Free</a>
                                         </li>
-                                        <li><a href="<?php echo base_url('absent/cuti/add');?>">Cuti</a>
+                                        <li><a href="<?php echo base_url('absent/cuti_add');?>">Cuti</a>
                                         </li>
+<<<<<<< HEAD
                                         <li><a href="<?php echo base_url('absent/master_cuti/all');?>">Master Cuti</a>
+=======
+                                        <li><a href="<?php echo base_url('absent/master_cuti');?>">Master Cuti</a>
+>>>>>>> 586f60d1ff0ce2c1e679c3eab3951431f2f8e330
                                         </li>
                                         <li><a href="projects.html">Overtime</a>
                                         </li>

@@ -25,4 +25,9 @@ class Management extends CI_Controller
 	{
 			$this->load->view('management/level/all');
 	}
+//function employee
+	public function employee()
+	{
+			$this->general->load('management/employee/all');
+	}
 }
