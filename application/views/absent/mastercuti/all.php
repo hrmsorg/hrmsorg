@@ -1,3 +1,4 @@
+
 <section class="content">
   <div class="right_col" role="main">
 
@@ -5,8 +6,7 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
-
-                    <h3>Form Company </h3>
+                    <h3>Form Salary </h3>
                 </div>
 
                 <div class="title_right">
@@ -23,6 +23,19 @@
             <div class="clearfix"></div>
         </div>
 
+        <!-- <div class="x_content"> -->
+<!--
+            <form class="form-horizontal form-label-left" novalidate>
+
+                <p>For alternative validation library <code>parsleyJS</code> check out in the <a href="form.html">form page</a>
+                </p>
+                <span class="section">Personal Info</span>
+
+
+            </form> -->
+
+
+<!-- coba template -->
 <div class="row">
 
 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -49,76 +62,41 @@
     </div>
     <div class="x_content">
 
-                <?php echo form_open_multipart('Company/save_company_add');?>
-
                     <div class="clearfix"></div>
                 </div>
                   <br>
                 <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">Name</label>
+                    <label for="password" class="control-label col-md-3">Gaji Awal</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="nama" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                        <input id="password" type="text" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
                     </div>
+                </div>
 
-                    <div class="clearfix"></div>
-              </div>
+           
+                  <br>
+                  <div class="clearfix"></div>
+                    <br>
+                <div class="item form-group">
+                    <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Gaji Akhir</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input id="password2" type="text" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
+                    </div>
+                </div>
                 <br>
-            <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Address
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <textarea id="textarea" required="required" name="alamat" class="form-control col-md-7 col-xs-12"></textarea>
-                </div>
 
-                    <div class="clearfix"></div>
-                </div>
+
                   <br>
-                <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">Pos Code</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="kode_pos" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                    </div>
-
-                    <div class="clearfix"></div>
-                </div>
-                  <br>
-                <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">NPWP</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="npwp" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                    </div>
-
-                    <div class="clearfix"></div>
-                </div>
-                  <br>
-                <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">No. Telp</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="no_telp" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                    </div>
-
-                    <div class="clearfix"></div>
-                </div>
-                  <br>
-                <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">Logo</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password"  type="file" name="logo" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                    </div>
-
-              <div class="clearfix"></div>
-              </div>
-                <br>
-            <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Description
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <textarea id="textarea" required="required" name="ket" style="" class="form-control col-md-7 col-xs-12"></textarea>
-                </div>
-            </div>
-
-               
-
+                  <div class="clearfix"></div>
+                    <br>
+                  <div class="form-group">
+                      <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Keterangan</label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                      <textarea id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="ket">
+                          </textarea>
+                      </div>
+                      </div>
+                    <br>
+                   
 
                 <div class="clearfix"></div>
 
@@ -130,8 +108,6 @@
                       </div>
                   </div>
               </div>
-
-              <?php form_close();?>
 
 
 

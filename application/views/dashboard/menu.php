@@ -40,17 +40,19 @@
                                         </li>
                                         <li><a href="<?php echo base_url('management/division');?>">Division</a>
                                         </li>
-                                        <li><a href="projects.html">Salary</a>
+                                       <li><a href="<?php echo base_url('management/master_gaji');?>">Master Salary</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a><i class="fa fa-calendar"></i> Absent <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="e_commerce.html">All</a>
+                                        <li><a href="<?php echo base_url('Absent/absent_add');?>">All</a>
                                         </li>
                                         <li><a href="projects.html">Free</a>
                                         </li>
                                         <li><a href="<?php echo base_url('absent/cuti/add');?>">Cuti</a>
+                                        </li>
+                                        <li><a href="<?php echo base_url('absent/mastercuti/all');?>">Master Cuti</a>
                                         </li>
                                         <li><a href="projects.html">Overtime</a>
                                         </li>
