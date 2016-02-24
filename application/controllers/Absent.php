@@ -1,7 +1,7 @@
 <?php
 
 /**
-* 
+*
 */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -12,8 +12,8 @@ class Absent extends CI_Controller
 
 	{
 
-		$this->load->view('absent/cuti');
-	
+	$this->general->load('absent/cuti/add');
+
 	}
 
 }

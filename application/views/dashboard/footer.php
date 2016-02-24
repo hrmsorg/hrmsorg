@@ -7,7 +7,7 @@
                     <div class="clearfix"></div>
                 </footer>
                 <!-- /footer content -->
-            
+
 
     <div id="custom_notifications" class="custom-notifications dsp_none">
         <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
@@ -131,7 +131,7 @@
         });
     </script>
     <!-- skycons -->
-    <script src="js/skycons/skycons.js"></script>
+    <script src="<?php echo base_url('assets/js/skycons/skycons.js');?>"></script>
     <script>
         var icons = new Skycons({
                 "color": "#73879C"
