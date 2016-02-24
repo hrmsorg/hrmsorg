@@ -21,7 +21,16 @@ class Absent extends CI_Controller
 
 	}
 
-<<<<<<< HEAD
+	public function master_cuti()
+
+	{
+
+	$this->general->load('absent/mastercuti/all');
+
+	}
+
+
+<<< HEAD
 		public function absent_add()
 	{
 		$this->general->load('absent/absensi');
