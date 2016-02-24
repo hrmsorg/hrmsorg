@@ -32,7 +32,7 @@
                                 </li>
                                 <li><a><i class="fa fa-sitemap"></i> Management <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="e_commerce.html">Employee</a>
+                                        <li><a href="<?php echo base_url('management/employee');?>">Employee</a>
                                         </li>
                                         <li><a href="projects.html">New Employee</a>
                                         </li>
