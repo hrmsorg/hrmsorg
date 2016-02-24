@@ -37,6 +37,11 @@ class general extends CI_Model
      
   }
 
+  public function save_absent($data)
+  {
+  	$this->db->insert('absensi', $data);
+  }
+
 }
 
  ?>
