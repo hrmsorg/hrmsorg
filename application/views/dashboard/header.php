@@ -12,6 +12,19 @@
 
     <!-- Bootstrap core CSS -->
 
+      <link rel="stylesheet" href="<?php echo base_url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css');?>" />
+    		<link rel="stylesheet" href="<?php echo base_url('https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/css/material.min.css');?>" />
+    		<link rel="stylesheet" href="<?php echo base_url('assets/temp2/css/bootstrap-material-datetimepicker.css');?>" />
+    		<link href="<?php echo base_url('http://fonts.googleapis.com/css?family=Roboto:400,500');?>" rel='stylesheet' type='text/css'>
+    		<link href="<?php echo base_url('https://fonts.googleapis.com/icon?family=Material+Icons');?>" rel="stylesheet">
+
+    		<script type="text/javascript" src="<?php echo base_url('https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js');?>"></script>
+    		<script type="text/javascript" src="<?php echo base_url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js');?>"></script>
+    		<script type="text/javascript" src="<?php echo base_url('https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/js/material.min.js');?>"></script>
+    		<script type="text/javascript" src="<?php echo base_url('http://momentjs.com/downloads/moment-with-locales.min.js');?>"></script>
+    		<script type="text/javascript" src="<?php echo base_url('assets/temp2/js/bootstrap-material-datetimepicker.js');?>"></script>
+
+
     <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
 
     <link href="<?php echo base_url('assets/fonts/css/font-awesome.min.css');?>" rel="stylesheet">
@@ -90,7 +103,7 @@
                                     <li>
                                         <a>
                                             <span class="image">
-                                        <img src="images/img.jpg" alt="Profile Image" />
+                                        <img src="<?php echo base_url('assets/images/img.jpg');?>" alt="Profile Image" />
                                     </span>
                                             <span>
                                         <span>John Smith</span>
@@ -104,7 +117,7 @@
                                     <li>
                                         <a>
                                             <span class="image">
-                                        <img src="images/img.jpg" alt="Profile Image" />
+                                        <img src="<?php echo base_url('assets/images/img.jpg');?>" alt="Profile Image" />
                                     </span>
                                             <span>
                                         <span>John Smith</span>
@@ -118,7 +131,7 @@
                                     <li>
                                         <a>
                                             <span class="image">
-                                        <img src="images/img.jpg" alt="Profile Image" />
+                                        <img src="<?php echo base_url('assets/images/img.jpg');?>" alt="Profile Image" />
                                     </span>
                                             <span>
                                         <span>John Smith</span>
@@ -132,7 +145,7 @@
                                     <li>
                                         <a>
                                             <span class="image">
-                                        <img src="images/img.jpg" alt="Profile Image" />
+                                        <img src="<?php echo base_url('assets/images/img.jpg');?>" alt="Profile Image" />
                                     </span>
                                             <span>
                                         <span>John Smith</span>

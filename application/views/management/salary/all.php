@@ -1,3 +1,4 @@
+
 <section class="content">
   <div class="right_col" role="main">
 
@@ -5,8 +6,7 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
-
-                    <h3>Form Absent </h3>
+                    <h3>Form Division </h3>
                 </div>
 
                 <div class="title_right">
@@ -23,6 +23,19 @@
             <div class="clearfix"></div>
         </div>
 
+        <!-- <div class="x_content"> -->
+<!--
+            <form class="form-horizontal form-label-left" novalidate>
+
+                <p>For alternative validation library <code>parsleyJS</code> check out in the <a href="form.html">form page</a>
+                </p>
+                <span class="section">Personal Info</span>
+
+
+            </form> -->
+
+
+<!-- coba template -->
 <div class="row">
 
 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -49,47 +62,50 @@
     </div>
     <div class="x_content">
 
-                <?php echo form_open('Absent/save_absent_add');?>
-
                     <div class="clearfix"></div>
                 </div>
                   <br>
                 <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">Date</label>
+                    <label for="password" class="control-label col-md-3">Name</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="tgl" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                        <input id="password" type="text" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
                     </div>
-
-                    <div class="clearfix"></div>
                 </div>
-                  <br>
-                <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">Start</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="jam_datang" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                    </div>
-
-                    <div class="clearfix"></div>
-                </div>
-                  <br>
-                <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">Finish</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="jam_pulang" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                    </div>
 
                 <div class="clearfix"></div>
+                <br>
+              <div class="item form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" >Logo<span class="required"></span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                      <form action="choices/form_upload.html" class="dropzone" style="border: 1px solid #e5e5e5; height: 300px; "></form>
+                  </div>
               </div>
+
+              <div class="clearfix"></div>
                 <br>
             <div class="item form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Description
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <textarea id="textarea" required="required" name="ket" style="" class="form-control col-md-7 col-xs-12"></textarea>
+                    <textarea id="textarea" required="required" name="textarea" class="form-control col-md-7 col-xs-12"></textarea>
                 </div>
             </div>
 
+                <br>
+                  <div class="clearfix"></div>
+                    <br>
+                <div class="item form-group">
+                    <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Main Task</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input id="password2" type="text" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
+                    </div>
+                </div>
+                <br>
+
+
                 <div class="clearfix"></div>
+
                   <br>
                   <div class="form-group">
                       <div class="col-md-6 col-md-offset-3">
@@ -98,8 +114,6 @@
                       </div>
                   </div>
               </div>
-
-              <?php form_close();?>
 
 
 
