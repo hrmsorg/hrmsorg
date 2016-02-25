@@ -16,7 +16,10 @@
           <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/dist/bootstrap-clockpicker.min.css');?>">
           <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/assets/css/github.min.css');?>">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6c35dd6d75b414538f8ca5fe8f74982116025cca
     <link href="<?php echo base_url('assets/fonts/css/font-awesome.min.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/animate.min.css');?>" rel="stylesheet">
 
@@ -28,18 +31,8 @@
 
     <script src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/nprogress.js');?>"></script>
-    <script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
     <link href="<?php echo base_url('assets/css/calendar/fullcalendar.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/calendar/fullcalendar.print.css');?>" rel="stylesheet" media="print">
-        <!-- chart js -->
-    <script src="<?php echo base_url('assets/js/chartjs/chart.min.js');?>"></script>
-        <!-- bootstrap progress js -->
-    <script src="<?php echo base_url('assets/js/progressbar/bootstrap-progressbar.min.js');?>"></script>
-    <script src="<?php echo base_url('assets/js/nicescroll/jquery.nicescroll.min.js');?>"></script>
-        <!-- icheck -->
-    <script src="<?php echo base_url('assets/js/icheck/icheck.min.js');?>"></script>
-
-    <script src="<?php echo base_url('assets/js/custom.js');?>"></script>
 
     <script src="<?php echo base_url('assets/js/moment.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/calendar/fullcalendar.min.js');?>"></script>
