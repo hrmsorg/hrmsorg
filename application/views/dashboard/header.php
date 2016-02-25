@@ -16,10 +16,7 @@
           <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/dist/bootstrap-clockpicker.min.css');?>">
           <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/assets/css/github.min.css');?>">
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 6c35dd6d75b414538f8ca5fe8f74982116025cca
     <link href="<?php echo base_url('assets/fonts/css/font-awesome.min.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/animate.min.css');?>" rel="stylesheet">
 

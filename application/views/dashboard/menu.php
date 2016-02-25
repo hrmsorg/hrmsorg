@@ -50,11 +50,11 @@
                                         </li>
                                         <li><a href="projects.html">Free</a>
                                         </li>
-                                        <li><a href="<?php echo base_url('absent/cuti/add');?>">Cuti</a>
+                                        <li><a href="<?php echo base_url('absent/cuti_add');?>">Cuti</a>
                                         </li>
                                         <li><a href="<?php echo base_url('absent/mastercuti/all');?>">Master Cuti</a>
                                         </li>
-                                        <li><a href="projects.html">Overtime</a>
+                                        <li><a href="<?php echo base_url('absent/free_all');?>">Overtime</a>
                                         </li>
 
                                     </ul>
