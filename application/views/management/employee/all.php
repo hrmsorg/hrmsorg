@@ -72,7 +72,44 @@
                     </div>
                 </div>
 
+                    <div class="clearfix"></div>
+                  <br>
+                <div class="item form-group">
+                    <label for="password" class="control-label col-md-3">Tempat Lahir</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input id="password" type="text" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                    </div>
+                </div>
 
+                <div class="clearfix"></div>
+                  <br>
+                <div class="item form-group">
+                    <label for="password" class="control-label col-md-3">Tanggal Lahir</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input id="password" type="text" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+                  <br>
+                <label>Gender *:</label>
+
+                     <p>
+                        M:
+                        <input type="radio" class="flat" name="gender" id="genderM" value="M" checked="" required /> 
+                        F:
+                        <input type="radio" class="flat" name="gender" id="genderF" value="F" />
+                    </p>
+
+
+                <div class="clearfix"></div>
+                  <br>
+                <div class="item form-group">
+                    <label for="password" class="control-label col-md-3">Mulai Bekerja</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input id="password" type="text" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                    </div>
+                </div>
                 <br>
                 <div class="clearfix"></div>
 
