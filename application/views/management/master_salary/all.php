@@ -1,4 +1,3 @@
-
 <section class="content">
   <div class="right_col" role="main">
 
@@ -6,7 +5,7 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
-                    <h3>Form Salary </h3>
+                    <h3>Form Master Gaji </h3>
                 </div>
 
                 <div class="title_right">
@@ -62,24 +61,31 @@
     </div>
     <div class="x_content">
 
-                    <div class="clearfix"></div>
-                </div>
+                   <?php echo form_open('Management/save_master_gaji');?>
+
+
+
+
                   <br>
+                  <div class="clearfix"></div>
+                    <br>
                 <div class="item form-group">
-                    <label for="password" class="control-label col-md-3">Gaji Awal</label>
+                    <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Gaji Awal</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="text" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                        <input id="password2" type="text" name="gaji_awal" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
                     </div>
                 </div>
+                <br>
 
-           
-                  <br>
+
+
+                <br>
                   <div class="clearfix"></div>
                     <br>
                 <div class="item form-group">
                     <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Gaji Akhir</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password2" type="text" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
+                        <input id="password2" type="text" name="gaji_akhir" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
                     </div>
                 </div>
                 <br>
@@ -96,7 +102,7 @@
                       </div>
                       </div>
                     <br>
-                   
+
 
                 <div class="clearfix"></div>
 
@@ -114,18 +120,5 @@
 
 
 
-<script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
-
-  <!-- chart js -->
-  <script src="<?php echo base_url('assets/chartjs/chart.min.js');?>"></script>
-  <!-- bootstrap progress js -->
-  <script src="<?php echo base_url('assets/js/progressbar/bootstrap-progressbar.min.js');?>"></script>
-  <script src="<?php echo base_url('assets/js/nicescroll/jquery.nicescroll.min.js');?>"></script>
-  <!-- icheck -->
-  <script src="<?php echo base_url('assets/js/icheck/icheck.min.js');?>"></script>
-
-  <script src="<?php echo base_url('assets/js/custom.js');?>"></script>
-  <!-- dropzone -->
-  <script src="<?php echo base_url('assets/js/dropzone/dropzone.js');?>"></script>
 
 </section>

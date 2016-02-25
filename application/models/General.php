@@ -34,13 +34,32 @@ class general extends CI_Model
   public function save_company($data)
   {
   	$this->db->insert('perusahaan', $data);
-     
-  }
 
+  }
+//ABSENT
   public function save_absent($data)
   {
   	$this->db->insert('absensi', $data);
   }
+
+  public function save_master_cuti($data)
+  {
+    $this->db->insert('master_cuti', $data);
+  }
+
+
+//MANAGEMENT
+  public function save_master_gaji($data)
+  {
+    $this->db->insert('master_gaji', $data);
+  }
+
+  //division
+  public function save_division($data)
+    {
+      $this->db->insert('divisi', $data);
+    }
+
 
 }
 
