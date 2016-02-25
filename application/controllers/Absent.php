@@ -18,19 +18,14 @@ class Absent extends CI_Controller
 	{
 		$this->general->load('absent/cuti/add');
 	}
-<<<<<<< HEAD
-=======
 
->>>>>>> 3becb668c3e1e1d4c0e24b2bbe43c68ff639aab8
 	public function master_cuti()
 	{
 
 	$this->general->load('absent/mastercuti/all');
 	}
 
-<<<<<<< HEAD
-		public function absent_add()
-=======
+
 	public function save_master_cuti()
 	{
 		$data = array (
@@ -45,7 +40,6 @@ class Absent extends CI_Controller
 		
 	public function absent_add()
 
->>>>>>> 3becb668c3e1e1d4c0e24b2bbe43c68ff639aab8
 	{
 		$this->general->load('absent/absensi');
 	}

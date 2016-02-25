@@ -123,7 +123,6 @@
 
               <?php form_close();?>
 
-<<<<<<< HEAD
           </div>
 
 
@@ -143,8 +142,6 @@
   <!-- dropzone -->
   <script src="<?php echo base_url('assets/js/dropzone/dropzone.js');?>"></script>
 
-=======
->>>>>>> 3becb668c3e1e1d4c0e24b2bbe43c68ff639aab8
 </section>
 
  <div id="custom_notifications" class="custom-notifications dsp_none">
