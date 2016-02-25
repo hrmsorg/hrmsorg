@@ -126,25 +126,7 @@
           </div>
 
 
-
-
-<script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
-
-  <!-- chart js -->
-  <script src="<?php echo base_url('assets/chartjs/chart.min.js');?>"></script>
-  <!-- bootstrap progress js -->
-  <script src="<?php echo base_url('assets/js/progressbar/bootstrap-progressbar.min.js');?>"></script>
-  <script src="<?php echo base_url('assets/js/nicescroll/jquery.nicescroll.min.js');?>"></script>
-  <!-- icheck -->
-  <script src="<?php echo base_url('assets/js/icheck/icheck.min.js');?>"></script>
-
-  <script src="<?php echo base_url('assets/js/custom.js');?>"></script>
-  <!-- dropzone -->
-  <script src="<?php echo base_url('assets/js/dropzone/dropzone.js');?>"></script>
-
-</section>
-
- <div id="custom_notifications" class="custom-notifications dsp_none">
+<div id="custom_notifications" class="custom-notifications dsp_none">
         <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
         </ul>
         <div class="clearfix"></div>

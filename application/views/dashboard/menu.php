@@ -48,13 +48,13 @@
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="<?php echo base_url('Absent/absent_add');?>">All</a>
                                         </li>
-                                        <li><a href="projects.html">Free</a>
+                                        <li><a href="<?php echo base_url('absent/free_all');?>">Free</a>
                                         </li>
                                         <li><a href="<?php echo base_url('absent/cuti_add');?>">Cuti</a>
                                         </li>
-                                        <li><a href="<?php echo base_url('absent/mastercuti/all');?>">Master Cuti</a>
+                                        <li><a href="<?php echo base_url('absent/master_cuti');?>">Master Cuti</a>
                                         </li>
-                                        <li><a href="<?php echo base_url('absent/free_all');?>">Overtime</a>
+                                        <li><a href="<?php echo base_url('absent/overtime');?>">Overtime</a>
                                         </li>
 
                                     </ul>
