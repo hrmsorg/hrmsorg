@@ -29,6 +29,21 @@
 
     <script src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/nprogress.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
+    <link href="<?php echo base_url('assets/css/calendar/fullcalendar.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/calendar/fullcalendar.print.css');?>" rel="stylesheet" media="print">
+        <!-- chart js -->
+    <script src="<?php echo base_url('assets/js/chartjs/chart.min.js');?>"></script>
+        <!-- bootstrap progress js -->
+    <script src="<?php echo base_url('assets/js/progressbar/bootstrap-progressbar.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/nicescroll/jquery.nicescroll.min.js');?>"></script>
+        <!-- icheck -->
+    <script src="<?php echo base_url('assets/js/icheck/icheck.min.js');?>"></script>
+
+    <script src="<?php echo base_url('assets/js/custom.js');?>"></script>
+
+    <script src="<?php echo base_url('assets/js/moment.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/calendar/fullcalendar.min.js');?>"></script>
     <script>
         NProgress.start();
     </script>
