@@ -14,6 +14,19 @@ class Management extends CI_Controller
 		$this->general->load('management/master_salary/all');
 	}
 
+		public function save_master_gaji()
+	{
+		$data = array (
+				
+				
+				'gaji_awal'=>$this->input->post('gaji_awal'),
+				'gaji_akhir'=>$this->input->post('gaji_akhir'),
+				'ket'=>$this->input->post('ket'));
+
+		$this->general->save_master_gaji($data);
+		redirect('Management/master_gaji');
+	}
+
 //function division
 	public function division()
 	{
