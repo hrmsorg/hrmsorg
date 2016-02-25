@@ -113,7 +113,7 @@
                                           <tr class="headings">
 
                                               <th>ID</th>
-                                              <th>ID Perusahaan </th>
+                                              <th>ID Company </th>
                                               <th>Name </th>
                                               <th>Description </th>
                                               <th>Main Task </th>
