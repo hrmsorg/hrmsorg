@@ -25,6 +25,7 @@ class Absent extends CI_Controller
 	$this->general->load('absent/mastercuti/all');
 	}
 
+
 	public function save_master_cuti()
 	{
 		$data = array (
@@ -48,13 +49,13 @@ class Absent extends CI_Controller
 		$data = array (
 				'id_perusahaan'=> 1,
 				'id_karyawan'=> 1,
-				'tgl'=>$this->input->post('tgl'),
+				'tgl'		=>$this->input->post('tgl'),
 				'jam_datang'=>$this->input->post('jam_datang'),
 				'jam_pulang'=>$this->input->post('jam_pulang'),
 				'ket'=>$this->input->post('ket'));
 
 		$this->General->save_absent($data);
-		redirect('Abset/absent_add');
+		redirect('Absent/absent_add');
 	}
 
 	public function free_all()

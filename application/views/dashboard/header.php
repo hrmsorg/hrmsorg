@@ -16,8 +16,6 @@
           <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/dist/bootstrap-clockpicker.min.css');?>">
           <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/assets/css/github.min.css');?>">
 
-    <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
-
     <link href="<?php echo base_url('assets/fonts/css/font-awesome.min.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/animate.min.css');?>" rel="stylesheet">
 
@@ -29,6 +27,11 @@
 
     <script src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/nprogress.js');?>"></script>
+    <link href="<?php echo base_url('assets/css/calendar/fullcalendar.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/calendar/fullcalendar.print.css');?>" rel="stylesheet" media="print">
+
+    <script src="<?php echo base_url('assets/js/moment.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/calendar/fullcalendar.min.js');?>"></script>
     <script>
         NProgress.start();
     </script>
