@@ -5,7 +5,7 @@
                     <div class="page-title">
                         <div class="title_left">
                             <h3>
-                    Form Cuti
+                    Form Overtime
                 </h3>
                         </div>
 
@@ -33,7 +33,7 @@
                             <!-- form date pickers -->
                             <div class="x_panel" style="">
                                 <div class="x_title">
-                                    <h2>Add Cuti <small> Available with multiple designs</small></h2>
+                                    <h2>Add Overtime <small> Available with multiple designs</small></h2>
                                     <ul class="nav navbar-right panel_toolbox">
                                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
@@ -52,93 +52,66 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-                                    <?php echo form_open('Absent/save_cuti_add');?>
+                                    <?php echo form_open('Absent/save_overtime_add');?>
+                                    <div class="col-md-9">
+                                                <fieldset>
+                                                  <div class="control-group">
+                                                      <div class="controls">
+                                                          <div class="input-prepend input-group">
+                                                            <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
 
-
-                                <div class="col-md-6">
-                                            <fieldset>
-                                              <div class="control-group">
-                                                  <div class="controls">
-                                                      <div class="input-prepend input-group">
-                                                        <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
-
-                                                          <input type="text" class="form-control has-feedback-left" id="single_cal3" name="tgl_awal" placeholder="Date Start" >
-                                                          <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
-                                                          <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
+                                                              <input type="text" class="form-control has-feedback-left" id="single_cal2" name="tgl" placeholder="Date Start" >
+                                                              <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
+                                                              <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
+                                                          </div>
                                                       </div>
                                                   </div>
-                                              </div>
-                                            </fieldset>
-                                </div>
-                                <div class="col-md-6">
-                                            <fieldset>
-                                              <div class="control-group">
-                                            		  <div class="controls">
-                                                      <div class="input-prepend input-group">
-                                            			         <div class="input-group clockpicker-with-callbacks">
-                                                             <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-clock-o"></i></span>
-
-                                                    				<input type="text" class="form-control has-feedback-left" name="jam_awal"  placeholder="Time Start"  >
-                                                            <!-- <span class="fa fa-clock-o form-control-feedback left" aria-hidden="true"></span>
-                                                            <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
-                                            			         </div>
-                                                      </div>
-                                            		  </div>
-                                          	</div>
-                                          </fieldset>
-                              </div>
-                              <div class="col-md-6">
-                                        <fieldset>
-                                              <div class="control-group">
-                                                  <div class="controls">
-                                                      <div class="input-prepend input-group">
-                                                        <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
-                                                          <input type="text" class="form-control has-feedback-left" id="single_cal2" name="tgl_akhir" placeholder="Date End" >
-                                                          <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
-                                                          <span id="inputSuccess2Status4" class="sr-only">(success)</span> -->
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </fieldset>
-                            </div>
-                            <div class="col-md-6">
-                                        <fieldset>
-                                            <div class="control-group">
-                                                <div class="controls">
-                                                    <div class="input-prepend input-group">
-                                                         <div class="input-group clockpicker-with-callbacks">
-                                                           <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-clock-o"></i></span>
-
-                                                          <input type="text" class="form-control has-feedback-left" name="jam_akhir"  placeholder="Time End" >
-                                                          <!-- <span class="fa fa-clock-o form-control-feedback left" aria-hidden="true"></span>
-                                                          <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
-                                                         </div>
-                                                    </div>
-                                              </div>
-                                          </div>
-                              </fieldset>
-                            </div>
-
-                            <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Description
-                                </label>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <textarea id="textarea" required="required" name="ket" class="form-control col-md-7 col-xs-12"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                    <div class="checkbox">
-                                        <label>
-                                          <input type="checkbox" class="flat" checked="checked" name="approved" value="setuju"> Approved
-                                        </label>
+                                                </fieldset>
                                     </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-3">
-                                    <button type="submit" class="btn btn-primary">Cancel</button>
-                                    <button id="send" type="submit" class="btn btn-success">Submit</button>
+                                    <div class="col-md-5">
+                                                <fieldset>
+                                                  <div class="control-group">
+                                                		  <div class="controls">
+                                                          <div class="input-prepend input-group">
+                                                			         <div class="input-group clockpicker-with-callbacks">
+                                                                 <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-clock-o"></i></span>
+
+                                                        				<input type="text" class="form-control has-feedback-left" name="jam_awal"  placeholder="Time Start"  >
+                                                                <!-- <span class="fa fa-clock-o form-control-feedback left" aria-hidden="true"></span>
+                                                                <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
+                                                			         </div>
+                                                          </div>
+                                                		  </div>
+                                              	</div>
+                                              </fieldset>
+                                  </div>
+
+                                <div class="col-md-5">
+                                            <fieldset>
+                                                <div class="control-group">
+                                                    <div class="controls">
+                                                        <div class="input-prepend input-group">
+                                                             <div class="input-group clockpicker-with-callbacks">
+                                                               <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-clock-o"></i></span>
+
+                                                              <input type="text" class="form-control has-feedback-left" name="jam_akhir"  placeholder="Time End" >
+                                                              <!-- <span class="fa fa-clock-o form-control-feedback left" aria-hidden="true"></span>
+                                                              <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
+                                                             </div>
+                                                        </div>
+                                                  </div>
+                                              </div>
+                                  </fieldset>
                                 </div>
-                            </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-3">
+                                        <button type="submit" class="btn btn-primary">Cancel</button>
+                                        <button id="send" type="submit" class="btn btn-success">Submit</button>
+                                    </div>
+                                </div>
+
 
 
                           </div>
@@ -246,8 +219,8 @@
            var optionSet1 = {
                startDate: moment().subtract(29, 'days'),
                endDate: moment(),
-               minDate: '2012-01-01',
-               maxDate: '2015-12-31',
+               minDate: '01/01/2012',
+               maxDate: '12/31/2015',
                dateLimit: {
                    days: 60
                },
@@ -268,7 +241,7 @@
                buttonClasses: ['btn btn-default'],
                applyClass: 'btn-small btn-primary',
                cancelClass: 'btn-small',
-               format: 'YYYY-MM-DD',
+               format: 'MM/DD/YYYY',
                separator: ' to ',
                locale: {
                    applyLabel: 'Submit',
@@ -326,8 +299,8 @@
            var optionSet1 = {
                startDate: moment().subtract(29, 'days'),
                endDate: moment(),
-               minDate: '2012-01-01',
-               maxDate: '2015-12-31',
+               minDate: '01/01/2012',
+               maxDate: '12/31/2015',
                dateLimit: {
                    days: 60
                },
@@ -348,7 +321,7 @@
                buttonClasses: ['btn btn-default'],
                applyClass: 'btn-small btn-primary',
                cancelClass: 'btn-small',
-               format: 'YYYY-MM-DD',
+               format: 'MM/DD/YYYY',
                separator: ' to ',
                locale: {
                    applyLabel: 'Submit',

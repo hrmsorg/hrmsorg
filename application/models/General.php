@@ -42,11 +42,22 @@ class general extends CI_Model
   	$this->db->insert('absensi', $data);
   }
 
+//master cuti
   public function save_master_cuti($data)
   {
     $this->db->insert('master_cuti', $data);
   }
 
+//cuti
+  public function save_cuti_add($data)
+  {
+    $this->db->insert('cuti', $data);
+  }
+  //overtime
+    public function save_overtime_add($data)
+    {
+      $this->db->insert('lembur', $data);
+    }
 
 //MANAGEMENT
   public function save_master_gaji($data)
