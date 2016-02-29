@@ -71,6 +71,11 @@ class general extends CI_Model
       $this->db->insert('divisi', $data);
     }
 
+    //employee
+  public function save_employee($data)
+    {
+      $this->db->insert('karyawan', $data);
+    }
 
 }
 
