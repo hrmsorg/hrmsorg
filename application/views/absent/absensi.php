@@ -52,69 +52,71 @@
                 <?php echo form_open('Absent/save_absent_add');?>
 
                    
-                                <div class="col-md-6">
-                                            <fieldset>
-                                              <div class="control-group">
-                                                  <div class="controls">
-                                                      <div class="col-md-11 xdisplay_inputx form-group has-feedback">
-                                                          <input type="text" name="tgl" class="form-control has-feedback-left" id="single_cal3" placeholder="Date" aria-describedby="inputSuccess2Status3">
-                                                          <span style="margin-top:-25px;" class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
-                                                          <span id="inputSuccess2Status3" class="sr-only">(success)</span>
+                                <div class="col-md-9">
+                                                <fieldset>
+                                                  <div class="control-group">
+                                                      <div class="controls">
+                                                          <div class="input-prepend input-group">
+                                                            <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+
+                                                              <input style="width:642px;" type="text" class="form-control has-feedback-left" id="single_cal2" name="tgl" placeholder="Date Start" >
+                                                              <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
+                                                              <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
+                                                          </div>
                                                       </div>
+                                                  </div>
+                                                </fieldset>
+                                    </div>
+                                    <div class="col-md-5">
+                                                <fieldset>
+                                                  <div class="control-group">
+                                                      <div class="controls">
+                                                          <div class="input-prepend input-group">
+                                                               <div class="input-group clockpicker-with-callbacks">
+                                                                 <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-clock-o"></i></span>
+
+                                                                <input type="text" class="form-control has-feedback-left" name="jam_datang"  placeholder="Time Start"  >
+                                                                <!-- <span class="fa fa-clock-o form-control-feedback left" aria-hidden="true"></span>
+                                                                <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
+                                                               </div>
+                                                          </div>
+                                                      </div>
+                                                </div>
+                                              </fieldset>
+                                  </div>
+
+                                <div class="col-md-5">
+                                            <fieldset>
+                                                <div class="control-group">
+                                                    <div class="controls">
+                                                        <div class="input-prepend input-group">
+                                                             <div class="input-group clockpicker-with-callbacks">
+                                                               <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-clock-o"></i></span>
+
+                                                              <input type="text" class="form-control has-feedback-left" name="jam_pulang"  placeholder="Time End" >
+                                                              <!-- <span class="fa fa-clock-o form-control-feedback left" aria-hidden="true"></span>
+                                                              <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
+                                                             </div>
+                                                        </div>
                                                   </div>
                                               </div>
-                                            </fieldset>
+                                  </fieldset>
                                 </div>
 
-                                <div class="col-md-6">
-                                            <fieldset>
-                                              <div class="control-group">
-                                                  <div class="controls">
-                                                      <div class="col-md-11 xdisplay_inputx form-group has-feedback">
-                                                        <div class="input-group clockpicker-with-callbacks">
-                                                            <input type="text" name="jam_datang" class="form-control has-feedback-left" id="single_cal3" placeholder="Time Start" aria-describedby="inputSuccess2Status3" >
-                                                            <span  class="fa fa-clock-o form-control-feedback left" aria-hidden="true"></span>
-                                                            <span id="inputSuccess2Status3" class="sr-only">(success)</span>
-                                                        </div>
-                                                      </div>
-                                                  </div>
-                                            </div>
-                                          </fieldset>
-
-                                </div>
-
-
-                                <div class="col-md-6">
-                                            <fieldset>
-                                              <div class="control-group">
-                                                  <div class="controls">
-                                                      <div class="col-md-11 xdisplay_inputx form-group has-feedback">
-                                                           <div class="input-group clockpicker-with-callbacks">
-                                                            <input type="text" name="jam_pulang" class="form-control has-feedback-left" id="single_cal3" placeholder="Time Finish" aria-describedby="inputSuccess2Status3" >
-                                                            <span class="fa fa-clock-o form-control-feedback left" aria-hidden="true"></span>
-                                                            <span id="inputSuccess2Status3" class="sr-only">(success)</span>
-                                                           </div>
-                                                      </div>
-                                                  </div>
-                                            </div>
-                                          </fieldset>
-                              </div>
 
                         <div class="clearfix"></div>
                       
                         <br>
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Description
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <textarea id="textarea" required="required" name="ket" style="" class="form-control col-md-7 col-xs-12"></textarea>
+                        <label style="margin-left:10px;" for="textarea">Description
+                        </label><br>
+                        <div>
+                            <textarea style="width:678px;margin-left:10px;" id="textarea" required="required" name="ket" style="" class="form-control col-md-7 col-xs-12"></textarea>
                         </div>
-                    </div>
 
                 <div class="clearfix"></div>
                   <br>
                   <div class="form-group">
-                      <div class="col-md-6 col-md-offset-3">
+                      <div style="margin-left:10px">
                           <button type="submit" class="btn btn-primary">Cancel</button>
                           <button id="send" type="submit" class="btn btn-success">Submit</button>
                       </div>
