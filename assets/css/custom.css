@@ -863,6 +863,7 @@ li.current-page a {
     padding: 5px;
     color: #C5C7CB;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .panel_toolbox>li>a:hover {

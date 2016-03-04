@@ -1,7 +1,8 @@
 <section class="content">
 <div class="right_col" role="main">
-                    <div class="">
+                    
 
+                    <div class="">
                         <div class="page-title">
                             <div class="title_left">
                                 <h3>
@@ -11,8 +12,8 @@
                                     </small>
                                 </h3>
                             </div>
+                            <div class="clearfix"></div>
                         </div>
-                        <div class="clearfix"></div>
 
                         <div class="row">
                             <div class="col-md-12">
@@ -50,6 +51,12 @@
                                 <div id="testmodal" style="padding: 5px 20px;">
                                     <form id="antoform" class="form-horizontal calender" role="form">
                                         <div class="form-group">
+                                            <label class="col-sm-3 control-label">Date</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="date" name="date">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label class="col-sm-3 control-label">Title</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" id="title" name="title">
@@ -84,6 +91,12 @@
                                 <div id="testmodal2" style="padding: 5px 20px;">
                                     <form id="antoform2" class="form-horizontal calender" role="form">
                                         <div class="form-group">
+                                            <label class="col-sm-3 control-label">Date</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="date2" name="date2">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label class="col-sm-3 control-label">Title</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" id="title2" name="title2">
@@ -98,30 +111,26 @@
 
                                     </form>
                                 </div>
-                            </div>
+                                </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary antosubmit2">Save changes</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                            </div>
+                            </div>
 
                 <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
                 <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
 
                 <!-- End Calender modal -->
                 <!-- /page content -->
-            </div>
-
-        </div>
 
         <div id="custom_notifications" class="custom-notifications dsp_none">
             <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
             </ul>
             <div class="clearfix"></div>
             <div id="notif-group" class="tabbed_notifications"></div>
-        </div>
+            </div>
         <script>
             $(window).load(function () {
 
@@ -142,6 +151,12 @@
                     selectHelper: true,
                     select: function (start, end, allDay) {
                         $('#fc_create').click();
+                        //$('#title').val(calEvent.title);
+                        //console.log(calEvent.end);
+                        $('#date').val(start._d.toLocaleDateString()+' - '+end._d.toLocaleDateString());
+                        //console.log(start);
+                        //console.log(end);
+                        categoryClass = $("#event_type").val();
 
                         started = start;
                         ended = end
@@ -163,7 +178,7 @@
                                     true // make the event "stick"
                                 );
                             }
-                            $('#title').val('');
+                            $('#title').val($(this).data('date'));
                             calendar.fullCalendar('unselect');
 
                             $('.antoclose').click();
@@ -176,6 +191,9 @@
 
                         $('#fc_edit').click();
                         $('#title2').val(calEvent.title);
+                        //console.log(calEvent.end);
+                        $('#date2').val(start._d.toLocaleDateString()+' - '+end._d.toLocaleDateString());
+                        // console.log(calEvent.end);
                         categoryClass = $("#event_type").val();
 
                         $(".antosubmit2").on("click", function () {
@@ -224,4 +242,3 @@
                 });
             });
         </script>
-</section>

@@ -77,6 +77,25 @@ class general extends CI_Model
       $this->db->insert('karyawan', $data);
     }
 
+  public function save_salary_detail_add($data)
+    {
+      $this->db->insert('detail_gaji', $data);
+
+    }
+  public function get_detail_gaji($id)
+    {
+      $this->db->where('id',$id);
+      $xa = $this->db->get('detail_gaji');
+      $xa = $xa->row_array();
+      return $xa;
+    }
+  public function get_id_gaji($id)
+    {
+      $this->db->where('id',$id);
+      $xa = $this->db->get('gaji');
+      $xa = $xa->row_array();
+      return $xa['id'];
+    }
 }
 
  ?>

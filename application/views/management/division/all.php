@@ -146,12 +146,10 @@
                       <br />
                       <br />
                                 </div>
-                            </div>
-                          </div>
 
 
                           <!-- ini table view: -->
 
                           <!-- tag table -->
                           <?php form_close();?>
-                        </section>
+

@@ -44,6 +44,8 @@
                                          </li>
                                        <li><a href="<?php echo base_url('management/master_gaji');?>">Master Salary</a>
                                         </li>
+                                        <li><a href="<?php echo base_url('management/salary_detail');?>">Salary Detail</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li><a><i class="fa fa-calendar"></i> Absent <span class="fa fa-chevron-down"></span></a>
