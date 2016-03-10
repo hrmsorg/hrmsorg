@@ -90,7 +90,8 @@ class Management extends CI_Controller
 
 	public function salary_detail()
 	{
-		$data['detail_gaji'] = $this->db->get('detail_gaji')->result_array();
+		$data['detail_gaji'] = $this->db->get('detail_gaji')->result_array(); 
+		$data['id_gaji'] = $this->db->where_in('id')->get('gaji')->result_array();
 		$this->general->load('management/salary_detail/all', $data);
 	}
 
@@ -99,7 +100,7 @@ class Management extends CI_Controller
 		$data = $this->input->post();
 		$data = array (
 
-			'id_gaji'=> 1,
+			'id_gaji'=> $this->input->post('id_gaji'),
 			'jumlah'=>$this->input->post('jumlah'),
 			'tgl'=>$this->input->post('tgl'),
 			'ket'=>$this->input->post('ket'),

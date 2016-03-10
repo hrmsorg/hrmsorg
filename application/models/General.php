@@ -22,11 +22,11 @@ class general extends CI_Model
 		// }
   }
 
-  public function load($data=array())
+  public function load($page,$data=array())
   {
     $this->load->view('dashboard/header');
     $this->load->view('dashboard/menu');
-    $this->load->view($data);
+    $this->load->view($page, $data);
     $this->load->view('dashboard/footer');
     // $this->general->logdata($page,$data);
   }
@@ -88,13 +88,6 @@ class general extends CI_Model
       $xa = $this->db->get('detail_gaji');
       $xa = $xa->row_array();
       return $xa;
-    }
-  public function get_id_gaji($id)
-    {
-      $this->db->where('id',$id);
-      $xa = $this->db->get('gaji');
-      $xa = $xa->row_array();
-      return $xa['id'];
     }
 }
 

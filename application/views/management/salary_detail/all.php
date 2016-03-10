@@ -136,7 +136,7 @@
                                           foreach ($detail_gaji as $key) {
                                             ?>
                                               <td><?php echo $key['id'];?></td>
-                                              <td class=" "><?php echo $this->general->get_id_gaji($key['id_gaji'],1);?></td>
+                                              <td class=" "><?php echo $key['id_gaji'];?></td>
                                               <td class=" "><?php echo $key['jumlah'];?><i class="success fa fa-long-arrow-up"></i>  </td>
                                               <td class=" "><?php echo $key['ket'];?></td>
                                               <td class=" "><?php echo $key['tgl'];?></td>
