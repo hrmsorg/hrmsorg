@@ -35,7 +35,7 @@
                                 <div class="item form-group">
                                     <label class="control-label col-md-3">Salary_id</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="id_gaji" id="id_gaji" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                                        <input type="text" name="gaji" id="gaji" required class="form-control col-md-7 col-xs-12" autocomplete="off"/>
                                     </div>
                                 </div>
                                 <div class="x_content"></div>
@@ -125,7 +125,7 @@
                                               <th> Salary Date </th>
                                               <th> Type </th>
                                               <th> Type of Salary</th>
-                                              <th class=" no-link last"><span class="nobr">Action</span>
+                                              <th class=" no-link last" colspan="2"><span class="nobr">Action</span>
                                               </th>
                                           </tr>
                                       </thead>
@@ -142,8 +142,18 @@
                                               <td class=" "><?php echo $key['tgl'];?></td>
                                               <td class=" "><?php echo $key['tipe'];?></td>
                                               <td class=" "><?php echo $key['jenis'];?></td>
-                                              <td class=" last"><a href="#">View</a>
-                                              </td>
+                                              <td class=" last"><a href="<?php echo base_url("management/salary_detail_delete/".$key['id']);?>" onClick="return doconfirm();">Delete</a>
+                                              <script>
+                                              function doconfirm()
+                                              {
+                                                job=confirm("Are you sure to delete this data?");
+                                              if(job!=true)
+                                              {
+                                              return false;
+                                              }
+                                          }
+                                          </script>
+                                              <td class=" last"><a href="<?php echo base_url("management/salary_detail_edit/".$key['id']);?>">Edit</a>
                                           <?php
                                           }
                                           ?>
@@ -155,16 +165,10 @@
                               </div>
                           </div>
                       </div>
-
-                      <br />
-                      <br />
-                      <br />
-                                </div>
-
-
-                          <!-- ini table view: -->
-
-                          <!-- tag table -->
+                      <br/>
+                      <br/>
+                      <br/>
+                      </div>
                           <?php form_close();?>
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>

@@ -111,4 +111,10 @@ class Management extends CI_Controller
 
 			redirect('Management/salary_detail/all',$data);
 	}
+	public function salary_detail_delete($id)
+	{
+		$this->db->where('id',$id);
+		$this->db->delete('detail_gaji');
+		redirect(base_url('management/salary_detail/all'));
+	}
 }
