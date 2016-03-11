@@ -35,7 +35,7 @@
                                 <div class="item form-group">
                                     <label class="control-label col-md-3">Salary_id</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="gaji" id="gaji" required class="form-control col-md-7 col-xs-12" autocomplete="off"/>
+                                        <input type="text" name="id_gaji" id="id_gaji" required class="form-control col-md-7 col-xs-12" autocomplete="off"/><input type="hidden" class="form-control" name="id">
                                     </div>
                                 </div>
                                 <div class="x_content"></div>
@@ -43,7 +43,6 @@
                                     <label class="control-label col-md-3">Amount</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input type="text" id="jumlah" name="jumlah" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                                        <input type="hidden" class="form-control" name="id">
                                     </div>
                                 </div>
                               <div class="x_content"></div>
@@ -125,8 +124,7 @@
                                               <th> Salary Date </th>
                                               <th> Type </th>
                                               <th> Type of Salary</th>
-                                              <th class=" no-link last" colspan="2"><span class="nobr">Action</span>
-                                              </th>
+                                              <th class=" no-link last" colspan="2">Action</th>
                                           </tr>
                                       </thead>
 
@@ -137,7 +135,7 @@
                                             ?>
                                               <td><?php echo $key['id'];?></td>
                                               <td class=" "><?php echo $key['id_gaji'];?></td>
-                                              <td class=" "><?php echo $key['jumlah'];?><i class="success fa fa-long-arrow-up"></i>  </td>
+                                              <td class=" "><?php echo $key['jumlah'];?></td>
                                               <td class=" "><?php echo $key['ket'];?></td>
                                               <td class=" "><?php echo $key['tgl'];?></td>
                                               <td class=" "><?php echo $key['tipe'];?></td>
