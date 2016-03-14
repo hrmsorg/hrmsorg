@@ -42,42 +42,35 @@ class general extends CI_Model
   	$this->db->insert('absensi', $data);
   }
 
+
 //master cuti
   public function save_master_cuti($data)
   {
     $this->db->insert('master_cuti', $data);
   }
 
+
 //cuti
   public function save_cuti_add($data)
   {
     $this->db->insert('cuti', $data);
   }
-  //overtime
+
+
+//overtime
     public function save_overtime_add($data)
     {
       $this->db->insert('lembur', $data);
     }
 
+
+
 //MANAGEMENT
-  public function save_master_gaji($data)
+  public function save_master_salary($data)
   {
     $this->db->insert('master_gaji', $data);
   }
-
-  //division
-  public function save_division($data)
-    {
-      $this->db->insert('divisi', $data);
-    }
-
-    //employee
-  public function save_employee($data)
-    {
-      $this->db->insert('karyawan', $data);
-    }
-
-  public function save_salary_detail_add($data)
+    public function save_salary_detail_add($data)
     {
       $this->db->insert('detail_gaji', $data);
 
@@ -94,6 +87,23 @@ class general extends CI_Model
       $xa = $xa->row_array();
       return $xa;
     }
+
+
+
+  //division
+  public function save_division($data)
+    {
+      $this->db->insert('divisi', $data);
+    }
+
+
+    //employee
+  public function save_employee($data)
+    {
+      $this->db->insert('karyawan', $data);
+    }
+
+
 }
 
  ?>

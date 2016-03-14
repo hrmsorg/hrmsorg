@@ -42,7 +42,7 @@
                                         </li>
                                         <li><a href="<?php echo base_url('management/salary');?>">Salary</a>
                                          </li>
-                                       <li><a href="<?php echo base_url('management/master_gaji');?>">Master Salary</a>
+                                       <li><a href="<?php echo base_url('management/master_salary');?>">Master Salary</a>
                                         </li>
                                         <li><a href="<?php echo base_url('management/salary_detail');?>">Salary Detail</a>
                                         </li>

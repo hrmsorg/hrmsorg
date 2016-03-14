@@ -5,7 +5,7 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
-                    <h3>Form Master Gaji </h3>
+                    <h3>Form Master Salary </h3>
                 </div>
 
                 <div class="title_right">
@@ -61,7 +61,7 @@
     </div>
     <div class="x_content">
 
-                   <?php echo form_open('Management/save_master_gaji');?>
+                   <?php echo form_open('Management/save_master_salary');?>
 
 
 
