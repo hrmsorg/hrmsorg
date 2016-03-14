@@ -34,7 +34,7 @@ class Absent extends CI_Controller
 						'tgl_akhir'			=>$this->input->post('tgl_akhir'),
 						'jam_awal'			=>$this->input->post('jam_awal'),
 						'jam_akhir'			=>$this->input->post('jam_akhir'),
-						'ket'						=>$this->input->post('ket'),
+						'ket'				=>$this->input->post('ket'),
 						'approved'			=>$this->input->post('approved')
 
 					);
@@ -57,11 +57,11 @@ class Absent extends CI_Controller
 		{
 				$data = array (
 						'id_perusahaan'	=> 1,
-						'id_karyawan'		=> 1,
-						'tgl'						=>$this->input->post('tgl'),
-						'jam_awal'			=>$this->input->post('jam_awal'),
-						'jam_akhir'			=>$this->input->post('jam_akhir'),
-						'durasi'				=>$this->input->post('durasi')
+						'id_karyawan'	=> 1,
+						'tgl'			=>$this->input->post('tgl'),
+						'jam_awal'		=>$this->input->post('jam_awal'),
+						'jam_akhir'		=>$this->input->post('jam_akhir'),
+						'durasi'		=>$this->input->post('durasi')
 
 					);
 
@@ -96,12 +96,12 @@ class Absent extends CI_Controller
 		public function save_absent_add()
 		{
 				$data = array (
-						'id_perusahaan'=> 1,
-						'id_karyawan'=> 1,
-						'tgl'		=>$this->input->post('tgl'),
-						'jam_datang'=>$this->input->post('jam_datang'),
-						'jam_pulang'=>$this->input->post('jam_pulang'),
-						'ket'=>$this->input->post('ket'));
+						'id_perusahaan'	=> 1,
+						'id_karyawan'	=> 1,
+						'tgl'			=>$this->input->post('tgl'),
+						'jam_datang'	=>$this->input->post('jam_datang'),
+						'jam_pulang'	=>$this->input->post('jam_pulang'),
+						'ket'			=>$this->input->post('ket'));
 
 				$this->General->save_absent($data);
 				redirect('Absent/absent_add');

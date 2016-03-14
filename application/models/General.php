@@ -87,6 +87,11 @@ class general extends CI_Model
       $this->db->update('detail_gaji', $data);
 
     }
+    // public function salary_detail_edit($id)
+    // {
+    //   $this->db->select('detail_gaji');
+    //   $this->db->$this->db->where('id', $data['id']);
+    // }
   public function get_detail_gaji($id)
     {
       $this->db->where('id',$id);
