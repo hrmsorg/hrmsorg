@@ -60,7 +60,7 @@
                     <input type="text" class="form-control has-feedback-left col-md-7 col-xs-12" id="single_cal2" name="tgl" placeholder="Select Date" >
                                                               <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                                                               <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
-
+<<<<<<< HEAD
                                                           </div>
                                                    </div>
                                            </div>
@@ -127,11 +127,10 @@
                                       </thead>
 
                                       <tbody>
-                                      <?php
+                                          <tr class="even pointer">
+                                          <?php
                                           foreach ($detail_gaji as $key) {
                                             ?>
-                                          <tr class="even pointer">
-                                          
                                               <td><?php echo $key['id'];?></td>
                                               <td class=" "><?php echo $key['id_gaji'];?></td>
                                               <td class=" "><?php echo $key['jumlah'];?></td>
@@ -151,11 +150,11 @@
                                           }
                                           </script>
                                               <td class=" last"><a href="<?php echo base_url("management/salary_detail_edit/".$key['id']);?>">Edit</a>
-                                         
-                                          </tr>
-                                           <?php
+                                          <?php
                                           }
                                           ?>
+                                          </tr>
+
                                       </tbody>
 
                                   </table>
@@ -167,11 +166,11 @@
                       <br/>
                       </div>
                           <?php form_close();?>
-
+=======
                 </div>
               </div>
           </div>                                 
-        <!-- <div class="x_content"></div>
+        <div class="x_content"></div>
           <div class="item form-group">
             <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Type</label>
               <div class="col-md-6 col-sm-6 col-xs-12">
@@ -263,7 +262,8 @@
     <br/>
   <br/>
 </div>
-<?php form_close();?> -->
+<?php form_close();?>
+>>>>>>> d555bd4862e1b01269b830f20af306100e0c3f86
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/dist/bootstrap-clockpicker.min.js');?>"></script>
