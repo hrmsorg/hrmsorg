@@ -50,7 +50,11 @@ class Absent extends CI_Controller
 //overtime
 		public function overtime_all()
 		{
-				$this->general->load('absent/overtime/all');
+
+				$data['overtime_all'] = $this->db->get('lembur')->result_array(); 
+				$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
+				$data['id_karyawan'] = $this->db->where_in('id')->get('karyawan')->result_array();
+				$this->general->load('absent/overtime/all',$data);
 		}
 		public function overtime_add()
 		{
