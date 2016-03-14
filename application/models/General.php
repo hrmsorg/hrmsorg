@@ -89,15 +89,13 @@ class general extends CI_Model
       $this->db->insert('karyawan', $data);
     }
 
-<<<<<<< HEAD
+
   public function save_new_employee($data)
     {
       $this->db->insert('calon_karyawan', $data);
     }
 
-=======
     //salary_detail
->>>>>>> 803f929e5a572a70dc87edaced9b127d6ae59fd7
   public function save_salary_detail_add($data)
     {
       $this->db->insert('detail_gaji', $data);
