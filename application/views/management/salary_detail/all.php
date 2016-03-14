@@ -66,7 +66,7 @@
                                                           </div>
                                                    </div>
                                            </div>
-                                           
+
                                 <div class="x_content"></div>
                                 <div class="item form-group">
                                     <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Type</label>
@@ -85,7 +85,7 @@
                                                 <option <?php echo ($this->input->post("jenis")=="BPJS")?"selected":"";?> value="BPJS">BPJS</option>
                                                 <option <?php echo ($this->input->post("jenis")=="Salary")?"selected":"";?> value="Salary">Salary</option>
                                                 <option <?php echo ($this->input->post("jenis")=="Overtime")?"selected":"";?> value="Overtime">Overtime</option>
-                                                <option <?php echo ($this->input->post("jenis")=="Piece")?"selected":"";?> value="Piece">Piece</option>    
+                                                <option <?php echo ($this->input->post("jenis")=="Piece")?"selected":"";?> value="Piece">Piece</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -130,7 +130,7 @@
 
                                       <tbody>
                                           <tr class="even pointer">
-                                          <?php 
+                                          <?php
                                           foreach ($detail_gaji as $key) {
                                             ?>
                                               <td><?php echo $key['id'];?></td>

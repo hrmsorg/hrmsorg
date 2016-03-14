@@ -66,17 +66,30 @@ class general extends CI_Model
   }
 
   //division
-  public function save_division($data)
-    {
-      $this->db->insert('divisi', $data);
-    }
+    public function save_division($data)
+      {
+        $this->db->insert('divisi', $data);
+      }
 
+    public function save_division_update($data)
+      {
+        $this->db->update('divisi', $data);
+
+      }
+    public function get_division($id)
+      {
+        $this->db->where('id',$id);
+        $xa = $this->db->get('divisi');
+        $xa = $xa->row_array();
+        return $xa;
+      }
     //employee
   public function save_employee($data)
     {
       $this->db->insert('karyawan', $data);
     }
 
+    //salary_detail
   public function save_salary_detail_add($data)
     {
       $this->db->insert('detail_gaji', $data);
