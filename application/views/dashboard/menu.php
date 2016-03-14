@@ -34,7 +34,7 @@
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="<?php echo base_url('management/employee');?>">Employee</a>
                                         </li>
-                                        <li><a href="projects.html">New Employee</a>
+                                        <li><a href="<?php echo base_url('management/new_employee/add');?>">New Employee</a>
                                         </li>
                                         <li><a href="management/level">Level</a>
                                         </li>

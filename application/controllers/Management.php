@@ -84,10 +84,40 @@ class Management extends CI_Controller
 
 			$this->general->save_employee($data);
 
-			redirect('Management/employee');
+			redirect('Management/employee/all');
 				
 	}
 
+	public function new_employee()
+	{
+			$this->general->load('management/new_employee/add');
+	}
+
+	public function save_new_employee()
+	{
+		$data = array (
+
+			'id'=> 1,
+			'nama'=>$this->input->post('nama'),
+			'tempat_lahir'=>$this->input->post('tempat_lahir'),
+			'tgl_lahir'=>$this->input->post('tgl_lahir'),
+			'jenis_kelamin'=>$this->input->post('jenis_kelamin'),
+			'alamat'=>$this->input->post('alamat'),
+			'agama'=>$this->input->post('agama'),
+			'no_tlp'=>$this->input->post('no_tlp'),
+			'no_ktp'=>$this->input->post('no_ktp'),
+			'kewarganegaraan'=>$this->input->post('kewarganegaraan'),
+			'email'=>$this->input->post('email'),
+			'tgl_lamaran'=>$this->input->post('tgl_lamaran'),
+			'status_lamaran'=>$this->input->post('status_lamaran'),
+			'berkas'=>$this->input->post('berkas'),
+			'foto'=>$this->input->post('foto'));
+
+			$this->general->save_new_employee($data);
+
+			redirect('Management/new_employee/add');
+				
+	}
 	public function salary_detail()
 	{
 		$data['detail_gaji'] = $this->db->get('detail_gaji')->result_array(); 

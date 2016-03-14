@@ -77,6 +77,11 @@ class general extends CI_Model
       $this->db->insert('karyawan', $data);
     }
 
+  public function save_new_employee($data)
+    {
+      $this->db->insert('calon_karyawan', $data);
+    }
+
   public function save_salary_detail_add($data)
     {
       $this->db->insert('detail_gaji', $data);
