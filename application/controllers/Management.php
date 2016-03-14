@@ -8,7 +8,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Management extends CI_Controller
 {
 
-<<<<<<< HEAD
 //function master_gaji
 		public function master_salary()
 	{
@@ -24,7 +23,7 @@ class Management extends CI_Controller
 		public function save_master_salary()
 	{
 		$data = array (
-=======
+
 //function master_salary
 						public function master_gaji()
 					{
@@ -34,21 +33,21 @@ class Management extends CI_Controller
 						public function save_master_gaji()
 					{
 						$data = array (
->>>>>>> 803f929e5a572a70dc87edaced9b127d6ae59fd7
+
 
 								'gaji_awal'=>$this->input->post('gaji_awal'),
 								'gaji_akhir'=>$this->input->post('gaji_akhir'),
 								'ket'=>$this->input->post('ket'));
 
-<<<<<<< HEAD
+
 		$this->general->save_master_salary($data);
 		redirect('Management/master_salary');
 	}
-=======
+
 						$this->general->save_master_gaji($data);
 						redirect('Management/master_gaji');
 					}
->>>>>>> 803f929e5a572a70dc87edaced9b127d6ae59fd7
+
 
 
 	// public function save_salary_detail_add()

@@ -131,12 +131,6 @@ class general extends CI_Model
     }
 
 
-    //employee
-  public function save_employee($data)
-    {
-      $this->db->insert('karyawan', $data);
-    }
-
 
 }
 
