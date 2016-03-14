@@ -83,6 +83,10 @@ class Management extends CI_Controller
 										$this->general->load('management/level/all');
 								}
 //function employee
+<<<<<<< HEAD
+=======
+
+>>>>>>> 657e9208698aaf9ba8b1dfaa4fa88a1cc3e10daa
 					public function employee()
 					{
 							$this->general->load('management/employee/all');
@@ -108,12 +112,44 @@ class Management extends CI_Controller
 							'no_ktp'=>$this->input->post('no_ktp'),
 							'no_rek'=>$this->input->post('no_rek'),
 							'bank'=>$this->input->post('bank'));
+							//'foto'=>$this->input->post('foto'));//
 
 							$this->general->save_employee($data);
 
 							redirect('Management/employee');
 
 					}
+					public function new_employee()
+					{
+						$this->general->load('management/new_employee/add');
+					}
+
+					public function save_new_employee()
+					{
+						$data = array (
+
+							'id'=> 1,
+							'nama'=>$this->input->post('nama'),
+							'tempat_lahir'=>$this->input->post('tempat_lahir'),
+							'tgl_lahir'=>$this->input->post('tgl_lahir'),
+							'jenis_kelamin'=>$this->input->post('jenis_kelamin'),
+							'alamat'=>$this->input->post('alamat'),
+							'agama'=>$this->input->post('agama'),
+							'no_tlp'=>$this->input->post('no_tlp'),
+							'no_ktp'=>$this->input->post('no_ktp'),
+							'kewarganegaraan'=>$this->input->post('kewarganegaraan'),
+							'email'=>$this->input->post('email'),
+							'tgl_lamaran'=>$this->input->post('tgl_lamaran'),
+							'status_lamaran'=>$this->input->post('status_lamaran'),
+							'berkas'=>$this->input->post('berkas'));
+							//'foto'=>$this->input->post('foto'));//
+
+							$this->general->save_new_employee($data);
+
+							redirect('Management/new_employee/add');
+								
+					}
+
 			//function salary_detail
 					public function salary_detail()
 					{
@@ -162,6 +198,7 @@ class Management extends CI_Controller
 						redirect(base_url('Management/salary_detail/all',$data));
 					}
 }
+<<<<<<< HEAD
 	public function employee()
 	{
 			$this->general->load('management/employee/all');
@@ -241,3 +278,7 @@ class Management extends CI_Controller
 	}
 }
 }
+=======
+
+	
+>>>>>>> 657e9208698aaf9ba8b1dfaa4fa88a1cc3e10daa
