@@ -70,15 +70,12 @@ class general extends CI_Model
   {
     $this->db->insert('master_gaji', $data);
   }
-<<<<<<< HEAD
-    public function save_salary_detail_add($data)
-=======
+
+   
+
 
   //division
-    public function save_division($data)
-      {
-        $this->db->insert('divisi', $data);
-      }
+  
 
     public function save_division_update($data)
       {
@@ -100,7 +97,7 @@ class general extends CI_Model
 
     //salary_detail
   public function save_salary_detail_add($data)
->>>>>>> 803f929e5a572a70dc87edaced9b127d6ae59fd7
+
     {
       $this->db->insert('detail_gaji', $data);
 
@@ -110,11 +107,7 @@ class general extends CI_Model
       $this->db->update('detail_gaji', $data);
 
     }
-    // public function salary_detail_edit($id)
-    // {
-    //   $this->db->select('detail_gaji');
-    //   $this->db->$this->db->where('id', $data['id']);
-    // }
+   
   public function get_detail_gaji($id)
     {
       $this->db->where('id',$id);
