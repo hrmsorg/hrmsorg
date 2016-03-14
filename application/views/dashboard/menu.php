@@ -2,7 +2,7 @@
                 <div class="left_col scroll-view">
 
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>PROGruments</span></a>
+                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Pro Gruments</span></a>
                     </div>
                     <div class="clearfix"></div>
 
@@ -36,7 +36,7 @@
                                         </li>
                                         <li><a href="<?php echo base_url('management/new_employee/add');?>">New Employee</a>
                                         </li>
-                                        <li><a href="management/level">Level</a>
+                                        <li><a href="<?php echo base_url('management/level');?>">Level</a>
                                         </li>
                                         <li><a href="<?php echo base_url('management/division');?>">Division</a>
                                         </li>
