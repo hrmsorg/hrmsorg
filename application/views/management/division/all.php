@@ -5,7 +5,7 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>
+                          <h3>
                 Manage Division
                 </h3>
                         </div>
@@ -100,7 +100,7 @@
                                   <table id="example" class="table table-striped responsive-utilities jambo_table">
                                       <thead>
                                         	<!-- //tabel :divisi-> id, id_perusahaan, nama, ket,tugas_utama -->
-                                          <tr class="headings">
+                                   <tr class="headings">
 
                                               <th>ID</th>
                                               <th>ID Company </th>
@@ -115,14 +115,28 @@
 
                                       <tbody>
                                           <tr class="even pointer">
-
-                                              <td class=" ">121000040</td>
-                                              <td class=" ">May 23, 2014 11:47:56 PM </td>
-                                              <td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i>  </td>
-                                              <td class=" ">John Blank L</td>
-                                              <td class=" ">Paid</td>
-                                              <td class=" last"><a href="#">View</a>
-                                              </td>
+                                            <?php
+                                            foreach ($divisi as $key) {
+                                              ?>
+                                                <td><?php echo $key['id'];?></td>
+                                                <td ><?php echo $key['id_perusahaan'];?></td>
+                                                <td><?php echo $key['nama'];?></td>
+                                                <td><?php echo $key['ket'];?></td>
+                                                <td><?php echo $key['tugas_utama'];?></td>                                                       <td><a href="<?php echo base_url("management/division_delete/".$key['id']);?>" onClick="return doconfirm();">Delete</a>
+                                                  <script>
+                                                  function doconfirm()
+                                                  {
+                                                    job=confirm("Are you sure to delete this data?");
+                                                  if(job!=true)
+                                                  {
+                                                  return false;
+                                                  }
+                                              }
+                                              </script>
+                                                  <td class=" last"><a href="<?php echo base_url("management/division_edit/".$key['id']);?>">Edit</a>
+                                              <?php
+                                              }
+                                              ?>
                                           </tr>
 
                                       </tbody>
@@ -142,4 +156,3 @@
 
                           <!-- tag table -->
                           <?php form_close();?>
-

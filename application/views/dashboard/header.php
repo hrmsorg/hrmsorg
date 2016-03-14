@@ -12,9 +12,9 @@
 
     <!-- Bootstrap core CSS -->
 
-          <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
-          <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/dist/bootstrap-clockpicker.min.css');?>">
-          <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/assets/css/github.min.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/dist/bootstrap-clockpicker.min.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/assets/css/github.min.css');?>">
 
 
     <link href="<?php echo base_url('assets/fonts/css/font-awesome.min.css');?>" rel="stylesheet">
@@ -25,6 +25,65 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/maps/jquery-jvectormap-2.0.1.css');?>" />
     <link href="<?php echo base_url('assets/css/icheck/flat/green.css');?>" rel="stylesheet" />
     <link href="<?php echo base_url('assets/css/floatexamples.css');?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('assets/css/datatables/tools/css/dataTables.tableTools.css');?>" rel="stylesheet">
+
+    <script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
+      <script src="<?php echo base_url('assets/js/chartjs/chart.min.js');?>"></script>
+      <script src="<?php echo base_url('assets/js/progressbar/bootstrap-progressbar.min.js');?>"></script>
+      <script src="<?php echo base_url('assets/js/nicescroll/jquery.nicescroll.min.js');?>"></script>
+      <script src="<?php echo base_url('assets/js/icheck/icheck.min.js');?>"></script>
+      <script src="<?php echo base_url('assets/js/custom.js');?>"></script>
+
+      <script src="<?php echo base_url('assets/js/datatables/js/jquery.dataTables.js');?>"></script>
+      <script src="<?php echo base_url('assets/js/datatables/tools/js/dataTables.tableTools.js');?>"></script>
+      <script>
+      $(document).ready(function () {
+         $('input.tableflat').iCheck({
+             checkboxClass: 'icheckbox_flat-green',
+             radioClass: 'iradio_flat-green'
+         });
+      });
+
+      var asInitVals = new Array();
+      $(document).ready(function () {
+         var oTable = $('#example').dataTable({
+             "oLanguage": {
+                 "sSearch": "Search all columns:"
+             },
+             "aoColumnDefs": [
+                 {
+                     'bSortable': false,
+                     'aTargets': [0]
+                 } //disables sorting for column one
+      ],
+             'iDisplayLength': 12,
+             "sPaginationType": "full_numbers",
+             "dom": 'T<"clear">lfrtip',
+             "tableTools": {
+                 "sSwfPath": "<?php echo base_url('assets2/js/Datatables/tools/swf/copy_csv_xls_pdf.swf'); ?>"
+             }
+         });
+         $("tfoot input").keyup(function () {
+             /* Filter on the column based on the index of this element's parent <th> */
+             oTable.fnFilter(this.value, $("tfoot th").index($(this).parent()));
+         });
+         $("tfoot input").each(function (i) {
+             asInitVals[i] = this.value;
+         });
+         $("tfoot input").focus(function () {
+             if (this.className == "search_init") {
+                 this.className = "";
+                 this.value = "";
+             }
+         });
+         $("tfoot input").blur(function (i) {
+             if (this.value == "") {
+                 this.className = "search_init";
+                 this.value = asInitVals[$("tfoot input").index(this)];
+             }
+         });
+      });
+      </script>
 
     <script src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/nprogress.js');?>"></script>
@@ -33,19 +92,11 @@
 
     <script src="<?php echo base_url('assets/js/moment.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/calendar/fullcalendar.min.js');?>"></script>
+
     <script>
         NProgress.start();
     </script>
 
-    <!--[if lt IE 9]>
-        <script src="../assets/js/ie8-responsive-file-warning.js"></script>
-        <![endif]-->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
 
 </head>
 
