@@ -83,7 +83,6 @@ class Management extends CI_Controller
 										$this->general->load('management/level/all');
 								}
 //function employee
-<<<<<<< HEAD
 					public function employee()
 					{
 							$this->general->load('management/employee/all');
@@ -163,7 +162,6 @@ class Management extends CI_Controller
 						redirect(base_url('Management/salary_detail/all',$data));
 					}
 }
-=======
 	public function employee()
 	{
 			$this->general->load('management/employee/all');
@@ -193,12 +191,12 @@ class Management extends CI_Controller
 			$this->general->save_employee($data);
 
 			redirect('Management/employee');
-				
+
 	}
 //salary_detail
 	public function salary_detail()
 	{
-		$data['detail_gaji'] = $this->db->get('detail_gaji')->result_array(); 
+		$data['detail_gaji'] = $this->db->get('detail_gaji')->result_array();
 		$data['id_gaji'] = $this->db->where_in('id')->get('gaji')->result_array();
 		$this->general->load('management/salary_detail/all', $data);
 	}
@@ -242,4 +240,4 @@ class Management extends CI_Controller
 		redirect(base_url('management/salary_detail/all'));
 	}
 }
->>>>>>> d555bd4862e1b01269b830f20af306100e0c3f86
+}
