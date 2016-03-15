@@ -14,6 +14,7 @@ class Absent extends CI_Controller
         $this->load->model('General');
     }
 
+<<<<<<< HEAD
 //cuti
 		public function cuti_all()
 		{
@@ -60,29 +61,42 @@ class Absent extends CI_Controller
 		{
 				$this->general->load('absent/overtime/add');
 		}
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7f224fc84a5389c0193d3203807c826c791e6b4e
 
-		public function save_overtime_add()
-		{
-				$data = array (
-						'id_perusahaan'		=> 1,
-						'id_karyawan'		=> 1,
-						'tgl'				=>$this->input->post('tgl'),
-						'jam_awal'			=>$this->input->post('jam_awal'),
-						'jam_akhir'			=>$this->input->post('jam_akhir'),
-						'durasi'				=>$this->input->post('durasi')
-
-					);
-
-				$this->General->save_overtime_add($data);
-				redirect('Absent/overtime_add');
-		}
 
 //master cuti
+<<<<<<< HEAD
 		
+=======
+		public function master_cuti()
+		{
+				$this->general->load('absent/mastercuti/all');
+		}
+
+		public function save_master_cuti()
+		{
+				$data = array (
+
+						'id'=>$this->input->post('id'),
+						'jenis'=>$this->input->post('jenis'),
+						'ket'=>$this->input->post('ket'));
+
+				$this->General->save_master_cuti($data);
+				redirect('Absent/master_cuti');
+		}
+
+>>>>>>> 78aca8f9329e0411528565fd72be08854197b222
+>>>>>>> 7f224fc84a5389c0193d3203807c826c791e6b4e
 //absent
 		public function absent_add()
 		{
-				$this->general->load('absent/absensi');
+				$data['absent_add'] = $this->db->get('absensi')->result_array(); 
+				$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
+				$data['id_karyawan'] = $this->db->where_in('id')->get('karyawan')->result_array();
+				$this->general->load('absent/absensi',$data);
 		}
 
 		public function save_absent_add()
@@ -97,17 +111,6 @@ class Absent extends CI_Controller
 
 				$this->General->save_absent($data);
 				redirect('Absent/absent_add');
-		}
-
-//free
-		public function free_all()
-		{
-				$this->general->load('absent/free/all');
-		}
-
-		public function free_add()
-		{
-				$this->general->load('absent/free/add');
 		}
 
 }

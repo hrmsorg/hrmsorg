@@ -55,12 +55,20 @@ class general extends CI_Model
   {
     $this->db->insert('cuti', $data);
   }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7f224fc84a5389c0193d3203807c826c791e6b4e
 //overtime
     public function save_overtime_add($data)
     {
       $this->db->insert('lembur', $data);
+    }
+//Salary
+    public function save_salary_add($data)
+    {
+      $this->db->insert('gaji', $data);
     }
 
 
@@ -108,10 +116,15 @@ class general extends CI_Model
       $this->db->insert('detail_gaji', $data);
 
     }
-    public function save_salary_detail_update($data)
+  public function save_salary_detail_update($id)
     {
-      $this->db->update('detail_gaji', $data);
-
+      $this->db->update('detail_gaji', $id);
+      $this->db->where('id_gaji')->get('detail_gaji');
+      // $this->db->select('*');
+      // $this->db->from('detail_gaji');
+      // $this->db->where('id_gaji',$id );
+      // $query = $this->db->get();
+      // return $result = $query->row_array();
     }
    
   public function get_detail_gaji($id)
@@ -133,5 +146,4 @@ class general extends CI_Model
 
 
 }
-
  ?>
