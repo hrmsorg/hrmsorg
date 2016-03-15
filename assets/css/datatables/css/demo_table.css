@@ -96,7 +96,7 @@ table.display {
 	margin: 0 auto;
 	clear: both;
 	width: 100%;
-	
+
 }
 
 table.display thead th {
@@ -105,6 +105,9 @@ table.display thead th {
 	font-weight: bold;
 	cursor: pointer;
 	* cursor: hand;
+}
+th.bat{
+	border :none;
 }
 
 table.display tfoot th {
@@ -144,7 +147,7 @@ table.display td.center {
 .sorting_desc_disabled {
 	background: url('../images/sort_desc_disabled.png') no-repeat center right;
 }
- 
+
 table.display thead th:active,
 table.display thead td:active {
 	outline: none;

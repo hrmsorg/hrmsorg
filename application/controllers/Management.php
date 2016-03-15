@@ -26,6 +26,7 @@ class Management extends CI_Controller
 						redirect('Management/master_gaji');
 					}
 
+<<<<<<< HEAD
 //function division
 
 					public function division()
@@ -78,6 +79,9 @@ class Management extends CI_Controller
 								{
 										$this->general->load('management/level/all');
 								}
+=======
+
+>>>>>>> 95ab8fe24f63b785a1b8f2a6871c9e65907e75e1
 //function employee
 
 					public function employee()
@@ -140,10 +144,8 @@ class Management extends CI_Controller
 							$this->general->save_new_employee($data);
 
 							redirect('Management/new_employee/add');
-								
+
 					}
 
 			
 }
-
-	
