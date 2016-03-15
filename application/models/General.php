@@ -42,17 +42,24 @@ class general extends CI_Model
   	$this->db->insert('absensi', $data);
   }
 
+
 //master cuti
   public function save_master_cuti($data)
   {
     $this->db->insert('master_cuti', $data);
   }
 
+
 //cuti
   public function save_cuti_add($data)
   {
     $this->db->insert('cuti', $data);
   }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7f224fc84a5389c0193d3203807c826c791e6b4e
 //overtime
     public function save_overtime_add($data)
     {
@@ -64,17 +71,19 @@ class general extends CI_Model
       $this->db->insert('gaji', $data);
     }
 
+
+
 //MANAGEMENT
-  public function save_master_gaji($data)
+  public function save_master_salary($data)
   {
     $this->db->insert('master_gaji', $data);
   }
 
+   
+
+
   //division
-    public function save_division($data)
-      {
-        $this->db->insert('divisi', $data);
-      }
+  
 
     public function save_division_update($data)
       {
@@ -102,6 +111,7 @@ class general extends CI_Model
 
     //salary_detail
   public function save_salary_detail_add($data)
+
     {
       $this->db->insert('detail_gaji', $data);
 
@@ -116,11 +126,7 @@ class general extends CI_Model
       // $query = $this->db->get();
       // return $result = $query->row_array();
     }
-    // public function salary_detail_edit($id)
-    // {
-    //   $this->db->select('detail_gaji');
-    //   $this->db->$this->db->where('id', $data['id']);
-    // }
+   
   public function get_detail_gaji($id)
     {
       $this->db->where('id',$id);
@@ -128,5 +134,16 @@ class general extends CI_Model
       $xa = $xa->row_array();
       return $xa;
     }
+
+
+
+  //division
+  public function save_division($data)
+    {
+      $this->db->insert('divisi', $data);
+    }
+
+
+
 }
  ?>

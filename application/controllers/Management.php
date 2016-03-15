@@ -8,23 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Management extends CI_Controller
 {
 
-//function master_salary
-						public function master_gaji()
-					{
-						$this->general->load('management/master_salary/all');
-					}
 
-						public function save_master_gaji()
-					{
-						$data = array (
-
-								'gaji_awal'=>$this->input->post('gaji_awal'),
-								'gaji_akhir'=>$this->input->post('gaji_akhir'),
-								'ket'=>$this->input->post('ket'));
-
-						$this->general->save_master_gaji($data);
-						redirect('Management/master_gaji');
-					}
 
 					public function division()
 							{
@@ -141,5 +125,67 @@ class Management extends CI_Controller
 
 					}
 
+<<<<<<< HEAD
+			//function salary_detail
+					public function salary_detail()
+					{
+						$data['detail_gaji'] = $this->db->get('detail_gaji')->result_array();
+						$data['id_gaji'] = $this->db->where_in('id')->get('gaji')->result_array();
+						$this->general->load('management/salary_detail/all', $data);
+					}
+
+					public function save_salary_detail_add()
+					{
+						$data = $this->input->post();
+						$data = array (
+
+							'id_gaji'=> $this->input->post('id_gaji'),
+							'jumlah'=>$this->input->post('jumlah'),
+							'tgl'=>$this->input->post('tgl'),
+							'ket'=>$this->input->post('ket'),
+							'tipe'=>$this->input->post('tipe'),
+							'jenis'=>$this->input->post('jenis'));
+
+							$this->general->save_salary_detail_add($data);
+
+							redirect('Management/salary_detail/all',$data);
+					}
+					public function salary_detail_delete($id)
+					{
+						$this->db->where('id',$id);
+						$this->db->delete('detail_gaji');
+						redirect(base_url('management/salary_detail/all'));
+					}
+					public function salary_detail_edit($id)
+					{
+						$data = array();
+						$data['detail_gaji'] = $this->db->get('detail_gaji')->result_array();
+						$data['detail_gaji'] = $this->db->where_in('id',$id)->get('detail_gaji')->row_array();
+
+						$this->general->load('Management/salary_detail/edit',$data);
+
+					}
+					public function save_salary_detail_update()
+					{
+						$data['detail_gaji'] = $this->db->get('detail_gaji')->result_array();
+						$data['id_gaji'] = $this->db->where_in('id')->get('gaji')->result_array();
+
+						// $data['id_gaji'] = $this->db->where_in('id')->get('gaji')->result_array();
+
+						$data = $this->input->post();
+						$this->db->where('id', $data['id']);
+						$this->db->update('detail_gaji',$data);
+
+						redirect(base_url('Management/salary_detail/all',$data));
+
+					}
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 95ab8fe24f63b785a1b8f2a6871c9e65907e75e1
+=======
 			
+>>>>>>> 7f224fc84a5389c0193d3203807c826c791e6b4e
 }
