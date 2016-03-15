@@ -18,14 +18,12 @@
                   <i class="fa fa-chevron-down"></i>
                 </a>
               </li>
-<<<<<<< HEAD
+
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                     <i class="fa fa-wrench"></i>
                   </a>
                 </li>
-=======
->>>>>>> 6c12d86d07966427e1033446a128e8280372ed3f
             </ul>
         <div class="clearfix"></div>
       </div>
@@ -61,10 +59,10 @@
                     <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                   </span>
                     <input type="text" class="form-control has-feedback-left col-md-7 col-xs-12" id="single_cal2" name="tgl" placeholder="Select Date" >
-<<<<<<< HEAD
+
                                                               <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                                                               <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
-<<<<<<< HEAD
+
                                                           </div>
                                                    </div>
                                            </div>
@@ -170,7 +168,7 @@
                       <br/>
                       </div>
                           <?php form_close();?>
-=======
+
                 </div>
               </div>
           </div>                                 
@@ -214,7 +212,7 @@
         <div class="x_title">
           <h2>View Salary <small>Salary Detail</small></h2>
         <div class="clearfix"></div>
-=======
+
                     <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span><span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
                 </div>
               </div>
@@ -259,7 +257,6 @@
           <div class="x_title">
             <h2>View Salary <small>Salary Detail</small></h2>
           <div class="clearfix"></div>
->>>>>>> 6c12d86d07966427e1033446a128e8280372ed3f
         </div>
         <div class="x_content">
           <table id="example" class="table table-striped responsive-utilities jambo_table">
@@ -276,7 +273,7 @@
               </tr>
             </thead>
             <tbody>
-<<<<<<< HEAD
+
               <tr class="even pointer">
                 <?php 
                   foreach ($detail_gaji as $key) {
@@ -314,8 +311,7 @@
   <br/>
 </div>
 <?php form_close();?>
->>>>>>> d555bd4862e1b01269b830f20af306100e0c3f86
-=======
+
             <?php
               foreach ($detail_gaji as $key) {
             ?>
@@ -353,7 +349,7 @@
   <br/>
 </div>
 <?php form_close();?>
->>>>>>> 6c12d86d07966427e1033446a128e8280372ed3f
+
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/dist/bootstrap-clockpicker.min.js');?>"></script>

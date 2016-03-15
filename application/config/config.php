@@ -29,11 +29,8 @@ $config['base_url'] = 'http://localhost/hrmsorg';
 | variable so that it is blank.
 |
 */
-<<<<<<< HEAD
-$config['index_page'] = '';
-=======
+
 $config['index_page'] = 'index.php/';
->>>>>>> 6c12d86d07966427e1033446a128e8280372ed3f
 
 /*
 |--------------------------------------------------------------------------

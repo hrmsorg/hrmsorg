@@ -182,29 +182,23 @@ class Management extends CI_Controller
 						$data = array();
 						$data['detail_gaji'] = $this->db->get('detail_gaji')->result_array();
 						$data['detail_gaji'] = $this->db->where_in('id',$id)->get('detail_gaji')->row_array();
-<<<<<<< HEAD
+
 						$this->general->load('Management/salary_detail/edit',$data);
-=======
-						$this->general->load('management/salary_detail/edit',$data);
->>>>>>> 6c12d86d07966427e1033446a128e8280372ed3f
+
 					}
 					public function save_salary_detail_update()
 					{
 						$data['detail_gaji'] = $this->db->get('detail_gaji')->result_array();
-<<<<<<< HEAD
 						$data['id_gaji'] = $this->db->where_in('id')->get('gaji')->result_array();
-=======
+
 						// $data['id_gaji'] = $this->db->where_in('id')->get('gaji')->result_array();
->>>>>>> 6c12d86d07966427e1033446a128e8280372ed3f
+
 						$data = $this->input->post();
 						$this->db->where('id', $data['id']);
 						$this->db->update('detail_gaji',$data);
-						$this->general->save_salary_detail_update($data);
-<<<<<<< HEAD
+
 						redirect(base_url('Management/salary_detail/all',$data));
-=======
-						redirect(base_url('management/salary_detail/all', $data));
->>>>>>> 6c12d86d07966427e1033446a128e8280372ed3f
+
 					}
 }
 
