@@ -26,9 +26,6 @@ class Management extends CI_Controller
 						redirect('Management/master_gaji');
 					}
 
-<<<<<<< HEAD
-//function division
-
 					public function division()
 							{
 									$data['divisi'] = $this->db->get('divisi')->result_array();
@@ -79,9 +76,6 @@ class Management extends CI_Controller
 								{
 										$this->general->load('management/level/all');
 								}
-=======
-
->>>>>>> 95ab8fe24f63b785a1b8f2a6871c9e65907e75e1
 //function employee
 
 					public function employee()

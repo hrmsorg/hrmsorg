@@ -196,13 +196,7 @@
                       <br />
                 </div>
                 </div>
-
-
-                          <?php form_close();?>
-                   
-                    
-                
-
+    <?php form_close();?>
         <!-- chart js -->
         <script src="<?php echo base_url('assets/js/chartjs/chart.min.js');?>"></script>
         <!-- bootstrap progress js -->

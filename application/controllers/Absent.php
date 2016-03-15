@@ -14,10 +14,6 @@ class Absent extends CI_Controller
         $this->load->model('General');
     }
 
-<<<<<<< HEAD
-=======
-
-
 //master cuti
 		public function master_cuti()
 		{
@@ -36,7 +32,6 @@ class Absent extends CI_Controller
 				redirect('Absent/master_cuti');
 		}
 
->>>>>>> 78aca8f9329e0411528565fd72be08854197b222
 //absent
 		public function absent_add()
 		{
