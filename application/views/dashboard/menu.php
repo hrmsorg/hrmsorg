@@ -30,21 +30,26 @@
                                 </li>
                                 <li><a href="<?php echo base_url('Company/company_add');?>"><i class="fa fa-university"></i> Company </a>
                                 </li>
-                                <li><a><i class="fa fa-sitemap"></i> Management <span class="fa fa-chevron-down"></span></a>
+                        <li><a><i class="fa fa-sitemap"></i> Management <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="<?php echo base_url('management/employee');?>">Employee</a>
+                                        <li><a href="<?php echo base_url('employee/employee');?>">Employee</a>
                                         </li>
-                                        <li><a href="<?php echo base_url('management/new_employee/add');?>">New Employee</a>
+                                        <li><a href="<?php echo base_url('newemployee/new_employee/add');?>">New Employee</a>
                                         </li>
-                                        <li><a href="<?php echo base_url('management/level');?>">Level</a>
+                                        <li><a href="<?php echo base_url('level/level');?>">Level</a>
+                                          <!-- ('level/level') : penempatan Controller / View -->
                                         </li>
-                                        <li><a href="<?php echo base_url('management/division');?>">Division</a>
+                                        <li><a href="<?php echo base_url('division/division');?>">Division</a>
                                         </li>
-                                        <li><a href="<?php echo base_url('management/salary');?>">Salary</a>
+                                        <li><a href="<?php echo base_url('salary/salary');?>">Salary</a>
                                          </li>
+<<<<<<< HEAD
                                        <li><a href="<?php echo base_url('MasterSalary/master_salary');?>">Master Salary</a>
+=======
+                                       <li><a href="<?php echo base_url('mastersalary/master_gaji');?>">Master Salary</a>
+>>>>>>> 95ab8fe24f63b785a1b8f2a6871c9e65907e75e1
                                         </li>
-                                        <li><a href="<?php echo base_url('management/salary_detail');?>">Salary Detail</a>
+                                        <li><a href="<?php echo base_url('salarydetail/salary_detail');?>">Salary Detail</a>
                                         </li>
                                     </ul>
                                 </li>
