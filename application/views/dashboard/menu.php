@@ -42,7 +42,7 @@
                                         </li>
                                         <li><a href="<?php echo base_url('management/salary');?>">Salary</a>
                                          </li>
-                                       <li><a href="<?php echo base_url('management/master_salary');?>">Master Salary</a>
+                                       <li><a href="<?php echo base_url('MasterSalary/master_salary');?>">Master Salary</a>
                                         </li>
                                         <li><a href="<?php echo base_url('management/salary_detail');?>">Salary Detail</a>
                                         </li>
@@ -56,7 +56,7 @@
                                         </li>
                                         <li><a href="<?php echo base_url('absent/cuti_all');?>">Cuti</a>
                                         </li>
-                                        <li><a href="<?php echo base_url('absent/master_cuti');?>">Master Cuti</a>
+                                        <li><a href="<?php echo base_url('MasterCuti/master_cuti');?>">Master Cuti</a>
                                         </li>
                                         <li><a href="<?php echo base_url('absent/overtime_all');?>">Overtime</a>
                                         </li>

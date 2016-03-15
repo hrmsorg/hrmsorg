@@ -17,8 +17,8 @@ class Absent extends CI_Controller
 //cuti
 		public function cuti_all()
 		{
-				
-				$data['cuti_all'] = $this->db->get('cuti')->result_array(); 
+
+				$data['cuti_all'] = $this->db->get('cuti')->result_array();
 				$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
 				$data['id_karyawan'] = $this->db->where_in('id')->get('karyawan')->result_array();
 				$this->general->load('absent/cuti/all',$data);
@@ -51,7 +51,7 @@ class Absent extends CI_Controller
 		public function overtime_all()
 		{
 
-				$data['overtime_all'] = $this->db->get('lembur')->result_array(); 
+				$data['overtime_all'] = $this->db->get('lembur')->result_array();
 				$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
 				$data['id_karyawan'] = $this->db->where_in('id')->get('karyawan')->result_array();
 				$this->general->load('absent/overtime/all',$data);
@@ -78,23 +78,7 @@ class Absent extends CI_Controller
 		}
 
 //master cuti
-		public function master_cuti()
-		{
-				$this->general->load('absent/mastercuti/all');
-		}
-
-		public function save_master_cuti()
-		{
-				$data = array (
-
-						'id'=>$this->input->post('id'),
-						'jenis'=>$this->input->post('jenis'),
-						'ket'=>$this->input->post('ket'));
-
-				$this->General->save_master_cuti($data);
-				redirect('Absent/master_cuti');
-		}
-
+		
 //absent
 		public function absent_add()
 		{

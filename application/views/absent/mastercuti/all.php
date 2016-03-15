@@ -61,11 +61,11 @@
     </div>
     <div class="x_content">
 
-                   <?php echo form_open('Absent/save_master_cuti');?>
+                   <?php echo form_open('MasterCuti/save_master_cuti');?>
 
-                    
 
-           
+
+
                   <br>
                   <div class="clearfix"></div>
                     <br>
@@ -89,7 +89,7 @@
                       </div>
                       </div>
                     <br>
-                   
+
 
                 <div class="clearfix"></div>
 
