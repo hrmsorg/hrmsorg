@@ -40,7 +40,7 @@
                                         </li>
                                         <li><a href="<?php echo base_url('management/division');?>">Division</a>
                                         </li>
-                                        <li><a href="<?php echo base_url('management/salary');?>">Salary</a>
+                                        <li><a href="<?php echo base_url('salary/salary_all');?>">Salary</a>
                                          </li>
                                        <li><a href="<?php echo base_url('management/master_gaji');?>">Master Salary</a>
                                         </li>
@@ -54,11 +54,11 @@
                                         </li>
                                         <li><a href="<?php echo base_url('absent/free_all');?>">Free</a>
                                         </li>
-                                        <li><a href="<?php echo base_url('absent/cuti_all');?>">Cuti</a>
+                                        <li><a href="<?php echo base_url('cuti/cuti_all');?>">Cuti</a>
                                         </li>
                                         <li><a href="<?php echo base_url('absent/master_cuti');?>">Master Cuti</a>
                                         </li>
-                                        <li><a href="<?php echo base_url('absent/overtime_all');?>">Overtime</a>
+                                        <li><a href="<?php echo base_url('overtime/overtime_all');?>">Overtime</a>
                                         </li>
 
                                     </ul>

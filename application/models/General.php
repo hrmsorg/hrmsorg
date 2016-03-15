@@ -53,10 +53,15 @@ class general extends CI_Model
   {
     $this->db->insert('cuti', $data);
   }
-  //overtime
+//overtime
     public function save_overtime_add($data)
     {
       $this->db->insert('lembur', $data);
+    }
+//Salary
+    public function save_salary_add($data)
+    {
+      $this->db->insert('gaji', $data);
     }
 
 //MANAGEMENT
