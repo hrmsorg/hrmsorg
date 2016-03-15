@@ -18,11 +18,6 @@
                     <i class="fa fa-chevron-down"></i>
                 </a>
             </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <i class="fa fa-wrench"></i>
-                </a>
-            </li>
           </ul>
         <div class="clearfix">
         </div>
@@ -58,8 +53,8 @@
                     <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                   </span>
                     <input type="text" class="form-control has-feedback-left col-md-7 col-xs-12" id="single_cal2" name="tgl" placeholder="Select Date" value="<?php echo $detail_gaji['tgl'];?>">
-                                                              <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
-                                                              <span id="inputSuccess2Status3" class="sr-only">(success)</span>-->
+                          <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
+                          <span id="inputSuccess2Status3" class="sr-only">(success)</span>-->
                 </div>
               </div>
           </div>                              
@@ -78,14 +73,13 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Type of Salary</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <select class="select2_single form-control" name="jenis" tabindex="-1" value="<?php echo $detail_gaji['jenis'];?>">
-                                    <option <?php echo ($this->input->post('jenis')=="BPJS")?"selected":"";?> value="BPJS">BPJS</option>
-                                    <option <?php echo ($this->input->post('jenis')=="Salary")?"selected":"";?> value="Salary">Salary</option>
-                                    <option <?php echo ($this->input->post('jenis')=="Overtime")?"selected":"";?> value="Overtime">Overtime</option>
-                                    <option <?php echo ($this->input->post('jenis')=="Piece")?"selected":"";?> value="Piece">Piece</option>    
+                            <option <?php echo ($this->input->post('jenis')=="BPJS")?"selected":"";?> value="BPJS">BPJS</option>
+                            <option <?php echo ($this->input->post('jenis')=="Salary")?"selected":"";?> value="Salary">Salary</option>
+                            <option <?php echo ($this->input->post('jenis')=="Overtime")?"selected":"";?> value="Overtime">Overtime</option>
+                            <option <?php echo ($this->input->post('jenis')=="Piece")?"selected":"";?> value="Piece">Piece</option>    
                         </select>
                     </div>
             </div>
-        </div>
         <div class="x_content"></div>
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-3">
@@ -93,6 +87,7 @@
                     <button id="send" type="submit" class="btn btn-success">Submit</button>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </div>
