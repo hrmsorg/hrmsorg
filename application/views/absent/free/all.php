@@ -10,7 +10,6 @@
               </small>
               </h3>
             </div>
-
             <div class="title_right">
             <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
             <div class="input-group">
@@ -23,7 +22,6 @@
             </div>
               <div class="clearfix"></div>
             </div>
-
                 <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                   <div class="x_panel">
