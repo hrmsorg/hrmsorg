@@ -101,10 +101,15 @@ class general extends CI_Model
       $this->db->insert('detail_gaji', $data);
 
     }
-    public function save_salary_detail_update($data)
+  public function save_salary_detail_update($id)
     {
-      $this->db->update('detail_gaji', $data);
-
+      $this->db->update('detail_gaji', $id);
+      $this->db->where('id_gaji')->get('detail_gaji');
+      // $this->db->select('*');
+      // $this->db->from('detail_gaji');
+      // $this->db->where('id_gaji',$id );
+      // $query = $this->db->get();
+      // return $result = $query->row_array();
     }
     // public function salary_detail_edit($id)
     // {
@@ -119,5 +124,4 @@ class general extends CI_Model
       return $xa;
     }
 }
-
  ?>
