@@ -18,20 +18,12 @@
                     <i class="fa fa-chevron-down"></i>
                 </a>
             </li>
-<<<<<<< HEAD
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <i class="fa fa-wrench"></i>
-                </a>
-            </li>
-=======
->>>>>>> 6c12d86d07966427e1033446a128e8280372ed3f
           </ul>
         <div class="clearfix">
         </div>
         </div>
         <div class="x_content">
-            <?php echo form_open('Management/save_salary_detail_update');?><br>
+            <?php echo form_open('SalaryDetail/save_salary_detail_update');?><br>
         <div class="item form-group">
             <label class="control-label col-md-3">Salary_id</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
@@ -61,13 +53,10 @@
                     <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                   </span>
                     <input type="text" class="form-control has-feedback-left col-md-7 col-xs-12" id="single_cal2" name="tgl" placeholder="Select Date" value="<?php echo $detail_gaji['tgl'];?>">
-<<<<<<< HEAD
                                                               <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                                                               <span id="inputSuccess2Status3" class="sr-only">(success)</span>-->
-=======
                           <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                           <span id="inputSuccess2Status3" class="sr-only">(success)</span>-->
->>>>>>> 6c12d86d07966427e1033446a128e8280372ed3f
                 </div>
               </div>
           </div>                              
@@ -86,7 +75,6 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Type of Salary</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <select class="select2_single form-control" name="jenis" tabindex="-1" value="<?php echo $detail_gaji['jenis'];?>">
-<<<<<<< HEAD
                                     <option <?php echo ($this->input->post('jenis')=="BPJS")?"selected":"";?> value="BPJS">BPJS</option>
                                     <option <?php echo ($this->input->post('jenis')=="Salary")?"selected":"";?> value="Salary">Salary</option>
                                     <option <?php echo ($this->input->post('jenis')=="Overtime")?"selected":"";?> value="Overtime">Overtime</option>
@@ -94,16 +82,6 @@
                         </select>
                     </div>
             </div>
-        </div>
-=======
-                            <option <?php echo ($this->input->post('jenis')=="BPJS")?"selected":"";?> value="BPJS">BPJS</option>
-                            <option <?php echo ($this->input->post('jenis')=="Salary")?"selected":"";?> value="Salary">Salary</option>
-                            <option <?php echo ($this->input->post('jenis')=="Overtime")?"selected":"";?> value="Overtime">Overtime</option>
-                            <option <?php echo ($this->input->post('jenis')=="Piece")?"selected":"";?> value="Piece">Piece</option>    
-                        </select>
-                    </div>
-            </div>
->>>>>>> 6c12d86d07966427e1033446a128e8280372ed3f
         <div class="x_content"></div>
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-3">
@@ -112,10 +90,8 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-=======
         </div>
->>>>>>> 6c12d86d07966427e1033446a128e8280372ed3f
+        </div>
     </div>
 </div>
 <div class="clearfix"></div>

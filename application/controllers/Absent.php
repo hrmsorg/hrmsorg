@@ -54,15 +54,4 @@ class Absent extends CI_Controller
 				redirect('Absent/absent_add');
 		}
 
-//free
-		public function free_all()
-		{
-				$this->general->load('absent/free/all');
-		}
-
-		public function free_add()
-		{
-				$this->general->load('absent/free/add');
-		}
-
 }
