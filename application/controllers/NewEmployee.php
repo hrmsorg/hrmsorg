@@ -13,4 +13,36 @@ class NewEmployee extends CI_Controller
         parent::__construct();
         $this->load->model('General');
     	}
+
+    	public function new_employee()
+		{
+			$data['calon_karyawan'] = $this->db->get('calon_karyawan')->result_array();
+			$this->general->load('management/new_employee/add', $data);
+		}
+
+		public function save_new_employee()
+		{
+			$data = array (
+
+			'id'=> 1,
+			'nama'=>$this->input->post('nama'),
+			'tempat_lahir'=>$this->input->post('tempat_lahir'),
+			'tgl_lahir'=>$this->input->post('tgl_lahir'),
+			'jenis_kelamin'=>$this->input->post('jenis_kelamin'),
+			'alamat'=>$this->input->post('alamat'),
+			'agama'=>$this->input->post('agama'),
+			'no_tlp'=>$this->input->post('no_tlp'),
+			'no_ktp'=>$this->input->post('no_ktp'),
+			'kewarganegaraan'=>$this->input->post('kewarganegaraan'),
+			'email'=>$this->input->post('email'),
+			'tgl_lamaran'=>$this->input->post('tgl_lamaran'),
+			'status_lamaran'=>$this->input->post('status_lamaran'),
+			'berkas'=>$this->input->post('berkas'));
+			//'foto'=>$this->input->post('foto'));//
+
+			$this->general->save_new_employee($data);
+
+			redirect('NewEmployee/new_employee/add');
+								
+		}
 }

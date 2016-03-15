@@ -39,7 +39,7 @@
                                 </div>
                                 	<!-- //tabel :level-> id, id_perusahaan, nama, ket,logo,tugas_utama -->
                                 <div class="x_content">
-                                    <?php echo form_open('Management/save_level_add');?>
+                                    <?php echo form_open('Level/save_level_add');?>
                                   <br>
                                 <div class="item form-group">
                                     <label for="password" class="control-label col-md-3">Name</label>

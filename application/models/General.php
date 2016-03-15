@@ -55,11 +55,7 @@ class general extends CI_Model
   {
     $this->db->insert('cuti', $data);
   }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 7f224fc84a5389c0193d3203807c826c791e6b4e
 //overtime
     public function save_overtime_add($data)
     {

@@ -13,8 +13,9 @@ class Level extends CI_Controller
         parent::__construct();
         $this->load->model('General');
     	}
-			public function level()
-			{
-								$this->general->load('management/level/all');
-							}
+		
+		public function level()
+		{
+			$this->general->load('management/level/all');
+		}
 }

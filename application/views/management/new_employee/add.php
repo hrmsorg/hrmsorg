@@ -61,7 +61,7 @@
         <div class="clearfix"></div>
     </div>
     <div class="x_content">
-    <?php echo form_open('Management/save_new_employee');?>
+    <?php echo form_open('Employee/save_new_employee');?>
 
                     <div class="clearfix"></div>
                 
