@@ -43,11 +43,10 @@
                                         </li>
                                         <li><a href="<?php echo base_url('salary/salary');?>">Salary</a>
                                          </li>
-<<<<<<< HEAD
+
                                        <li><a href="<?php echo base_url('MasterSalary/master_salary');?>">Master Salary</a>
-=======
-                                       <li><a href="<?php echo base_url('mastersalary/master_gaji');?>">Master Salary</a>
->>>>>>> 95ab8fe24f63b785a1b8f2a6871c9e65907e75e1
+
+            
                                         </li>
                                         <li><a href="<?php echo base_url('salarydetail/salary_detail');?>">Salary Detail</a>
                                         </li>
