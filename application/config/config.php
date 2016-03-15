@@ -30,7 +30,7 @@ $config['base_url'] = 'http://localhost/hrmsorg';
 |
 */
 
-$config['index_page'] = 'index.php/';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
