@@ -61,7 +61,7 @@
         <div class="clearfix"></div>
     </div>
     <div class="x_content">
-    <?php echo form_open('Employee/save_new_employee');?>
+    <?php echo form_open('NewEmployee/new_employee/save_new_employee');?>
 
                     <div class="clearfix"></div>
                 
@@ -239,6 +239,89 @@
                   </div>
                 </div>
               
+              <div class="row">
+
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                          <div class="x_panel">
+                              <div class="x_title">
+                                  <h2>View New Employee <small>All New Employee</small></h2>
+
+                                  <div class="clearfix"></div>
+                              </div>
+                              <div class="x_content">
+                                  <table id="example" class="table table-striped responsive-utilities jambo_table">
+                                      <thead>
+                                          <!-- //tabel :divisi-> id, id_perusahaan, nama, ket,tugas_utama -->
+                                   <tr class="headings">
+
+                                              <th>ID</th>
+                                              <th>Name </th>
+                                              <th>Birth Place </th>
+                                              <th>Birth Date </th>
+                                              <th>Gender </th>
+                                              <th>Start Working </th>
+                                              <th>Address </th>
+                                              <th>Religion </th>
+                                              <th>Phone Number </th>
+                                              <th>Identity Number </th>
+                                              <th>Nationality </th>
+                                              <th>Email </th>
+                                              <th>Tanggal Lamaran </th>
+                                              <th>Status Lamaran </th>
+                                              <th>File </th>
+                                              <th>Photo </th>
+
+
+
+                                              <th class=" no-link last"><span class="nobr">Action</span>
+                                              </th>
+                                          </tr>
+                                      </thead>
+
+                                      <tbody>
+                                          <tr class="even pointer">
+                                            <?php
+                                            foreach ($divisi as $key) {
+                                              ?>
+                                                <td><?php echo $key['id'];?></td>
+                                                <td ><?php echo $key['id_perusahaan'];?></td>
+                                                <td><?php echo $key['nama'];?></td>
+                                                <td><?php echo $key['ket'];?></td>
+                                                <td><?php echo $key['tugas_utama'];?></td>                                                       <td><a href="<?php echo base_url("management/division_delete/".$key['id']);?>" onClick="return doconfirm();">Delete</a>
+                                                  <script>
+                                                  function doconfirm()
+                                                  {
+                                                    job=confirm("Are you sure to delete this data?");
+                                                  if(job!=true)
+                                                  {
+                                                  return false;
+                                                  }
+                                              }
+                                              </script>
+                                                  <td class=" last"><a href="<?php echo base_url("management/division_edit/".$key['id']);?>">Edit</a>
+                                              <?php
+                                              }
+                                              ?>
+                                          </tr>
+
+                                      </tbody>
+
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+
+                      <br />
+                      <br />
+                      <br />
+                                </div>
+
+
+                          <!-- ini table view: -->
+
+                          <!-- tag table -->
+                          <?php form_close();?>
+
 
  <script type="text/javascript" src="<?php echo base_url('assets/js/moment.min2.js');?>"></script>
       <script type="text/javascript" src="<?php echo base_url('assets/js/datepicker/daterangepicker.js');?>"></script>
