@@ -249,45 +249,36 @@
                                   <div class="clearfix"></div>
                               </div>
                               <div class="x_content">
-                                  <table id="example" class="table table-striped responsive-utilities jambo_table">
+                                  <table id="example" class="table table-striped responsive-utilities jambo_table" style="">
                                       <thead>
-                                          <!-- //tabel :divisi-> id, id_perusahaan, nama, ket,tugas_utama -->
+                                          
                                    <tr class="headings">
 
                                               <th>ID</th>
                                               <th>Name </th>
-                                              <th>Birth Place </th>
-                                              <th>Birth Date </th>
                                               <th>Gender </th>
-                                              <th>Start Working </th>
-                                              <th>Address </th>
-                                              <th>Religion </th>
-                                              <th>Phone Number </th>
                                               <th>Identity Number </th>
-                                              <th>Nationality </th>
                                               <th>Email </th>
-                                              <th>Tanggal Lamaran </th>
                                               <th>Status Lamaran </th>
-                                              <th>File </th>
-                                              <th>Photo </th>
-
-
-
-                                              <th class=" no-link last"><span class="nobr">Action</span>
-                                              </th>
+                                              <th class=" no-link last" colspan="2"><span class="nobr">Action</span></th>
+                                              
                                           </tr>
                                       </thead>
 
                                       <tbody>
+                                          <?php
+                                            foreach ($calon_karyawan as $key) {
+                                          ?>
                                           <tr class="even pointer">
-                                            <?php
-                                            foreach ($divisi as $key) {
-                                              ?>
                                                 <td><?php echo $key['id'];?></td>
-                                                <td ><?php echo $key['id_perusahaan'];?></td>
-                                                <td><?php echo $key['nama'];?></td>
-                                                <td><?php echo $key['ket'];?></td>
-                                                <td><?php echo $key['tugas_utama'];?></td>                                                       <td><a href="<?php echo base_url("management/division_delete/".$key['id']);?>" onClick="return doconfirm();">Delete</a>
+                                                <td ><?php echo $key['nama'];?></td>
+                                                <td><?php echo $key['jenis_kelamin'];?></td>
+                                                <td><?php echo $key['no_ktp'];?></td>
+                                                <td><?php echo $key['email'];?></td>
+                                                <td><?php echo $key['status_lamaran'];?></td>
+                                                <!-- <td><?php echo $key['foto'];?></td> -->
+
+                                          <td><a href="<?php echo base_url("NewEmployee/new_employee_delete/".$key['id']);?>" onClick="return doconfirm();">Delete</a>
                                                   <script>
                                                   function doconfirm()
                                                   {
@@ -298,12 +289,12 @@
                                                   }
                                               }
                                               </script>
-                                                  <td class=" last"><a href="<?php echo base_url("management/division_edit/".$key['id']);?>">Edit</a>
-                                              <?php
-                                              }
-                                              ?>
+                                                  <td class=" last"><a href="<?php echo base_url("NewEmployee/new_employee_edit/".$key['id']);?>">Edit</a>
+                                             
                                           </tr>
-
+                                            <?php
+                                                }
+                                            ?>
                                       </tbody>
 
                                   </table>

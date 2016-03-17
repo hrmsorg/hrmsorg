@@ -42,7 +42,24 @@ class NewEmployee extends CI_Controller
 
 			$this->general->save_new_employee($data);
 
-			redirect('NewEmployee/new_employee/add');
+			redirect('NewEmployee/new_employee');
 								
+		}
+
+		public function new_employee_delete()
+		{
+			$this->db->where('id',$id);
+			$this->db->delete('calon_karyawan');
+			redirect(base_url('NewEmployee/new_employee/add'));
+
+		}
+
+		public function new_employee_edit($id)
+		{
+			$data = array();
+			$data['calon_karyawan'] = $this->db->get('calon_karyawan')->result_array();
+			$data['calon_karyawan'] = $this->db->where_in('id',$id)->get('calon_karyawan')->row_array();
+			$this->general->load('management/new_employee/add',$data);
+
 		}
 }
