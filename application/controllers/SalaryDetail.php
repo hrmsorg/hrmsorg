@@ -70,6 +70,14 @@ class SalaryDetail extends CI_Controller
 		public function save_salary_detail_update()
 		{
 			// $data['id_gaji'] = $this->db->where_in('id')->get('gaji')->result_array();
+			$data = array(
+            'id_gaji'=> $this->input->post('id_gaji'),
+			'jumlah'=>$this->input->post('jumlah'),
+			'tgl'=>$this->input->post('tgl'),
+			'ket'=>$this->input->post('ket'),
+			'tipe'=>$this->input->post('tipe'),
+			'jenis'=>$this->input->post('jenis'));
+
 			$data = $this->input->post();
 			$this->db->where('id', $data['id']);
 			$this->db->update('detail_gaji',$data);
