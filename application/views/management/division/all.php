@@ -125,7 +125,8 @@
                                                 <td ><?php echo $key['id_perusahaan'];?></td>
                                                 <td><?php echo $key['nama'];?></td>
                                                 <td><?php echo $key['ket'];?></td>
-                                                <td><?php echo $key['tugas_utama'];?></td>                                 <canter><td><a href="<?php echo base_url("division/division_delete/".$key['id']);?>" onClick="return doconfirm();"><i class="fa fa-trash" ></i> </a>
+                                                <td><?php echo $key['tugas_utama'];?></td>                                 
+                                                <canter><td><a href="<?php echo base_url("division/division_delete/".$key['id']);?>" onClick="return doconfirm();"><i class="fa fa-trash" ></i> </a>
                                                       <script>
                                                             function doconfirm()
                                                             {

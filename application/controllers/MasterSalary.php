@@ -17,7 +17,7 @@ class MasterSalary extends CI_Controller
 
 		public function master_salary()
 		{
-				$data['master_gaji'] = $this->db->get('master_gaji')->result_array();
+				$data['master_salary'] = $this->db->get('master_gaji')->result_array();
 				$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
 				$data['id_divisi'] = $this->db->where_in('id')->get('divisi')->result_array();
 				$data['id_jabatan'] = $this->db->where_in('id')->get('jabatan')->result_array();
@@ -29,9 +29,10 @@ class MasterSalary extends CI_Controller
 				$data = $this->input->post();
 				$data = array (
 
-				'id_perusahaan'=>$this->input->post('id_perusahaan'),
-				'id_divisi'=>$this->input->post('id_divisi'),
-				'id_jabatan'=>$this->input->post('id_jabatan'),
+				
+				'id_perusahaan'=>1,
+				'id_divisi'=>1,
+				'id_jabatan'=>1,
 				'gaji_awal'=>$this->input->post('gaji_awal'),
 				'gaji_akhir'=>$this->input->post('gaji_akhir'),
 				'ket'=>$this->input->post('ket'));

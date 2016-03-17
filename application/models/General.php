@@ -48,6 +48,19 @@ class general extends CI_Model
   {
     $this->db->insert('master_cuti', $data);
   }
+  public function save_master_cuti_update($data)
+  {
+    $this->db->update('master_cuti', $data);
+
+  }
+
+  public function get_master_cuti($id)
+  {
+    $this->db->where('id',$id);
+    $xa = $this->db->get('master_cuti');
+    $xa = $xa->row_array();
+    return $xa;
+  }
 
 
 //cuti
