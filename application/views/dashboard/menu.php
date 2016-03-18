@@ -49,7 +49,7 @@
                         <a href="<?php echo base_url('Division/division');?>">Division</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('Salary/salary');?>">Salary</a>
+                        <a href="<?php echo base_url('Salary/salary_all');?>">Salary</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('MasterSalary/master_salary');?>">Master Salary</a>

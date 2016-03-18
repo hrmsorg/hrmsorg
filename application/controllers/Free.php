@@ -17,11 +17,25 @@ class Free extends CI_Controller
     	//free
 		public function free_all()
 		{
+			$data[]=$this->db->get('master_libur')->result_array();
 			$this->general->load('absent/free/all');
 		}
-
+		// show form add new 
 		public function free_add()
 		{
 			$this->general->load('absent/free/add');
+		}
+
+		public function save_free_add()
+		{
+			$data = $this->input->post();
+			$data = array (
+				'tgl'=>$this->input->post('tgl'),
+				'ket'=>$this->input->post('ket'),
+				'judul'=>$this->input->post('judul'));
+
+				$this->general->save_free_add($data);
+
+				redirect(base_url('Free/free_all',$data));
 		}
 }

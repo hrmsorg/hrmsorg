@@ -42,7 +42,7 @@
                 <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-
+                        <?php echo form_open('Free/save_free_add');?>
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                 <h4 class="modal-title" id="myModalLabel">New Calender Entry</h4>
@@ -53,19 +53,19 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Date</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="date" name="date">
+                                                <input type="text" class="form-control" id="tgl" name="tgl"><input type="hidden" class="form-control" name="id">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Title</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="title" name="title">
+                                                <input type="text" class="form-control" id="judul" name="judul">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Description</label>
                                             <div class="col-sm-9">
-                                                <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
+                                                <textarea class="form-control" style="height:55px;" id="ket" name="ket"></textarea>
                                             </div>
                                         </div>
                                     </form>
@@ -74,10 +74,8 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary antosubmit">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                </div>
+                                </div>
                 <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -110,14 +108,10 @@
                                         </div>
 
                                     </form>
-                                </div>
-                                </div>
+                                </div></div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary antosubmit2">Save changes</button>
-                            </div>
-                            </div>
-                            </div>
 
                 <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
                 <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
@@ -141,6 +135,146 @@
                 var started;
                 var categoryClass;
 
+       //          $('#calendar').fullCalendar({
+       //      header: {
+       //          left: 'prev,next today',
+       //          center: 'title',
+       //          right: 'month,agendaWeek,agendaDay'
+       //      },
+       //      defaultView: 'month',
+       //      editable: true,
+       //      allDaySlot: false,
+       //      selectable: true,
+       //      slotMinutes: 15,
+       //      displayEventEnd: {
+       //          month: true,
+       //          basicWeek: true,
+       //          "default": true
+       //      },
+       //      events: sourceUserView,
+       //      eventClick: function (calEvent, jsEvent, view) {
+       //          DisplayCurrentEvent(calEvent);
+
+       //      },
+       //      select: function (start, end, jsEvent, view) {
+       //          if (isMors == "True") {
+       //               newScheduleRange(start, end, jsEvent, view);
+       //          }
+
+       //          //alert("will i get here");
+       //      },
+       //      eventDrop: function (event, dayDelta, revertFunc, jsEvent, ui, view) {
+       //          var hd = new Date();
+       //          var movedToDate = new Date(event.start._d);
+
+       //          if (event.MorsRecID == $('#HiddenMorsRecID').val() || isAdmin == "True") {
+       //              if (isAdmin) {
+       //                  MoveEvent(event);
+       //              } else {
+       //                  if (movedToDate <= hd) {
+       //                      revertFunc();
+       //                      alert("Can not move anything to earlier then Tomorrow.");
+       //                  } else {
+       //                      if (confirm("Confirm move?")) {
+       //                          MoveEvent(event);
+       //                      } else {
+       //                          revertFunc();
+       //                      }
+       //                  }
+       //              }
+
+
+
+       //          } else {
+       //              alert("You can only adjust your own items.");
+       //              revertFunc();
+       //          }
+       //      },
+       //      eventRightclick: function (event, jsEvent, view) {
+       //          if (event.MorsRecID == $('#HiddenMorsRecID').val() || isAdmin == "True") {
+       //              EventRightClicked(event);
+       //          }
+       //          //alert('an event has been rightclicked!');
+       //          // Prevent browser context menu:
+       //          return false;
+       //      },
+       //      eventResize: function (event, delta, revertFunc) {
+       //          if (event.MorsRecID == $('#HiddenMorsRecID').val() || isAdmin == "True") {
+       //              var hd = new Date();
+       //              var nDate = new Date(event.start._d);
+       //              if (isAdmin) {
+       //                  UpdateEvent(event.id, event.start, event.end);
+       //              } else {
+       //                  if (nDate <= hd) {
+       //                      revertFunc();
+       //                      alert("Can not adjust Today or past dates.");
+       //                  } else {
+       //                      UpdateEvent(event.id, event.start, event.end);
+       //                  }
+       //              }
+
+
+
+       //          } else {
+       //              revertFunc();
+       //          }
+       //          if (event.MorsRecID != $('#HiddenMorsRecID').val() && isAdmin != "True") {
+       //              alert("You can only adjust your own items.");
+       //          }
+       //      },
+       //      dayClick: function (date, allDay, jsEvent, view) {
+       //          if (isMors == "True") {
+       //              ShowEventPopup(date);
+       //              var d = date;
+       //              var sd = moment(d).format('L');
+       //              $('#StartDate').val(sd);
+       //          } 
+       //      },
+       //      viewRender: function (view, element) {
+       //          if (!CalLoading) {
+       //              $('#calendar').fullCalendar('removeEventSource', sourceUserView);
+       //              if ($('#ShowMine').is(':checked')) {
+       //                  $('#calendar').fullCalendar('addEventSource', sourceUserView); 
+       //              }
+       //              CombineLists();
+       //          }
+       //      }
+       //  });
+
+
+       //  // page is now ready, initialize the calendar...
+       //  CalLoading = false;
+       // //88888888888888888888888888888888888888888888888888888888888888888***************
+       //  function newScheduleRange(start, end, jsEvent, view) {
+
+       //      var spanStartDate = start._d.toLocaleDateString();
+       //      if (view.name == 'month') {
+       //          spanStartDate = moment(spanStartDate, 'MM/DD/YYYY').add('days', 1).format('MM/DD/YYYY');
+       //      } else {
+       //          spanStartDate = moment(spanStartDate, 'MM/DD/YYYY').format('MM/DD/YYYY');
+       //      }
+
+       //      var spanEndDate = end._d.toLocaleDateString();
+       //      spanEndDate = moment(spanEndDate, 'MM/DD/YYYY').format('MM/DD/YYYY');
+       //      if (spanStartDate != spanEndDate && spanStartDate < spanEndDate) {
+       //          var hd = new Date();
+       //          var realDate = new Date(spanStartDate);
+       //          if (realDate <= hd) {
+       //              alert("Choose a start date greater then Today.");
+       //          } else {
+       //              $('#popupNewSpanForm').modal('show');
+       //          $('#SpanStartHour').focus();
+       //          //alert("The start is: " + spanStartDate);
+       //          //alert("The end is: " + spanEndDate);
+       //          $('#SpanStartDate').val(spanStartDate);
+       //          $('#SpanEndDate').val(spanEndDate);
+       //          }
+
+
+       //      }
+
+
+       //  }
                 var calendar = $('#calendar').fullCalendar({
                     header: {
                         left: 'prev,next today',
@@ -153,7 +287,9 @@
                         $('#fc_create').click();
                         //$('#title').val(calEvent.title);
                         //console.log(calEvent.end);
+                        // var minDate = end.setDate(end.getDate() - 1);
                         $('#date').val(start._d.toLocaleDateString()+' - '+end._d.toLocaleDateString());
+                        // $('#date').val(start._d.getDateString()+' - '+end._d.getDateString());
                         //console.log(start);
                         //console.log(end);
                         categoryClass = $("#event_type").val();
@@ -205,40 +341,40 @@
                         calendar.fullCalendar('unselect');
                     },
                     editable: true,
-                    events: [
-                        {
-                            title: 'All Day Event',
-                            start: new Date(y, m, 1)
-                    },
-                        {
-                            title: 'Long Event',
-                            start: new Date(y, m, d - 5),
-                            end: new Date(y, m, d - 2)
-                    },
-                        {
-                            title: 'Meeting',
-                            start: new Date(y, m, d, 10, 30),
-                            allDay: false
-                    },
-                        {
-                            title: 'Lunch',
-                            start: new Date(y, m, d + 14, 12, 0),
-                            end: new Date(y, m, d, 14, 0),
-                            allDay: false
-                    },
-                        {
-                            title: 'Birthday Party',
-                            start: new Date(y, m, d + 1, 19, 0),
-                            end: new Date(y, m, d + 1, 22, 30),
-                            allDay: false
-                    },
-                        {
-                            title: 'Click for Google',
-                            start: new Date(y, m, 28),
-                            end: new Date(y, m, 29),
-                            url: 'http://google.com/'
-                    }
-                ]
+                //     events: [
+                //         {
+                //             title: 'All Day Event',
+                //             start: new Date(y, m, 1)
+                //     },
+                //         {
+                //             title: 'Long Event',
+                //             start: new Date(y, m, d - 5),
+                //             end: new Date(y, m, d - 2)
+                //     },
+                //         {
+                //             title: 'Meeting',
+                //             start: new Date(y, m, d, 10, 30),
+                //             allDay: false
+                //     },
+                //         {
+                //             title: 'Lunch',
+                //             start: new Date(y, m, d + 14, 12, 0),
+                //             end: new Date(y, m, d, 14, 0),
+                //             allDay: false
+                //     },
+                //         {
+                //             title: 'Birthday Party',
+                //             start: new Date(y, m, d + 1, 19, 0),
+                //             end: new Date(y, m, d + 1, 22, 30),
+                //             allDay: false
+                //     },
+                //         {
+                //             title: 'Click for Google',
+                //             start: new Date(y, m, 28),
+                //             end: new Date(y, m, 29),
+                //             url: 'http://google.com/'
+                //     }
+                // ]
                 });
             });
         </script>
