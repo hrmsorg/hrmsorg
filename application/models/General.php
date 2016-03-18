@@ -139,6 +139,11 @@ class general extends CI_Model
       $this->db->insert('divisi', $data);
     }
 
+  //free
+  public function save_free_add($data)
+    {
+      $this->db->insert('master_libur', $data); 
+    }
 
 
 }
