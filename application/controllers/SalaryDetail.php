@@ -18,9 +18,8 @@ class SalaryDetail extends CI_Controller
 		public function salary_detail()
 		{
 			$data['detail_gaji'] = $this->db->get('detail_gaji')->result_array();
-			$data['id_gaji'] = $this->db->where_in('id')->get('gaji')->result_array();
+			$data['id'] = $this->db->where_in('id')->get('gaji')->result_array();
 			$this->general->load('management/salary_detail/all', $data);
-			
 			// //pagination
 			// $this->load->library('pagination');
 
@@ -46,7 +45,7 @@ class SalaryDetail extends CI_Controller
 
 				$this->general->save_salary_detail_add($data);
 
-				redirect(base_url('SalaryDetail/salary_detail',$data));
+				redirect(base_url('SalaryDetail/salary_detail'));
 		}
 
 		public function salary_detail_delete($id)
@@ -70,20 +69,20 @@ class SalaryDetail extends CI_Controller
 		public function save_salary_detail_update()
 		{
 			// $data['id_gaji'] = $this->db->where_in('id')->get('gaji')->result_array();
+			$id = $this->input->post('id');
 			$data = array(
+			// 'id' =>  $this->input->post('id'),
             'id_gaji'=> $this->input->post('id_gaji'),
 			'jumlah'=>$this->input->post('jumlah'),
 			'tgl'=>$this->input->post('tgl'),
 			'ket'=>$this->input->post('ket'),
 			'tipe'=>$this->input->post('tipe'),
 			'jenis'=>$this->input->post('jenis'));
-
-			$data = $this->input->post();
-			$this->db->where('id', $data['id']);
-			$this->db->update('detail_gaji',$data);
-
-			$this->general->save_salary_detail_update($data);
-
+					
+			$this->db->where('id', $id);
+			$this->db->update('detail_gaji', $data);
+			// $this->general->save_salary_detail_update($data);
+			
 			redirect(base_url('SalaryDetail/salary_detail'));
 
 		}

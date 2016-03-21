@@ -15,7 +15,7 @@ class MasterSalary extends CI_Controller
     }
 
 
-		public function master_salary()
+		public function master_salary() 
 		{
 				$data['master_salary'] = $this->db->get('master_gaji')->result_array();
 				$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();

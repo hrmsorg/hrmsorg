@@ -24,10 +24,11 @@
         </div>
         <div class="x_content">
             <?php echo form_open('SalaryDetail/save_salary_detail_update');?><br>
+            <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $detail_gaji['id'];?>">
         <div class="item form-group">
             <label class="control-label col-md-3">Salary_id</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="text" value="<?php echo $detail_gaji['id_gaji'];?>" name="id_gaji" id="id_gaji" required class="form-control col-md-7 col-xs-12" autocomplete="off"/><!-- <input type="hidden" class="form-control" name="id"> -->
+                    <input type="text" value="<?php echo $detail_gaji['id_gaji'];?>" name="id_gaji" id="id_gaji" required class="form-control col-md-7 col-xs-12" autocomplete="off"/>
                 </div>
         </div>
         <div class="x_content"></div>

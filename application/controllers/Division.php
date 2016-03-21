@@ -13,9 +13,9 @@ class Division extends CI_Controller
         parent::__construct();
         $this->load->model('General');
     	}
-
+ 
 			public function division()
-					{
+					{ 
 							$data['divisi'] = $this->db->get('divisi')->result_array();
 							$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
 							$this->general->load('management/division/all', $data);
