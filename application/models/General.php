@@ -93,12 +93,6 @@ class general extends CI_Model
 
   //division
   
-
-    public function save_division_update($data)
-      {
-        $this->db->update('divisi', $data);
-
-      }
     public function get_division($id)
       {
         $this->db->where('id',$id);
@@ -125,16 +119,7 @@ class general extends CI_Model
       $this->db->insert('detail_gaji', $data);
 
     }
-  public function save_salary_detail_update($id)
-    {
-      $this->db->update('detail_gaji', $id);
-      $this->db->where('id_gaji')->get('detail_gaji');
-      // $this->db->select('*');
-      // $this->db->from('detail_gaji');
-      // $this->db->where('id_gaji',$id );
-      // $query = $this->db->get();
-      // return $result = $query->row_array();
-    }
+
    
   public function get_detail_gaji($id)
     {
