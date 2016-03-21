@@ -43,15 +43,23 @@
                           <tr>
                             <th>No</th>
                             <th>Date</th>
+                            <th>Title</th>
                             <th>Describe</th>
                           </tr>
                         </thead>
                         <tbody>
+                        <?php 
+                          foreach ($free as $key) {
+                        ?>
                           <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
+                            <th><?php echo $key['id'];?></th>
+                            <td><?php echo $key['tgl'];?></td>
+                            <td><?php echo $key['judul'];?></td>
+                            <td><?php echo $key['ket'];?></td>
                           </tr>
+                          <?php
+                        }
+                        ?>
                         </tbody>
                         </table>
                   </div>
