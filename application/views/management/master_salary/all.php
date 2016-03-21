@@ -8,7 +8,7 @@
                           <h3>
                 Manage Master Salary
                 </h3>
-                        </div>
+                        </div>   
 
                         <div class="title_right">
                             <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
@@ -37,23 +37,22 @@
                                     </ul>
                                     <div class="clearfix"></div>
                                 </div>
-                                    <!-- //tabel :divisi-> id, id_perusahaan, nama, ket,tugas_utama -->
+                                  <!-- //tabel :divisi-> id, id_perusahaan, nama, ket,tugas_utama -->
                                 <div class="x_content">
                                     <?php echo form_open('MasterSalary/save_master_salary');?>
                                   <br>
                                 <div class="item form-group">
-                                    <label for="password" class="control-label col-md-3">Starting Salaries</label>
+                                    <label for="password" class="control-label col-md-3">Gaji Awal</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input id="password" type="text" name="gaji_awal" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
                                     </div>
                                 </div>
 
-
-                                <br>
+                                 <br>
                                   <div class="clearfix"></div>
                                     <br>
                                 <div class="item form-group">
-                                    <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Final Salaries</label>
+                                    <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Gaji Akhir</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input id="password2" type="text" name="gaji_akhir" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
                                     </div>
@@ -71,7 +70,7 @@
                                 </div>
                             </div>
 
-                                
+                               
 
 
                                 <div class="clearfix"></div>
@@ -95,25 +94,25 @@
                       <div class="col-md-12 col-sm-12 col-xs-12">
                           <div class="x_panel">
                               <div class="x_title">
-                                  <h2>View Master Salary <small>Master Salary</small></h2>
+                                  <h2>View Master Salary <small>All Master Salary</small></h2>
 
                                   <div class="clearfix"></div>
                               </div>
                               <div class="x_content">
                                   <table id="example" class="table table-striped responsive-utilities jambo_table">
                                       <thead>
-                                            <!-- //tabel :divisi-> id, id_perusahaan, nama, ket,tugas_utama -->
+                                          <!-- //tabel :divisi-> id, id_perusahaan, nama, ket,tugas_utama -->
                                    <tr class="headings">
 
-                                              <th>Id </th>
-                                              <th>Id Perusahaan</th>
-                                              <th>Id Division</th>
-                                              <th>Id Jabatan</th>
-                                              <th>Gaji Awal </th>
-                                              <th>Gaji Akhir </th>
-                                              <th>Description </th>
-                                              <th class=" no-link last"><span class="nobr"> Action</span>
-                                              </th>
+                                      
+                                      <th>Company Id </th>
+                                      <th>Division Id</th>
+                                      <th>Jabatan Id</th>
+                                      <th>Gaji Awal</th>
+                                      <th>Gaji Akhir </th>
+                                      <th>Description</th>
+                                      <th class=" no-link last"><span class="nobr"> Action</span>
+                                      </th>
 
                                           </tr>
                                       </thead>
@@ -126,24 +125,24 @@
                                           ?>
                                           <tr class="even pointer">
 
-                                                <td><?php echo $key['id']; ?></td> 
-                                                <td><?php echo $key['id_perusahaan']; ?></td> 
-                                                <td><?php echo $key['id_divisi']; ?></td> 
-                                                <td><?php echo $key['id_jabatan']; ?></td> 
-                                                <td><?php echo $key['gaji_awal'];?></td>
-                                                <td><?php echo $key['gaji_akhir'];?></td>
-                                                <td><?php echo $key['ket'];?></td>                                 
-                                                <td class=" last"><a href="<?php echo base_url("MasterSalary/master_salary_delete/".$key['id']);?>" onClick="return doconfirm();"><i class="fa fa-eraser">Delete</i></a>
-              <script>
-                function doconfirm()
-                {
-                  job=confirm("Are you sure to delete this data?");
-                  if(job!=true)
-                  {
-                    return false;
-                  }
-                }
-              </script>
+                                       
+                                        <td ><?php echo $key['id_perusahaan'];?></td>
+                                        <td ><?php echo $key['id_divisi'];?></td>
+                                        <td ><?php echo $key['id_jabatan'];?></td>
+                                        <td><?php echo $key['gaji_awal'];?></td>
+                                        <td><?php echo $key['gaji_akhir'];?></td>
+                                        <td><?php echo $key['ket'];?></td>                                 
+                                        <canter><td><a href="<?php echo base_url("MasterSalary/master_salary_delete/".$key['id']);?>" onClick="return doconfirm();"><i class="fa fa-trash" ></i> </a>
+                                                      <script>
+                                                            function doconfirm()
+                                                            {
+                                                              job=confirm("Are you sure to delete this data?");
+                                                            if(job!=true)
+                                                            {
+                                                            return false;
+                                                            }
+                                                        }
+                                                      </script></center>
                                               <a href="<?php echo base_url("MasterSalary/master_salary_edit/".$key['id']);?>"> | <i class="fa fa-edit"></i</a></td>
                                               <?php
                                               }
@@ -198,17 +197,17 @@
                                       });
 
                                       var asInitVals = new Array();
-                                      $(document).ready(function () {
-                                          var oTable = $('#example').dataTable({
-                                              "oLanguage": {
-                                                  "sSearch": "Search all columns:"
-                                              },
-                                              "aoColumnDefs": [
-                                                  {
-                                                      'bSortable': false,
-                                                      'aTargets': [0]
-                                                  } //disables sorting for column one
-                                      ],
+                                      // $(document).ready(function () {
+                                      //     var oTable = $('#example').dataTable({
+                                      //         "oLanguage": {
+                                      //             "sSearch": "Search all columns:"
+                                      //         },
+                                      //         "aoColumnDefs": [
+                                      //             {
+                                      //                 'bSortable': false,
+                                      //                 'aTargets': [0]
+                                      //             } //disables sorting for column one
+                                      // ],
                                               'iDisplayLength': 12,
                                               "sPaginationType": "full_numbers",
                                               "dom": 'T<"clear">lfrtip',
