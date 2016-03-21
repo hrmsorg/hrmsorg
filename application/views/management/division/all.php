@@ -8,7 +8,7 @@
                           <h3>
                 Manage Division
                 </h3>
-                        </div>   
+                        </div>
 
                         <div class="title_right">
                             <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
@@ -125,7 +125,7 @@
                                                 <td ><?php echo $key['id_perusahaan'];?></td>
                                                 <td><?php echo $key['nama'];?></td>
                                                 <td><?php echo $key['ket'];?></td>
-                                                <td><?php echo $key['tugas_utama'];?></td>                                 
+                                                <td><?php echo $key['tugas_utama'];?></td>
                                                 <canter><td><a href="<?php echo base_url("division/division_delete/".$key['id']);?>" onClick="return doconfirm();"><i class="fa fa-trash" > </i> </a>
                                                       <script>
                                                             function doconfirm()
@@ -138,7 +138,7 @@
                                                         }
                                                       </script></center>
                                               <a href="<?php echo base_url("division/division_edit/".$key['id']);?>"> | <i class="fa fa-edit"></i</a></td>
-                                              <?php
+                                                <?php
                                               }
                                               ?>
                                           </tr>
