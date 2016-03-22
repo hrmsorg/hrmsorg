@@ -43,6 +43,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                         <?php echo form_open('Free/save_free_add');?><br>
+                        <input type="hidden" class="form-control" name="id">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                 <h4 class="modal-title" id="myModalLabel">New Calender Entry</h4>
@@ -53,7 +54,7 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Date</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="tgl" name="tgl"><input type="hidden" class="form-control" name="id">
+                                                <input type="text" class="form-control" id="tgl" name="tgl"> 
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -72,8 +73,13 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary antosubmit">Save changes</button>
+                                <div class="x_content"></div>
+          <div class="form-group">
+            <div class="col-md-6 col-md-offset-3">
+              <button type="submit" class="btn btn-primary">Cancel</button>
+              <button id="send" type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </div>
                                 </div>
                                 </div>
                 <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -91,19 +97,19 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Date</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="date2" name="date2">
-                                            </div>
+                                                <input type="text" class="form-control" id="tgl" name="tgl" value="<?php echo $free['tgl'] ;?>">
+<                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Title</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="title2" name="title2">
+                                                <input type="text" class="form-control" id="judul" name="judul" value="<?php echo $free['judul'] ;?>">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Description</label>
                                             <div class="col-sm-9">
-                                                <textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
+                                                <textarea class="form-control" style="height:55px;" id="ket" name="ket" value="<?php echo $free['ket'] ;?>"></textarea>
                                             </div>
                                         </div>
 

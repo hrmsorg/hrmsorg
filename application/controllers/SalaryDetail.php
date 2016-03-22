@@ -31,6 +31,10 @@ class SalaryDetail extends CI_Controller
 
 			// echo $this->pagination->create_links();
 		}
+		public function salary_detail_add()
+		{
+			$this->general->load('management/salary_detail/add');
+		}
 		
 		public function save_salary_detail_add()
 		{
