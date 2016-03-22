@@ -13,13 +13,20 @@ class Absent extends CI_Controller
         parent::__construct();
         $this->load->model('General');
     }
+
 //absent
-		public function absent_add()
-		{
-				$data['absent_add'] = $this->db->get('absensi')->result_array(); 
+
+    	public function get_absent_all()
+    	{
+    			$data['get_absent_all'] = $this->db->get('absensi')->result_array(); 
 				$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
 				$data['id_karyawan'] = $this->db->where_in('id')->get('karyawan')->result_array();
-				$this->general->load('absent/absensi',$data);
+    			$this->general->load('absent/absensi/all',$data);
+    	}
+
+		public function get_absent_add()
+		{
+				$this->general->load('absent/absensi/add');
 		}
 
 		public function save_absent_add()
