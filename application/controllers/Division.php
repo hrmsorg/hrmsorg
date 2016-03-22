@@ -60,6 +60,41 @@ class Division extends CI_Controller
 						redirect(base_url('division/division/all', $data));
 					}
 
+<<<<<<< HEAD
+=======
+            redirect('Division/division', $data);
+        }
+    public function division_delete($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('divisi');
+        redirect(base_url('Division/division'));
+    }
+    public function division_edit($id)
+    {
+        $data = array();
+        $data['divisi'] = $this->db->get('divisi')->result_array();
+        $data['divisi'] = $this->db->where_in('id', $id)->get('divisi')->row_array();
+        $this->general->load('management/division/edit', $data);
+    }
+    public function save_division_update()
+    {
+        $id = $this->input->post('id');
+        $data = array(
+                            'id_perusahaan' => 1,
+                            'nama' => $this->input->post('nama'),
+                            'ket' => $this->input->post('ket'),
+                            'tugas_utama' => $this->input->post('tugas_utama'));
+        $this->db->where('id', $id);
+        $this->db->update('divisi', $data);
+        redirect(base_url('Division/division'));
+    }
+>>>>>>> 758d3803801244052e611a6ed35de24610baca99
 
-
+    public function get_division_add()
+    {
+        $data['divisi'] = $this->db->get('divisi')->result_array();
+        $data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
+        $this->general->load('management/division/add', $data);
+    }
 }

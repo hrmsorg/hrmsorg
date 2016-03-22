@@ -415,7 +415,8 @@ body {
 }
 
 .page-title .title_right .pull-right {
-    margin: 10px 0;
+    margin-right: 0px;
+
 }
 
 .fixed_height_320 {
