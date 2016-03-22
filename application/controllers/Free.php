@@ -36,6 +36,6 @@ class Free extends CI_Controller
 
 				$this->general->save_free_add($data);
 
-				redirect(base_url('Free/free_all',$data));
+				redirect(base_url('Free/free_all'));
 		}
 }

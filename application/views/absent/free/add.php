@@ -1,88 +1,77 @@
 <section class="content">
-<div class="right_col" role="main">
-                    
-
-                    <div class="">
-                        <div class="page-title">
-                            <div class="title_left">
-                                <h3>
-                                    Calender
-                                    <small>
-                                        Click to add/edit events
-                                    </small>
-                                </h3>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <h2>Calender Events <small>Sessions</small></h2>
-                                        <ul class="nav navbar-right panel_toolbox">
-                                        <li>
-                                          <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                                        </li>
-                                        </ul>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content">
-                                        <div id='calendar'></div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <div class="right_col" role="main">
+        <div class="">
+          <div class="page-title">
+            <div class="title_left">
+            <h3>
+              Calender
+              <small>
+                Click to add/edit events
+              </small>
+            </h3>
+          </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="x_panel">
+        <div class="x_title">
+          <h2>Calender Events <small>Sessions</small></h2>
+        
+        <ul class="nav navbar-right panel_toolbox">
+          <li>
+            <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+    <div id='calendar'></div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Start Calender modal -->
+<div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <?php echo form_open('Free/save_free_add');?><br>
+        <input type="hidden" class="form-control" name="id">
+          <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel">New Calender Entry</h4>
+          </div>
+          <div class="modal-body">
+            <div id="testmodal" style="padding: 5px 20px;">
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Date</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="tgl" name="tgl"> 
                     </div>
-                    <!-- /footer content -->
-
                 </div>
-                <!-- Start Calender modal -->
-                <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                        <?php echo form_open('Free/save_free_add');?><br>
-                        <input type="hidden" class="form-control" name="id">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title" id="myModalLabel">New Calender Entry</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div id="testmodal" style="padding: 5px 20px;">
-                                    <form id="antoform" class="form-horizontal calender" role="form">
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Date</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="tgl" name="tgl"> 
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Title</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="judul" name="judul">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Description</label>
-                                            <div class="col-sm-9">
-                                                <textarea class="form-control" style="height:55px;" id="ket" name="ket"></textarea>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <div class="x_content"></div>
-          <div class="form-group">
-            <div class="col-md-6 col-md-offset-3">
-              <button type="submit" class="btn btn-primary">Cancel</button>
-              <button id="send" type="submit" class="btn btn-success">Submit</button>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Title</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="judul" name="judul">
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Description</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" style="height:55px;" id="ket" name="ket"></textarea>
+                    </div>
+                </div>
             </div>
           </div>
-                                </div>
-                                </div>
-                <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-footer">
+            <div class="x_content"></div>
+            <div class="form-group">
+              <div class="col-md-12 col-md-offset-4">
+                <button id="send" type="submit" class="btn btn-success col-md-6 col-xs-12">Save</button>
+              </div>
+                <!-- <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
 
@@ -93,7 +82,6 @@
                             <div class="modal-body">
 
                                 <div id="testmodal2" style="padding: 5px 20px;">
-                                    <form id="antoform2" class="form-horizontal calender" role="form">
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Date</label>
                                             <div class="col-sm-9">
@@ -113,11 +101,10 @@
                                             </div>
                                         </div>
 
-                                    </form>
                                 </div></div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary antosubmit2">Save changes</button>
+                                <button type="button" class="btn btn-primary antosubmit2">Save changes</button> -->
 
                 <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
                 <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
@@ -207,11 +194,13 @@
                         calendar.fullCalendar('unselect');
                     },
                     editable: true,
-                //     events: [
-                //         {
-                //             title: 'All Day Event',
-                //             start: new Date(y, m, 1)
-                //     },
+                    events: [
+                        {
+                            date
+                            title: 'All Day Event',
+                            start: new Date(y, m, 1)
+                        }
+                ]
                 //         {
                 //             title: 'Long Event',
                 //             start: new Date(y, m, d - 5),

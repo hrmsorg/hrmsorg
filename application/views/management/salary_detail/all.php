@@ -1,20 +1,24 @@
 <section class="content">
   <div class="right_col" role="main">
     <div class="">
-  <div class="clearfix"></div>
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel">
-        <div class="x_title">
-          <h2>View Salary <small>Salary Detail</small></h2>
-        <div class="title_right">
+        <div class="page-title">
+            <div class="title_left">
+          <h2>View Salary</h2>
+          </div>
+          <div class="title_right">
           <div class="col-md col-sm col-xs form-group pull-right top_search">
            <?php echo form_open('SalaryDetail/salary_detail_add');?>
            <button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Add New"></a><i class="fa fa-plus"></i></button>
           </div>
         </div>
-          <div class="clearfix"></div>
         </div>
+          <div class="x_panel">
+        <div class="x_title">
+          <small>Salary Detail</small>
+        </div>
+          <div class="clearfix"></div>
       <div class="x_content">
         <table id="example" class="table table-striped responsive-utilities jambo_table">
           <thead>
@@ -69,3 +73,4 @@
 <br/>
 <br/>
 </div>
+<?php form_close();?>
