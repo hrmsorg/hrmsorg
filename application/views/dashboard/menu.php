@@ -65,7 +65,7 @@
                 </a>
                   <ul class="nav child_menu" style="display: none">
                     <li>
-                      <a href="<?php echo base_url('Absent/absent_add');?>">All</a>
+                      <a href="<?php echo base_url('Absent/get_absent_all');?>">All</a>
                     </li>
                     <li>
                       <a href="<?php echo base_url('Free/free_all');?>">Free</a>
