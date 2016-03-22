@@ -22,6 +22,7 @@ class NewEmployee extends CI_Controller
 
 		public function save_new_employee()
 		{
+			$data = $this->input->post();
 			$data = array (
 
 			'id'=> 1,
