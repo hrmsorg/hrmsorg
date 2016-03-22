@@ -33,13 +33,13 @@ class Division extends CI_Controller
 
             $this->general->save_division($data);
 
-            redirect('division/division', $data);
+            redirect('Division/division', $data);
         }
     public function division_delete($id)
     {
         $this->db->where('id', $id);
         $this->db->delete('divisi');
-        redirect(base_url('division/division/all'));
+        redirect(base_url('Division/division'));
     }
     public function division_edit($id)
     {
@@ -58,8 +58,13 @@ class Division extends CI_Controller
                             'tugas_utama' => $this->input->post('tugas_utama'));
         $this->db->where('id', $id);
         $this->db->update('divisi', $data);
-        redirect(base_url('division/division/all'));
+        redirect(base_url('Division/division'));
     }
 
-
+    public function get_division_add()
+    {
+        $data['divisi'] = $this->db->get('divisi')->result_array();
+        $data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
+        $this->general->load('management/division/add', $data);
+    }
 }
