@@ -104,7 +104,7 @@
                                           <!-- //tabel :divisi-> id, id_perusahaan, nama, ket,tugas_utama -->
                                    <tr class="headings">
 
-                                      
+                                      <th>Id</center> </th>
                                       <th>Company Id </th>
                                       <th>Division Id</th>
                                       <th>Jabatan Id</th>
@@ -125,7 +125,7 @@
                                           ?>
                                           <tr class="even pointer">
 
-                                       
+                                        <td><?php echo $key['id']; ?></td>
                                         <td ><?php echo $key['id_perusahaan'];?></td>
                                         <td ><?php echo $key['id_divisi'];?></td>
                                         <td ><?php echo $key['id_jabatan'];?></td>
