@@ -74,14 +74,14 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
-		// 'dsn'	=> 'mysql:host=103.27.206.159;port=3306;dbname=pg_hrms;',
-	'hostname' => 'localhost',
-	// 'hostname' => '103.27.206.159',
-	'username' => 'root',
-	// 'username' => 'pg_hrms_usr',
-	'password' => 'kiny',
-	// 'password' => 'jogja237e-hrms',
+	// 'dsn'	=> '',
+		'dsn'	=> 'mysql:host=103.27.206.159;port=3306;dbname=pg_hrms;',
+	// 'hostname' => 'localhost',
+	'hostname' => '103.27.206.159',
+	// 'username' => 'root',
+	'username' => 'pg_hrms_usr',
+	// 'password' => 'kiny',
+	'password' => 'jogja237e-hrms',
 	'database' => 'pg_hrms',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
