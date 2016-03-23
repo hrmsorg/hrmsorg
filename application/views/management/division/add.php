@@ -4,8 +4,13 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
+                          <ul class="nav navbar-right panel_toolbox">
+
+                              </li>
+
+                          </ul>
                           <h3>
-                Manage Division
+            <a href="<?php echo 'Division';?>" >  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Back"><i class="fa  fa-arrow-left"></i></button></a></i>  Manage Division
                 </h3>
                         </div>
 

@@ -12,9 +12,7 @@
 
 
  <div class="title_right">
-    <div class="col-md col-sm col-xs form-group pull-right top_search">
-        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Add New"> <a href="<?php echo 'get_division_add';?>" ><i class="fa fa-plus" ></i></a></button>
-    </div>
+
 </div>
 
                     </div>
@@ -27,7 +25,9 @@
                           <div class="x_panel">
                               <div class="x_title">
                                   <h2>View Division <small>All Division</small></h2>
-
+                                  <div class="col-md col-sm col-xs form-group pull-right top_search">
+                                     <a href="<?php echo 'get_division_add';?>" >  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Add New"><i class="fa fa-plus" ></i></button></a>
+                                  </div>
                                   <div class="clearfix"></div>
                               </div>
                               <div class="x_content">
