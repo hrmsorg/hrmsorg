@@ -7,14 +7,16 @@
             <div class="title_left">
           <h2>View Free Data</h2>
           </div>
+        </div>
+        </div>
+          <div class="x_panel">
           <div class="title_right">
           <div class="col-md col-sm col-xs form-group pull-right top_search">
            <?php echo form_open('Free/free_add');?>
            <button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Add New"></a><i class="fa fa-plus"></i></button>
           </div>
         </div>
-        </div>
-          <div class="x_panel">
+        <?php form_close();?>
         <div class="x_title">
           <small>Free Master List</small>
           <div class="col-md col-sm col-xs form-group pull-right top_search">
@@ -48,7 +50,7 @@
               <td class=" "><?php echo $key['ket'];?></td>
               <td class=" "><?php echo $key['tgl'];?></td>
               <td class=" last">
-              <?php echo form_open("Free/free_delete/".$key['id']);?>
+              <?php echo form_open('Free/free_delete/'.$key['id']);?>
               <button onClick="return doconfirm();" data-placement="bottom" data-toggle="tooltip" data-original-title="Delete" class="btn btn-sm tooltips btn-danger"><i class="fa fa-trash-o"></i></button>
               <script>
                 function doconfirm()

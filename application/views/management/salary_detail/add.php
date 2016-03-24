@@ -3,7 +3,10 @@
     <div class="">
 <div class="page-title">
     <div class="title_left">
-      <h3> Salary Detail </h3>
+      <h3>
+      <?php echo form_open("SalaryDetail/salary_detail");?>
+      <button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Back"><i class="fa fa-arrow-left"></i></button>
+      Salary Detail </h3><?php echo form_close();?>
     </div>
     </div>
       <div class="clearfix"></div>
@@ -23,11 +26,11 @@
       </div>
         <div class="x_content">
           <?php echo form_open('SalaryDetail/save_salary_detail_add');?><br>
+          <input type="hidden" class="form-control" name="id">
           <div class="item form-group">
             <label class="control-label col-md-3">Salary_id</label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <input type="text" name="id_gaji" id="id_gaji" required class="form-control col-md-7 col-xs-12" autocomplete="off"/>
-                <input type="hidden" class="form-control" name="id">
               </div>
           </div>
         <div class="x_content"></div>
@@ -92,6 +95,7 @@
       </div>
     </div>
     </div>
+    <?php echo form_close()?>
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/dist/bootstrap-clockpicker.min.js');?>"></script>
