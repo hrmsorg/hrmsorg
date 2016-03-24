@@ -13,7 +13,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $this->load->model('General');
     }
 
-			public function company_add()
+    	public function get_company_all()
+    	{
+    			$data['get_company_all'] = $this->db->get('perusahaan')->result_array(); 
+				$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
+				$data['id_karyawan'] = $this->db->where_in('id')->get('karyawan')->result_array();
+    			$this->general->load('company/all',$data);
+    	}
+
+			public function get_company_add()
 
 		{
 			$this->general->load('company/add');

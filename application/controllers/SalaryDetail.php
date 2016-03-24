@@ -15,7 +15,7 @@ class SalaryDetail extends CI_Controller
     	}
     	
     	//function salary_detail
-		public function salary_detail()
+		public function salary_detail() 
 		{
 			$data['detail_gaji'] = $this->db->get('detail_gaji')->result_array();
 			$data['id'] = $this->db->where_in('id')->get('gaji')->result_array();
