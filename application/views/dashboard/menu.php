@@ -40,7 +40,7 @@
                         <a href="<?php echo base_url('Employee/employee');?>">Employee</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('NewEmployee/new_employee');?>">New Employee</a>
+                        <a href="<?php echo base_url('NewEmployee/new_employee_all');?>">New Employee</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('Level/level');?>">Level</a>

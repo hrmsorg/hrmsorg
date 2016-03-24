@@ -14,18 +14,21 @@ class NewEmployee extends CI_Controller
         $this->load->model('General');
     	}
 
-    	public function new_employee()
+    	public function new_employee_all()
 		{
 			$data['calon_karyawan'] = $this->db->get('calon_karyawan')->result_array();
-			$this->general->load('management/new_employee/add', $data);
+			$this->general->load('management/new_employee/all', $data);
 		}
 
-		public function save_new_employee()
+		public function new_employee_add()
 		{
+			$this->general->load('management/new_employee/add');
+		}
+		public function save_new_employee()
+		{	
 			$data = $this->input->post();
 			$data = array (
 
-			'id'=> 1,
 			'nama'=>$this->input->post('nama'),
 			'tempat_lahir'=>$this->input->post('tempat_lahir'),
 			'tgl_lahir'=>$this->input->post('tgl_lahir'),
@@ -43,7 +46,7 @@ class NewEmployee extends CI_Controller
 
 			$this->general->save_new_employee($data);
 
-			redirect('NewEmployee/new_employee');
+			redirect('NewEmployee/new_employee_all');
 								
 		}
 
