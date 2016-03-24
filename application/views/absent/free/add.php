@@ -196,7 +196,6 @@
                     editable: true,
                     events: [
                         {
-                            date
                             title: 'All Day Event',
                             start: new Date(y, m, 1)
                         }

@@ -13,7 +13,7 @@ class MasterCuti extends CI_Controller
         parent::__construct();
         $this->load->model('General');
    		}
-
+ 
 
 		public function master_cuti()
 		{
@@ -40,20 +40,28 @@ class MasterCuti extends CI_Controller
 		}
 		public function master_cuti_edit($id)
 		{
-						$data = array();
-						$data['master_cuti'] = $this->db->get('master_cuti')->result_array();
-						$data['master_cuti'] = $this->db->where_in('id',$id)->get('master_cuti')->row_array();
-						$this->general->load('absent/mastercuti/edit', $data);
-		} 
+			$data = array();
+			$data['master_cuti'] = $this->db->get('master_cuti')->result_array();
+			$data['master_cuti'] = $this->db->where_in('id',$id)->get('master_cuti')->row_array();
+
+			$this->general->load('absent/mastercuti/edit',$data);
+
+		}
+		
+		
 		public function save_master_cuti_update()
-		{
+					{
 						$data['master_cuti'] = $this->db->get('master_cuti')->result_array();
 						$data = $this->input->post();
 						$this->db->where('id', $data['id']);
 						$this->db->update('master_cuti',$data);
-						$this->general->save_master_cuti_update($data);
-						redirect(base_url('absent/mastercuti/all', $data));
-		}
-
+						$this->general->load('absent/mastercuti/all', $data);
+						redirect(base_url('MasterCuti/mastercuti/all', $data));
+					}
+					public function get_master_cuti_add()
+			    {
+			        $data['master_cuti'] = $this->db->get('master_cuti')->result_array();
+			        $this->general->load('absent/mastercuti/add', $data);
+			    }
 
 }

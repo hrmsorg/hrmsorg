@@ -3,7 +3,9 @@
     <div class="">
     <div class="page-title">
       <div class="title_left">
-            <h3> Salary Detail </h3>
+      <?php echo form_open("SalaryDetail/salary_detail");?>
+      <button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Back"><i class="fa fa-arrow-left"></i></button>
+      Salary Detail </h3><?php echo form_close();?>
       </div>
     </div>
   <div class="clearfix"></div>

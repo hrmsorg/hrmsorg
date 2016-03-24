@@ -6,7 +6,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Division extends CI_Controller
-{
+{ 
 
 		public function __construct()
 		{
@@ -27,7 +27,7 @@ class Division extends CI_Controller
 						$data =$this->input->post();
 						$data = array (
 
-								'id_perusahaan'=> 1,
+								'id_perusahaan'=> 1, 
 								'nama'=>$this->input->post('nama'),
 								'ket'=>$this->input->post('ket'),
 								'tugas_utama'=>$this->input->post('tugas_utama'));
