@@ -30,11 +30,9 @@
                             <div class="x_panel" style="">
                                 <div class="x_title">
                                     <h2>Form Division</h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"><small> Add new</small></i></a>
-                                        </li>
-
-                                    </ul>
+                                    <div class="col-md col-sm col-xs form-group pull-right top_search">
+                                       <a href="<?php echo 'Division';?>" >  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Back"><i class="fa fa-arrow-left" ></i></button></a>
+                                    </div>
                                     <div class="clearfix"></div>
                                 </div>
                                 	<!-- //tabel :divisi-> id, id_perusahaan, nama, ket,tugas_utama -->
