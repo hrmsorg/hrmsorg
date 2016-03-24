@@ -12,14 +12,12 @@
 
 
  <div class="title_right">
-    <div class="col-md col-sm col-xs form-group pull-right top_search">
-        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Add New"> <a href="<?php echo 'get_master_cuti';?>" ><i class="fa fa-plus" ></i></a></button>
-    </div>
+
 </div>
 
                     </div>
 
-                     t <div class="clearfix"></div>
+                 <div class="clearfix"></div>
 
                   <div class="row">
 
@@ -27,7 +25,9 @@
                           <div class="x_panel">
                               <div class="x_title">
                                   <h2>View Master Cuti <small>All Master Cuti</small></h2>
-
+                                  <div class="col-md col-sm col-xs form-group pull-right top_search">
+                                     <a href="<?php echo 'get_master_cuti_add';?>" >  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Add New"><i class="fa fa-plus" ></i></button></a>
+                                  </div>
                                   <div class="clearfix"></div>
                               </div>
                               <div class="x_content">
@@ -39,6 +39,7 @@
                                               <th>ID</center> </th>
                                               <th>Type </th>
                                               <th>Description </th>
+                                             
                                               <th class=" no-link last"><span class="nobr"> Action</span>
                                               </th>
 
@@ -53,13 +54,11 @@
 
                                                 <td><?php echo $key['id'];
                                             ?></td>
-                                                
-                                                <td><?php echo $key['jenis'];
+                                             <td><?php echo $key['jenis'];
                                             ?></td>
-
                                                 <td><?php echo $key['ket'];
                                             ?></td>
-                                              
+                                                
   <td><a href="<?php echo base_url('MasterCuti/master_cuti_delete/'.$key['id']);
                                             ?>" onClick="return doconfirm();">   <button title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Trash" class="btn btn-sm tooltips btn-danger"><i class="fa fa-trash-o"></i>
                                                             </button></a>

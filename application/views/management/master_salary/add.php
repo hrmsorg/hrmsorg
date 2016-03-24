@@ -10,7 +10,7 @@
 
                           </ul>
                           <h3>
-            <a href="<?php echo 'Division';?>" >  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Back"><i class="fa  fa-arrow-left"></i></button></a></i>  Manage Master Salary
+            <a href="<?php echo 'MasterSalary';?>" >  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Back"><i class="fa  fa-arrow-left"></i></button></a></i>  Manage Master Salary
                 </h3>
                         </div>
 

@@ -37,7 +37,7 @@
                                     </ul>
                                     <div class="clearfix"></div>
                                 </div>
-                                	<!-- //tabel :divisi-> id, id_perusahaan, nama, ket,tugas_utama -->
+                                  <!-- //tabel :divisi-> id, id_perusahaan, nama, ket,tugas_utama -->
                                 <div class="x_content">
                                     <?php echo form_open('MasterCuti/save_master_cuti_update');?>
                                   <br>
@@ -45,10 +45,11 @@
                                 <div class="item form-group">
                                     <label for="password" class="control-label col-md-3">Type</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="password" type="text" name="jenis" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required" autocomplete="off" value="<?php echo $divisi['nama'];?>">
+                                        <input id="password" type="text" name="jenis" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required" autocomplete="off" value="<?php echo $master_cuti['jenis'];?>">
                                     </div>
                                 </div>
 
+                                
 
                               <div class="clearfix"></div>
                                 <br>
@@ -56,11 +57,11 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Description
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <textarea id="textarea" required="required" name="ket" class="form-control col-md-7 col-xs-12"  value="<?php echo $divisi['tugas_utama'];?>"></textarea>
+                                    <textarea id="textarea" required="required" name="ket" class="form-control col-md-7 col-xs-12"  value="<?php echo $master_cuti['ket'];?>"></textarea>
                                 </div>
                             </div>
 
-                                
+                               
 
 
                                 <div class="clearfix"></div>
@@ -78,4 +79,3 @@
                             </div>
                                     </div>
                                     <div class="clearfix"></div>
-

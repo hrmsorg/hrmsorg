@@ -22,7 +22,7 @@ class MasterSalary extends CI_Controller
 				$data['id_divisi'] = $this->db->where_in('id')->get('divisi')->result_array();
 				$data['id_level'] = $this->db->where_in('id')->get('level')->result_array();
 				$this->general->load('management/master_salary/all',$data);
-		}
+		} 
 
 		public function save_master_salary()
 		{ 

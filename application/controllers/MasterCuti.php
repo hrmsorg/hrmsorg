@@ -48,28 +48,19 @@ class MasterCuti extends CI_Controller
 
 		}
 		
+		
 		public function save_master_cuti_update()
-		{
-			
-			$id = $this->input->post('id');
-			$data = array(
-			// 'id' =>  $this->input->post('id'),
-            
-			'jenis'=>$this->input->post('jenis'),
-			
-			'ket'=>$this->input->post('ket'));
-					
-			$this->db->where('id', $id);
-			$this->db->update('master_cuti', $data);
-			// $this->general->save_salary_detail_update($data);
-			
-			redirect(base_url('MasterCuti/master_cuti'));
-
-		}
-		public function get_master_cuti()
+					{
+						$data['master_cuti'] = $this->db->get('master_cuti')->result_array();
+						$data = $this->input->post();
+						$this->db->where('id', $data['id']);
+						$this->db->update('master_cuti',$data);
+						$this->general->load('absent/mastercuti/all', $data);
+						redirect(base_url('MasterCuti/mastercuti/all', $data));
+					}
+					public function get_master_cuti_add()
 			    {
 			        $data['master_cuti'] = $this->db->get('master_cuti')->result_array();
-			     
 			        $this->general->load('absent/mastercuti/add', $data);
 			    }
 
