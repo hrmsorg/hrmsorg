@@ -69,12 +69,12 @@ class Salary extends CI_Controller
 						// 'id' =>  $this->input->post('id'),
 						'id_perusahaan'			=> 1,
 						'id_karyawan'			=> 1,
-						'id_level'				=> 1,
+						'id_level'			=> 1,
 						'pokok'					=>$this->input->post('pokok'),
 						'tunjangan'				=>$this->input->post('tunjangan'),
 						'periode_kerja_awal'	=>$this->input->post('periode_kerja_awal'),
 						'periode_kerja_akhir'	=>$this->input->post('periode_kerja_akhir')
-					);
+							);
 								
 						$this->db->where('id', $id);
 						$this->db->update('gaji', $data);

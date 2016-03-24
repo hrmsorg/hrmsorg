@@ -28,6 +28,7 @@
                                  
                                 <div class="x_content">
                                     <?php echo form_open('Cuti/save_cuti_update');?>
+                                    <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $cuti_all['id'];?>">
 
 
                                 <div class="col-md-6">

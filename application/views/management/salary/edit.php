@@ -29,6 +29,7 @@
                                 
                                  <div class="x_content">
                                     <?php echo form_open('Salary/save_salary_update');?>
+                                    <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $salary_all['id'];?>">
                           
                                   <div class="item form-group">
                                       <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Salary</label>
