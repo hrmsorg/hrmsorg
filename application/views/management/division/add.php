@@ -4,8 +4,13 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
+                          <ul class="nav navbar-right panel_toolbox">
+
+                              </li>
+
+                          </ul>
                           <h3>
-                Manage Division
+            Manage Division
                 </h3>
                         </div>
 
@@ -18,10 +23,11 @@
                             <!-- form date pickers -->
                             <div class="x_panel" style="">
                                 <div class="x_title">
-                                    <h2>Form Division</h2>
+                                    <h2>Form Division<small>Add New</small></h2>
                                     <ul class="nav navbar-right panel_toolbox">
-                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"><small> Add new</small></i></a>
-                                        </li>
+                                      <div class="col-md col-sm col-xs form-group pull-right top_search">
+                                         <a href="<?php echo 'Division';?>" >  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Back"><i class="fa fa-arrow-left" ></i></button></a>
+                                      </div>
 
                                     </ul>
                                     <div class="clearfix"></div>

@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	// 'dsn'	=> '',
-	'dsn'	=> 'mysql:host=103.27.206.159;port=3306;dbname=pg_hrms;',
+		'dsn'	=> 'mysql:host=103.27.206.159;port=3306;dbname=pg_hrms;',
 	// 'hostname' => 'localhost',
 	'hostname' => '103.27.206.159',
 	// 'username' => 'root',

@@ -23,12 +23,12 @@
               <ul class="nav side-menu">
               <li>
                 <a href="<?php echo base_url('/');?>">
-                    <i class="fa fa-dashboard"></i> Dashboard 
+                    <i class="fa fa-dashboard"></i> Dashboard
                 </a>
               </li>
               <li>
                 <a href="<?php echo base_url('Company/company_add');?>">
-                    <i class="fa fa-university"></i> Company 
+                    <i class="fa fa-university"></i> Company
                 </a>
               </li>
               <li>
@@ -43,7 +43,7 @@
                         <a href="<?php echo base_url('NewEmployee/new_employee_all');?>">New Employee</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('Level/level');?>">Level</a>
+                        <a href="<?php echo base_url('Level');?>">Level</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('Division/division');?>">Division</a>

@@ -1,101 +1,128 @@
 <section class="content">
-  <div class="right_col" role="main">
-    <div class="">
-<div class="page-title">
-    <div class="title_left">
-      <h3>
-      <?php echo form_open("SalaryDetail/salary_detail");?>
-      <button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Back"><i class="fa fa-arrow-left"></i></button>
-      Salary Detail </h3><?php echo form_close();?>
-    </div>
-    </div>
-      <div class="clearfix"></div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="x_panel" style="">
-            <div class="x_title">
-              <h2>Form Salary<small> Add new</small></h2>
-            <ul class="nav navbar-right panel_toolbox">
-              <li>
-                <a class="collapse-link">
-                  <i class="fa fa-chevron-down"></i>
-                </a>
-              </li>
-            </ul>
-        <div class="clearfix"></div>
-      </div>
-        <div class="x_content">
-          <?php echo form_open('SalaryDetail/save_salary_detail_add');?><br>
-          <input type="hidden" class="form-control" name="id">
-          <div class="item form-group">
-            <label class="control-label col-md-3">Salary_id</label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" name="id_gaji" id="id_gaji" required class="form-control col-md-7 col-xs-12" autocomplete="off"/>
-              </div>
-          </div>
-        <div class="x_content"></div>
-          <div class="item form-group">
-            <label class="control-label col-md-3">Amount</label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="jumlah" name="jumlah" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-              </div>
-          </div>
-        <div class="x_content"></div>
-          <div class="item form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Description</label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <textarea id="textarea" required="required" name="ket" id="ket" class="form-control col-md-7 col-xs-12"></textarea>
-              </div>
-          </div>
-        <div class="x_content"></div>
-          <div class="item form-group">
-            <label for="password" class="control-label col-md-3">Salary Date</label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="input-prepend input-group ">
-                  <span class="add-on input-group-addon">
-                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                  </span>
-                    <input type="text" class="form-control has-feedback-left col-md-7 col-xs-12" id="single_cal2" name="tgl" id="tgl" placeholder="Select Date" >
-                          <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
-                          <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
-                </div>
-              </div>
-            </div>
-        <div class="x_content"></div>
-          <div class="item form-group">
-            <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Type</label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <select class="select2_single form-control" name="tipe" id="tipe" tabindex="-1">
-                  <option <?php echo ($this->input->post("tipe")=="Plus")?"selected":"";?> value="Plus">Plus</option>
-                  <option <?php echo ($this->input->post("tipe")=="Minus")?"selected":"";?> value="Minus">Minus</option>
-                </select>
-              </div>
-          </div>
-        <div class="x_content"></div>
-          <div class="form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12">Type of Salary</label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <select class="select2_single form-control" name="jenis" id="jenis" tabindex="-1">
-                  <option <?php echo ($this->input->post("jenis")=="BPJS")?"selected":"";?> value="BPJS">BPJS</option>
-                  <option <?php echo ($this->input->post("jenis")=="Salary")?"selected":"";?> value="Salary">Salary</option>
-                  <option <?php echo ($this->input->post("jenis")=="Overtime")?"selected":"";?> value="Overtime">Overtime</option>
-                  <option <?php echo ($this->input->post("jenis")=="Piece")?"selected":"";?> value="Piece">Piece</option>
-                </select>
-              </div>
-          </div>
-        <div class="x_content"></div>
-          <div class="form-group">
-            <div class="col-md-6 col-md-offset-3">
-              <button type="submit" class="btn btn-primary">Cancel</button>
-              <button id="send" type="submit" class="btn btn-success">Submit</button>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    <?php echo form_close()?>
+            <div class="right_col" role="main">
+
+                <div class="">
+                    <div class="page-title">
+                        <div class="title_left">
+                          <h3>
+                           Manage Cuti
+                          </h3>
+                        </div>
+
+                        <div class="title_right"></div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <!-- form date pickers -->
+                            <div class="x_panel" style="">
+                                <div class="x_title">
+                                    <h2>Form Cuti</h2>
+                                    <div class="col-md col-sm col-xs form-group pull-right top_search">
+                                     <a href="<?php echo 'cuti_all';?>" >  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Back"><i class="fa  fa-arrow-left"></i></button></a>
+                                  </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                 
+                                <div class="x_content">
+                                    <?php echo form_open('Cuti/save_cuti_update');?>
+
+
+                                <div class="col-md-6">
+                                            <fieldset>
+                                              <div class="control-group">
+                                                  <div class="controls">
+                                                      <div class="input-prepend input-group">
+                                                        <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+
+                                                          <input type="text" class="form-control has-feedback-left" id="single_cal3" name="tgl_awal" value="<?php echo $cuti_all['tgl_awal'];?>" placeholder="Date Start" >
+                                                         
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                            <fieldset>
+                                              <div class="control-group">
+                                                      <div class="controls">
+                                                      <div class="input-prepend input-group">
+                                                                 <div class="input-group clockpicker-with-callbacks">
+                                                             <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-clock-o"></i></span>
+
+                                                                    <input type="text" class="form-control has-feedback-left" name="jam_awal" value="<?php echo $cuti_all['jam_awal'];?>"  placeholder="Time Start"  >
+                                                          
+                                                                 </div>
+                                                      </div>
+                                                      </div>
+                                            </div>
+                                          </fieldset>
+                              </div>
+                              <div class="col-md-6">
+                                        <fieldset>
+                                              <div class="control-group">
+                                                  <div class="controls">
+                                                      <div class="input-prepend input-group">
+                                                        <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                                          <input type="text" class="form-control has-feedback-left" id="single_cal2" name="tgl_akhir" value="<?php echo $cuti_all['tgl_akhir'];?>" placeholder="Date End" >
+                                                          <!-- <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
+                                                          <span id="inputSuccess2Status4" class="sr-only">(success)</span> -->
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </fieldset>
+                            </div>
+                            <div class="col-md-6">
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <div class="controls">
+                                                    <div class="input-prepend input-group">
+                                                         <div class="input-group clockpicker-with-callbacks">
+                                                           <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-clock-o"></i></span>
+
+                                                          <input type="text" class="form-control has-feedback-left" name="jam_akhir" value="<?php echo $cuti_all['jam_akhir'];?>"  placeholder="Time End" >
+                                                          <!-- <span class="fa fa-clock-o form-control-feedback left" aria-hidden="true"></span>
+                                                          <span id="inputSuccess2Status3" class="sr-only">(success)</span> -->
+                                                         </div>
+                                                    </div>
+                                              </div>
+                                          </div>
+                              </fieldset>
+                            </div>
+
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Description
+                                </label>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <textarea id="textarea" name="ket" class="form-control col-md-7 col-xs-12"><?php echo $cuti_all['ket'];?></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <div class="checkbox">
+                                        <label>
+                                          <input type="checkbox" class="flat" checked="checked" name="approved" value="setuju"> Approved
+                                        </label>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <button type="submit" class="btn btn-primary">Cancel</button>
+                                    <button id="send" type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                            </div>
+
+                            <?php form_close();?>
+                          </div>
+                          
+                      </div>
+                          </div>
+                            </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/dist/bootstrap-clockpicker.min.js');?>"></script>
@@ -355,3 +382,4 @@
            });
        });
    </script>
+   <!-- /datepicker -->

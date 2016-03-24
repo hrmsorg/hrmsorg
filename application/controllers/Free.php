@@ -28,6 +28,8 @@ class Free extends CI_Controller
 
 		public function save_free_add()
 		{
+			$data['master_libur'] = $this->db->get('master_libur')->result_array();
+
 			$data = $this->input->post();
 			$data = array (
 				'tgl'=>$this->input->post('tgl'),
@@ -36,6 +38,14 @@ class Free extends CI_Controller
 
 				$this->general->save_free_add($data);
 
-				redirect(base_url('Free/free_all',$data));
+				redirect(base_url('Free/free_all'));
+		}
+
+		public function free_delete($id)
+		{
+			$this->db->where('id', $id);
+			$this->db->delete('master_libur');
+
+			redirect(base_url('Free/free_all'));
 		}
 }

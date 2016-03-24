@@ -88,6 +88,61 @@ class general extends CI_Model
     $this->db->insert('master_gaji', $data);
   }
 
+
+//level
+
+  function tambah_level($nama_foto,$tanggal) {
+
+    $data = array(
+      'title' => $this->input->post('judul'),
+      'photo_url' => $nama_foto,
+      'created' => $tanggal,
+      'id_perusahaan'=>1,
+    
+      'ket'=> $this->input->post('ket_level'),
+      'tugas_utama'=>$this->input->post('tugas_level')
+    );
+
+    return $this->db->insert('level', $data);
+
+  }
+
+  function get_level($perPage, $uri) {
+
+
+    $this->db->order_by('id_level','DESC');
+
+    $query = $getData = $this->db->get('level', $perPage, $uri);
+
+    if($getData->num_rows() > 0)
+
+    return $query;
+
+    else
+
+    return null;
+
+  }
+
+  function link_level($id_level){
+
+    $this->db->where('id_level',$id_level);
+      $query = $getData = $this->db->get('level');
+
+    if($getData->num_rows() > 0)
+    return $query;
+    else
+    return null;
+
+  }
+
+  function hapus_level($id_level) {
+
+    $this->db->where('id_level',$id_level);
+    $this->db->delete('level');
+
+  }
+
    
 
 
