@@ -76,8 +76,7 @@
                                                             }
                                                         }
                                                       </script></center>
-                                              <a href="<?php echo base_url('division/division_edit/'.$key['id']);
-                                            ?>"><button title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Edit" class="btn btn-sm tooltips btn-primary"><i class="fa fa-edit"></i>
+<a href="<?php echo base_url('division/division_edit/'.$key['id']);?>"><button title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Edit" class="btn btn-sm tooltips btn-primary"><i class="fa fa-edit"></i>
                                                             </button></a></td>
 
                                               <?php
