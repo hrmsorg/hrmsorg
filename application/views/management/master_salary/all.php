@@ -12,9 +12,7 @@
 
 
  <div class="title_right">
-    <div class="col-md col-sm col-xs form-group pull-right top_search">
-        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Add New"> <a href="<?php echo 'get_master_salary';?>" ><i class="fa fa-plus" ></i></a></button>
-    </div>
+
 </div>
 
                     </div>
@@ -27,7 +25,9 @@
                           <div class="x_panel">
                               <div class="x_title">
                                   <h2>View Master Salary <small>All Master Salary</small></h2>
-
+                                  <div class="col-md col-sm col-xs form-group pull-right top_search">
+                                     <a href="<?php echo 'get_master_salary_add';?>" >  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Add New"><i class="fa fa-plus" ></i></button></a>
+                                  </div>
                                   <div class="clearfix"></div>
                               </div>
                               <div class="x_content">
@@ -37,11 +37,13 @@
                                    <tr class="headings">
 
                                               <th>ID</center> </th>
-                                            
-                                              <th>Jenis </th>
-
+                                              <th>ID Company</center> </th>
+                                              <th>ID Division</center> </th>
+                                              <th>ID Level</center> </th>
+                                              <th>Gaji Awal </th>
+                                              <th>Gaji Akhir </th>
                                               <th>Description </th>
-                                              
+                                             
                                               <th class=" no-link last"><span class="nobr"> Action</span>
                                               </th>
 
@@ -56,8 +58,15 @@
 
                                                 <td><?php echo $key['id'];
                                             ?></td>
-                                               
-                                                <td><?php echo $key['jenis'];
+                                                <td ><?php echo $key['id_perusahaan'];
+                                            ?></td>
+                                            <td ><?php echo $key['id_divisi'];
+                                            ?></td>
+                                            <td ><?php echo $key['id_level'];
+                                            ?></td>
+                                                <td><?php echo $key['gaji_awal'];
+                                            ?></td>
+                                             <td><?php echo $key['gaji_akhir'];
                                             ?></td>
                                                 <td><?php echo $key['ket'];
                                             ?></td>
@@ -75,7 +84,7 @@
                                                             }
                                                         }
                                                       </script></center>
-                                              <a href="<?php echo base_url('division/division_edit/'.$key['id']);
+                                              <a href="<?php echo base_url('MasterSalary/master_salary_edit/'.$key['id']);
                                             ?>"><button title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Edit" class="btn btn-sm tooltips btn-primary"><i class="fa fa-edit"></i>
                                                             </button></a></td>
 
