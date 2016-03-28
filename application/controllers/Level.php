@@ -1,170 +1,133 @@
 <?php
 
-/**
-*
-*/
-defined('BASEPATH') OR exit('No direct script access allowed');
+if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
 class Level extends CI_Controller
 {
-
-		public function __construct()
-		{
+    public function __construct()
+    {
         parent::__construct();
-        $this->load->model('General');
-				$this->load->library('pagination');
-    	}
 
-			public function index()
-			{
-				//------------------------------------------------------------------------------------
-				$getData = $this->db->get('level');
-				$a = $getData->num_rows();
-				$config['base_url'] = site_url().'/level/index'; //set the base url for pagination
-				$config['total_rows'] = $a; //total rows
-				$config['per_page'] = '6'; //the number of per page for pagination
-				$config['uri_segment'] = 3; //see from base_url. 3 for this case
-				$config['full_tag_open'] = '<p class=pagination>';
-				$config['full_tag_close'] = '</p>';
-				$this->pagination->initialize($config); //initialize pagination
-				//------------------------------------------------------------------------------------
+        $this->load->model('general');
+        $this->load->library('pagination');
+    }
 
-				$data['judul'] = 'Photo Album';
+    public function index()
+    {
+        //------------------------------------------------------------------------------------
+    $getData = $this->db->get('jabatan');
+        $a = $getData->num_rows();
+        $config['base_url'] = site_url().'/level/index'; //set the base url for pagination
+    $config['total_rows'] = $a; //total rows
+    $config['per_page'] = '6'; //the number of per page for pagination
+    $config['uri_segment'] = 3; //see from base_url. 3 for this case
+    $config['full_tag_open'] = '<p class=pagination>';
+        $config['full_tag_close'] = '</p>';
+        $this->pagination->initialize($config); //initialize pagination
+    //------------------------------------------------------------------------------------
 
-				$data['level'] = $this->general->get_level($config['per_page'],$this->uri->segment(3));
+    $data['jabatan'] = $this->general->get_photo($config['per_page'], $this->uri->segment(3));
 
-				$this->general->load('management/level/all', $data);
-			}
+        $this->general->load('management/level/all', $data);
+    }
 
-			public function tambah()
-			{
-				$data['error'] = '';
+    public function tambah()
+    {
+        $data['error'] = '';
 
-				$data['judul'] = 'Level';
+        $data['judul'] = 'Photo Album';
 
-				$this->general->load('management/level/add', $data);
-			}
+        $this->general->load('management/level/add', $data);
+    }
 
-			public function proses_tambah()
-			{
+    public function proses_tambah()
+    {
+        $this->load->library('form_validation');
 
-				// 'title' => $this->input->post('judul'),
-	  		// 'photo_url' => $nama_foto,
-	  		// 'created' => $tanggal,
-	      // 'id_perusahaan'=>1,
-	      // 'ket'=> $this->input->post('ket_level'),
-	      // 'tugas_utama'=>$this->input->post('tugas_level')
-				$this->load->library('form_validation');
+        $nama_asli = $_FILES['userfile']['name'];
 
-				$nama_asli = $_FILES['userfile']['name'];
+        $judul = $this->input->post('judul', true);
+        $ket_jabatan = $this->input->post('ket_jabatan', true);
+        $utama_jabatan = $this->input->post('utama_jabatan', true);
 
-				$judul = $this->input->post('judul',TRUE);
-				$ket_level = $this->input->post('ket_level',TRUE);
-				$tugas_level = $this->input->post('tugas_level',TRUE);
+    // Konfigurasi Upload Gambar
 
-				// Konfigurasi Upload Gambar
+    $config['file_name'] = $judul.'_'.'_'.$nama_asli;
+        $config['upload_path'] = './application/views/management/level/photo';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size'] = '1024';
+        $config['max_width'] = '1600';
+        $config['max_height'] = '1200';
 
-				$config['file_name'] = $judul.'_'.'_'.$nama_asli;
-				$config['upload_path'] = './application/views/management/level/photo';
-				$config['allowed_types'] = 'gif|jpg|png';
-				$config['max_size']	= '1024';
-				$config['max_width']  = '1600';
-				$config['max_height']  = '1200';
+    // End Konfigurasi Upload Gambar
 
-				// End Konfigurasi Upload Gambar
+    // Memuat Library Upload File
+    $this->load->library('upload', $config);
 
-				// Memuat Library Upload File
-				$this->load->library('upload', $config);
+        $this->form_validation->set_message('required', '%s is required.');
+        $this->form_validation->set_message('min_length', '%s Minimal %s Karakter.');
+        $this->form_validation->set_message('max_length', '%s Maksimal %s Karakter.');
+        $this->form_validation->set_message('is_unique', '%s Telah Terdaftar');
+        $this->form_validation->set_message('matches', '%s Tidak Cocok dengan %s.');
+        $this->form_validation->set_message('numeric', '%s Harus diisi Angka.');
 
-				$this->form_validation->set_message('required', '%s is required.');
-				$this->form_validation->set_message('min_length', '%s Minimal %s Karakter.');
-				$this->form_validation->set_message('max_length', '%s Maksimal %s Karakter.');
-				$this->form_validation->set_message('is_unique', '%s Telah Terdaftar');
-				$this->form_validation->set_message('matches', '%s Tidak Cocok dengan %s.');
-				$this->form_validation->set_message('numeric', '%s Harus diisi Angka.');
+        $this->form_validation->set_rules('judul', 'Title', 'trim|required|is_unique[photo.title]');
 
-				$this->form_validation->set_rules('judul', 'Title', 'trim|required|is_unique[level.title]');
+        if (($this->form_validation->run() === false) || (!$this->upload->do_upload())) {
+            // Jika Konfigurasi tidak cocok :
+        $data = array('error' => $this->upload->display_errors('<span class="error">', '</span>'));
 
-				if (($this->form_validation->run() === FALSE) || (! $this->upload->do_upload()))
-				{
-					// Jika Konfigurasi tidak cocok :
-					$data = array('error' => $this->upload->display_errors('<span class="error">','</span>'));
+            $data['judul'] = 'Photo Album';
 
-					$data['judul'] = 'Photo Album';
+            $this->general->load('management/level/add', $data);
+        } else {
+            $data = array('upload_data' => $this->upload->data());
 
-					$this->general->load('management/level/add', $data);
+            $tanggal = date('Y-m-d');
 
-				}
-				else{
+            $get_name = $this->upload->data();
+            $nama_foto = $get_name['file_name'];
 
-					$data = array('upload_data' => $this->upload->data());
+            $this->general->tambah_photo($nama_foto, $tanggal);
 
-					$tanggal = date('Y-m-d');
+            redirect('Level');
+        }
+    }
 
-					$get_name = $this->upload->data();
-					$nama_foto = $get_name['file_name'];
+    public function proses_hapus($id)
+    {
+        $photo = $this->general->link_photo($id);
 
-					$this->general->tambah_level($nama_foto,$tanggal);
+        if ($photo->num_rows() > 0) {
+            $row = $photo->row();
 
-					redirect('level','refresh');
+            $file_photo = $row->logo;
 
-				}
+            $path_file = './application/views/management/level/photo';
+            unlink($path_file.$file_photo);
+        }
 
-			}
+        $this->general->hapus_photo($id);
 
-			public function proses_hapus($id_level)
-			{
-
-				$level = $this->general->link_level($id_level);
-
-				if ($level->num_rows() > 0)
-				{
-
-					$row = $level->row();
-
-					$file_photo = $row->photo_url;
-
-					$path_file = './application/views/management/level/photo/';
-					unlink($path_file.$file_photo);
-
-				}
-
-				$this->general->hapus_level($id_level);
-
-				redirect('level','refresh');
-
-			}
-			public function proses_edit($id_level)
-			{
-
-				$level = $this->general->link_level($id_level);
-
-				if ($level->num_rows() > 0)
-				{
-
-					$row = $level->row();
-
-					$file_photo = $row->photo_url;
-
-					$path_file = './application/views/management/level/photo/';
-					unlink($path_file.$file_photo);
-
-				}
-
-				$this->general->hapus_level($id_level);
-
-				redirect('level','refresh');
-
-			}
-			// public function save_division_update()
-			// 			{
-			// 				$data['divisi'] = $this->db->get('divisi')->result_array();
-			// 				$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
-			// 				$data = $this->input->post();
-			// 				$this->db->where('id', $data['id']);
-			// 				$this->db->update('divisi',$data);
-			// 				$this->general->save_division_update($data);
-			// 				redirect(base_url('division/division/all', $data));
-			// 			}
-
+        redirect('Level');
+    }
+		// public function division_edit($id)
+		// 			{
+		// 				$data = array();
+		// 				$data['divisi'] = $this->db->get('divisi')->result_array();
+		// 				$data['divisi'] = $this->db->where_in('id',$id)->get('divisi')->row_array();
+		// 				$this->general->load('Management/division/edit', $data);
+		// 			}
+		// public function save_division_update()
+		// 			{
+		// 				$data['divisi'] = $this->db->get('divisi')->result_array();
+		// 				$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
+		// 				$data = $this->input->post();
+		// 				$this->db->where('id', $data['id']);
+		// 				$this->db->update('divisi',$data);
+		// 				$this->general->save_division_update($data);
+		// 				redirect(base_url('division/division/all', $data));
+		// 			}
 }

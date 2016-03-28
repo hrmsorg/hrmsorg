@@ -6,7 +6,7 @@
                     <div class="page-title">
                         <div class="title_left">
                           <h3>
-                Manage Division
+                Manage Level
                 </h3>
                         </div>
 
@@ -24,22 +24,25 @@
                       <div class="col-md-12 col-sm-12 col-xs-12">
                           <div class="x_panel">
                               <div class="x_title">
-                                  <h2>View Division <small>All Division</small></h2>
+                                  <h2>View Level<small>All data</small></h2>
                                   <div class="col-md col-sm col-xs form-group pull-right top_search">
-                                     <a href="<?php echo 'get_division_add';?>" >  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Add New"><i class="fa fa-plus" ></i></button></a>
+                                     <a href="<?php echo 'level/tambah';?>" >  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Add New"><i class="fa fa-plus" ></i></button></a>
                                   </div>
                                   <div class="clearfix"></div>
                               </div>
                               <div class="x_content">
                                   <table id="example" class="table table-striped responsive-utilities jambo_table">
                                       <thead>
-                                        	<!-- //tabel :divisi-> id, id_perusahaan, nama, ket,tugas_utama -->
+                                          <!-- //id, id_jabatan, id_perusahaan, id_divisi, title, logo,ket, created, tugas_utama -->
                                    <tr class="headings">
 
                                               <th>ID</center> </th>
-                                              <th>ID Company</center> </th>
+																							<th>ID Level</center> </th>
+																						  <th>ID Company</center> </th>
+                                              <th>ID Division </th>
                                               <th>Name </th>
-                                              <th>Description </th>
+																							<th>Logo </th>
+																								<th>Description </th>
                                               <th>Main Task </th>
                                               <th class=" no-link last"><span class="nobr"> Action</span>
                                               </th>
@@ -48,22 +51,34 @@
                                       </thead>
 
                                       <tbody>
-                                        <?php
-                                        foreach ($divisi as $key) {
-                                            ?>
+																				<?php
+
+																				foreach($jabatan->result() as $row):?>
+
                                           <tr class="even pointer">
 
-                                                <td><?php echo $key['id'];
-                                            ?></td>
-                                                <td ><?php echo $key['id_perusahaan'];
-                                            ?></td>
-                                                <td><?php echo $key['nama'];
-                                            ?></td>
-                                                <td><?php echo $key['ket'];
-                                            ?></td>
-                                                <td><?php echo $key['tugas_utama'];
-                                            ?></td>
-  <td><a href="<?php echo base_url('Division/division_delete/'.$key['id']);
+                                                <td> <?php echo($row->id);?></td>
+                                                <td ><?php echo($row->id_jabatan);?></td>
+                                                <td><?php echo($row->id_perusahaan);?></td>
+                                                <td><?php echo($row->id_divisi);?></td>
+                                                <td><?php echo($row->title);?></td>
+																								<td>	<?php
+
+																											$image = array(
+																											  'src' => 'application/views/management/level/photo/'.($row->logo),
+																											  'alt' => ($row->title),
+																											  'class' => 'photo',
+																											  'width' => '65',
+																											  'height' => '60',
+																											  'title' => ($row->title),
+																											  'rel' => 'lightbox',
+																											);
+
+																											echo img($image); ?></td>
+																									<td><?php echo($row->ket);?></td>
+																									<td><?php echo($row->tugas_utama);?></td>
+
+  <td><a href="<?php echo base_url('Level/proses_hapus/'.$row->id);
                                             ?>" onClick="return doconfirm();">   <button title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Trash" class="btn btn-sm tooltips btn-danger"><i class="fa fa-trash-o"></i>
                                                             </button></a>
                                                       <script>
@@ -76,14 +91,11 @@
                                                             }
                                                         }
                                                       </script></center>
-                                              <a href="<?php echo base_url('division/division_edit/'.$key['id']);
+                                              <a href="<?php echo base_url('level/level_edit/'.$row->id);
                                             ?>"><button title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Edit" class="btn btn-sm tooltips btn-primary"><i class="fa fa-edit"></i>
                                                             </button></a></td>
 
-                                              <?php
-
-                                        }
-                                              ?>
+                                            <?php endforeach; ?>
                                           </tr>
 
                                       </tbody>
