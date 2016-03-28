@@ -20,7 +20,7 @@ class Salary extends CI_Controller
 				$data['salary_all'] = $this->db->get('gaji')->result_array(); 
 				$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
 				$data['id_karyawan'] = $this->db->where_in('id')->get('karyawan')->result_array();
-				$data['id_level'] = $this->db->where_in('id')->get('level')->result_array();
+				$data['id_jabatan'] = $this->db->where_in('id')->get('jabatan')->result_array();
 				$this->general->load('management/salary/all',$data);
 		}
 
@@ -31,7 +31,7 @@ class Salary extends CI_Controller
 				$data = array (
 						'id_perusahaan'			=> 1,
 						'id_karyawan'			=> 1,
-						'id_level'			=> 1,
+						'id_jabatan'				=> 1,
 						'pokok'					=>$this->input->post('pokok'),
 						'tunjangan'				=>$this->input->post('tunjangan'),
 						'periode_kerja_awal'	=>$this->input->post('periode_kerja_awal'),
@@ -46,7 +46,7 @@ class Salary extends CI_Controller
 			    $data['salary_all'] = $this->db->get('gaji')->result_array();
 			    $data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
 			    $data['id_karyawan'] = $this->db->where_in('id')->get('karyawan')->result_array();
-			    $data['id_level'] = $this->db->where_in('id')->get('level')->result_array();
+			    $data['id_jabatan'] = $this->db->where_in('id')->get('jabatan')->result_array();
 			    $this->general->load('management/salary/add', $data);
 		}
 		public function salary_delete($id)
@@ -69,7 +69,7 @@ class Salary extends CI_Controller
 						// 'id' =>  $this->input->post('id'),
 						'id_perusahaan'			=> 1,
 						'id_karyawan'			=> 1,
-						'id_level'			=> 1,
+						'id_jabatan'			=> 1,
 						'pokok'					=>$this->input->post('pokok'),
 						'tunjangan'				=>$this->input->post('tunjangan'),
 						'periode_kerja_awal'	=>$this->input->post('periode_kerja_awal'),
