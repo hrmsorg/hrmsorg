@@ -39,7 +39,7 @@
                                               <th>ID</center> </th>
                                               <th>ID Company</center> </th>
                                               <th>ID Division</center> </th>
-                                              <th>ID Level</center> </th>
+                                              <th>ID jabatan</center> </th>
                                               <th>Gaji Awal </th>
                                               <th>Gaji Akhir </th>
                                               <th>Description </th>
@@ -62,7 +62,7 @@
                                             ?></td>
                                             <td ><?php echo $key['id_divisi'];
                                             ?></td>
-                                            <td ><?php echo $key['id_level'];
+                                            <td ><?php echo $key['id_jabatan'];
                                             ?></td>
                                                 <td><?php echo $key['gaji_awal'];
                                             ?></td>

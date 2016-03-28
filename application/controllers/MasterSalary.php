@@ -20,7 +20,7 @@ class MasterSalary extends CI_Controller
 				$data['master_salary'] = $this->db->where_in('id')->get('master_gaji')->result_array();
 				$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
 				$data['id_divisi'] = $this->db->where_in('id')->get('divisi')->result_array();
-				$data['id_level'] = $this->db->where_in('id')->get('level')->result_array();
+				$data['id_jabatan'] = $this->db->where_in('id')->get('jabatan')->result_array();
 				$this->general->load('management/master_salary/all',$data);
 		} 
 
@@ -31,7 +31,7 @@ class MasterSalary extends CI_Controller
 				
 				'id_perusahaan'=>1,
 				'id_divisi'=>1,
-				'id_level'=>1,
+				'id_jabatan'=>1,
 				'gaji_awal'=>$this->input->post('gaji_awal'),
 				'gaji_akhir'=>$this->input->post('gaji_akhir'),
 				'ket'=>$this->input->post('ket'));
@@ -58,7 +58,7 @@ class MasterSalary extends CI_Controller
 						$data['master_salary'] = $this->db->get('master_gaji')->result_array();
 						$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
 						$data['id_divisi'] = $this->db->where_in('id')->get('divisi')->result_array();
-						$data['id_level'] = $this->db->where_in('id')->get('level')->result_array();
+						$data['id_jabatan'] = $this->db->where_in('id')->get('jabatan')->result_array();
 						$data = $this->input->post();
 						$this->db->where('id', $data['id']);
 						$this->db->update('master_gaji',$data);
@@ -70,7 +70,7 @@ class MasterSalary extends CI_Controller
 			        $data['master_salary'] = $this->db->get('master_gaji')->result_array();
 			       		$data['id_perusahaan'] = $this->db->where_in('id')->get('perusahaan')->result_array();
 						$data['id_divisi'] = $this->db->where_in('id')->get('divisi')->result_array();
-						$data['id_level'] = $this->db->where_in('id')->get('level')->result_array();
+						$data['id_jabatan'] = $this->db->where_in('id')->get('jabatan')->result_array();
 			        $this->general->load('management/master_salary/add', $data);
 			    }
 
