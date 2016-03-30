@@ -16,7 +16,7 @@
            <button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Add New"></a><i class="fa fa-plus"></i></button>
           </div>
         </div>
-        <?php form_close();?>
+        <?php echo form_close();?>
         <div class="x_title">
           <small>Free Master List</small>
           <div class="col-md col-sm col-xs form-group pull-right top_search">
@@ -62,6 +62,7 @@
                   }
                 }
               </script>
+              <?php echo form_close();?>
               <!-- <?php echo form_open("Free/free_add");?>
               <button data-placement="bottom" data-toggle="tooltip" data-original-title="Show " class="btn btn-sm tooltips btn-primary"><i class="fa fa-edit"></i></button> -->
             </tr>

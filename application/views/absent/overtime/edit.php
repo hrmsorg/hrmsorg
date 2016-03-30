@@ -29,6 +29,7 @@
                                 
                             <div class="x_content">
                                     <?php echo form_open('Overtime/save_overtime_update');?>
+                                    <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $overtime_all['id'];?>">
                                     <div class="col-md-9">
                                                 <fieldset>
                                                   <div class="control-group">
