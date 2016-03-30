@@ -13,6 +13,7 @@
            <button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Add New"></a><i class="fa fa-plus"></i></button>
           </div>
         </div>
+        <?php echo form_close();?>
           <div class="clearfix"></div>
         </div>
       <div class="x_content">
@@ -40,8 +41,8 @@
               <td class=" "><?php echo $key['tgl_lamaran'];?></td>
               <td class=" "><?php echo $key['status_lamaran'];?></td>
               <td class=" last">
-              <?php echo form_open("NewEmployee/new_employee_delete/".$key['id']);?>
-              <button onClick="return doconfirm();" data-placement="bottom" data-toggle="tooltip" data-original-title="Delete" class="btn btn-sm tooltips btn-danger"><i class="fa fa-trash-o"></i></button>
+               <a href="<?php echo base_url('NewEmployee/new_employee_delete/'.$key['id']);?>" onClick="return doconfirm();"> 
+              <button data-placement="bottom" data-toggle="tooltip" data-original-title="Delete" class="btn btn-sm tooltips btn-danger"><i class="fa fa-trash-o"></i></button>
               <script>
                 function doconfirm()
                 {
@@ -52,7 +53,11 @@
                   }
                 }
               </script>
-              <?php echo form_open("NewEmployee/new_employee_edit/".$key['id']);?>
+              
+              <a href="<?php echo base_url('NewEmployee/new_employee_edit/'.$key['id']);?>"> 
+              <button data-placement="bottom" data-toggle="tooltip" data-original-title="Edit" class="btn btn-sm tooltips btn-dark"><i class="fa fa-eye"></i></button>
+
+              <a href="<?php echo base_url('NewEmployee/new_employee_edit/'.$key['id']);?>"> 
               <button data-placement="bottom" data-toggle="tooltip" data-original-title="Edit" class="btn btn-sm tooltips btn-primary"><i class="fa fa-edit"></i></button>
             </tr>
             <?php
