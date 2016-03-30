@@ -178,7 +178,8 @@ class general extends CI_Model
   {
       $this->db->insert('master_libur', $data);
   }
-  public function getData() {
+  public function getData() 
+  {
     $query = $this->db->get('master_libur');
     return $query->result_array();
   }

@@ -193,13 +193,13 @@
                         });
                         calendar.fullCalendar('unselect');
                     },
-                    editable: true,
-                    events: [
-                        {
-                            title: 'All Day Event',
-                            start: new Date(y, m, 1)
-                        }
-                ]
+                //     editable: true,
+                //     events: [
+                //         {
+                //             title: 'All Day Event',
+                //             start: new Date(y, m, 1)
+                //         }
+                // ]
                 //         {
                 //             title: 'Long Event',
                 //             start: new Date(y, m, d - 5),
