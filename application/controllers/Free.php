@@ -23,6 +23,8 @@ class Free extends CI_Controller
 		// show form add new 
 		public function free_add()
 		{
+			// $data['master_libur'] = $this->general->getData($data);
+			// echo $data->judul;
 			$this->general->load('absent/free/add');
 		}
 
